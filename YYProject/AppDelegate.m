@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "FZMUIMediator.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [[FZMUIMediator sharedInstance] createMainView:self.window];
+    
     return YES;
 }
 

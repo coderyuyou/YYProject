@@ -8,6 +8,7 @@ target 'YYProject' do
   pod 'Masonry', '~> 1.1.0'
   pod 'AFNetworking', '~> 3.2.1'
   pod 'SDWebImage', '~> 4.4.2'
+  pod 'MJRefresh','~> 3.1.15.7'
   
   target 'YYProjectTests' do
     inherit! :search_paths
