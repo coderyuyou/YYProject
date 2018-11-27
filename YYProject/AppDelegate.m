@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "FZMUIMediator.h"
+#import "YYUIManager.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    [[FZMUIMediator sharedInstance] createMainView:self.window];
+    [[YYUIManager sharedInstance] createMainView:self.window];
     
     return YES;
 }

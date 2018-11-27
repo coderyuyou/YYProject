@@ -1,16 +1,16 @@
 //
-//  UIColor+HexColors.m
-//  MZB
+//  UIColor+Extension.m
+//  YYProject
 //
-//  Created by 吴文拼 on 2017/10/31.
-//  Copyright © 2017年 吴文拼. All rights reserved.
+//  Created by 于优 on 2018/11/27.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#import "UIColor+HexColors.h"
+#import "UIColor+Extension.h"
 
-@implementation UIColor (HexColors)
+@implementation UIColor (Extension)
 
-+(UIColor *)colorWithHexString:(NSString *)hexString {
++ (UIColor *)colorWithHexString:(NSString *)hexString {
     
     if ([hexString length] != 6) {
         return nil;
@@ -50,7 +50,7 @@
     
 }
 
-+(NSString *)hexValuesFromUIColor:(UIColor *)color {
++ (NSString *)hexValuesFromUIColor:(UIColor *)color {
     
     if (!color) {
         return nil;

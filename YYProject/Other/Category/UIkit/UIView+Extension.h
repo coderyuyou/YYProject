@@ -1,13 +1,12 @@
 //
 //  UIView+Extension.h
-//  KVO
+//  YYProject
 //
-//  Created by 于优 on 16/5/9.
-//  Copyright © 2016年 于优. All rights reserved.
+//  Created by 于优 on 2018/11/27.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, UIBorderSideType) {
@@ -16,7 +15,7 @@ typedef NS_ENUM(NSInteger, UIBorderSideType) {
     UIBorderSideTypeBottom = 1 << 1,
     UIBorderSideTypeLeft   = 1 << 2,
     UIBorderSideTypeRight  = 1 << 3,
-};  
+};
 
 IB_DESIGNABLE
 
@@ -56,20 +55,24 @@ IB_DESIGNABLE
 /** frame.origin.y */
 @property (nonatomic) CGFloat y;
 
-@property(nonatomic, assign) IBInspectable CGFloat borderWidth;
-@property(nonatomic, assign) IBInspectable UIColor *_Nullable borderColor;
-@property(nonatomic, assign) IBInspectable CGFloat cornerRadius;
-
+@property (nonatomic, assign) IBInspectable CGFloat borderWidth;
+@property (nonatomic, assign) IBInspectable UIColor *_Nullable borderColor;
+@property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
 
 /**
- *  父控制器
+ *  添加手势事件
+ */
+@property (nonatomic, copy, nullable) void(^tapGestureHandle)(UITapGestureRecognizer * _Nullable gesture, UIView * _Nullable tapView);
+
+/**
+ *  获取父控制器
  */
 - (UIViewController *_Nullable)parentController;
 
 /**
- *  手势事件
+ *  移除所有子视图
  */
-@property (nullable, copy, nonatomic) void(^tapGestureHandle)(UITapGestureRecognizer * _Nullable gesture, UIView * _Nullable tapView);
+- (void)removeAllSubviews;
 
 /**
  *  给 UIView 的图层添加阴影
@@ -78,38 +81,34 @@ IB_DESIGNABLE
  *  @param offset 阴影的偏移量
  *  @param radius 阴影的渐变距离
  */
-- (void)setLayerShadow:(nullable UIColor*)color
-                offset:(CGSize)offset
-                radius:(CGFloat)radius;
+- (void)setLayerShadow:(UIColor *_Nullable)color offset:(CGSize)offset radius:(CGFloat)radius;
+
+/**
+ *  给 UIView 的图层添加边框
+ *
+ *  @param color        边框颜色
+ *  @param borderWidth  边框宽度
+ *  @param borderType   边框类型
+ */
+- (void)setLayerBorder:(UIColor *_Nullable)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType;
+
+/**
+ *  给 UIView 绘制圆角
+ *
+ *  @param cornerRadius 圆角度数
+ */
+- (void)setLayerRoundedRect:(CGFloat)cornerRadius;
 
 /**
  *  截取当前视图
- *
  */
-- (nullable UIImage *)snapshotImage;
+- (UIImage *_Nullable)snapshotImage;
 
 /**
- Create a snapshot image of the complete view hierarchy.
- @discussion It's faster than "snapshotImage", but may cause screen updates.
- See -[UIView drawViewHierarchyInRect:afterScreenUpdates:] for more information.
+ *  Create a snapshot image of the complete view hierarchy.
+ *  discussion It's faster than "snapshotImage", but may cause screen updates.
+ *  See -[UIView drawViewHierarchyInRect:afterScreenUpdates:] for more information.
  */
-- (nullable UIImage *)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
-
-- (void)removeAllsubViews;
-
-+ (UIView *_Nonnull)borderForView:(UIView *_Nullable)originalView color:(UIColor *_Nullable)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType;
-
+- (UIImage *_Nullable)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-

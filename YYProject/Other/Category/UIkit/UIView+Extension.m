@@ -1,9 +1,9 @@
 //
 //  UIView+Extension.m
-//  KVO
+//  YYProject
 //
-//  Created by 于优 on 16/5/9.
-//  Copyright © 2016年 于优. All rights reserved.
+//  Created by 于优 on 2018/11/27.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
 #import "UIView+Extension.h"
@@ -127,11 +127,42 @@
     self.frame = tempRect;
 }
 
+- (CGFloat)borderWidth {
+    return self.borderWidth;
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    
+    if (borderWidth < 0) {
+        return;
+    }
+    self.layer.borderWidth = borderWidth;
+}
+
+- (UIColor *)borderColor {
+    return self.borderColor;
+}
+
+- (void)setBorderColor:(UIColor *)borderColor {
+    self.layer.borderColor = borderColor.CGColor;
+}
+
+- (CGFloat)cornerRadius {
+    return self.cornerRadius;
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = YES;
+}
 
 static char event_key;
 
-- (void)setTapGestureHandle:(void (^)(UITapGestureRecognizer *, UIView *))tapGestureHandle
-{
+- (void (^)(UITapGestureRecognizer *, UIView *))tapGestureHandle {
+    return objc_getAssociatedObject(self, &event_key);
+}
+
+- (void)setTapGestureHandle:(void (^)(UITapGestureRecognizer *, UIView *))tapGestureHandle {
     self.userInteractionEnabled = YES;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapHandle:)];
@@ -141,87 +172,15 @@ static char event_key;
     objc_setAssociatedObject(self, &event_key, tapGestureHandle, OBJC_ASSOCIATION_COPY);
 }
 
-- (void (^)(UITapGestureRecognizer *, UIView *))tapGestureHandle
-{
-    return objc_getAssociatedObject(self, &event_key);
-}
-
-- (void)didTapHandle:(UITapGestureRecognizer *)tap
-{
+- (void)didTapHandle:(UITapGestureRecognizer *)tap {
     void (^tapGestureHandle)(UITapGestureRecognizer *tap, UIView *tapView) = objc_getAssociatedObject(self, &event_key);
     
-    if (tapGestureHandle)
-    {
+    if (tapGestureHandle) {
         tapGestureHandle(tap, tap.view);
     }
 }
 
-
-/**
- *  给 UIView 的图层添加阴影
- *
- *  @param color  阴影颜色
- *  @param offset 阴影的偏移量
- *  @param radius 阴影的渐变距离
- */
-- (void)setLayerShadow:(nullable UIColor*)color
-                offset:(CGSize)offset
-                radius:(CGFloat)radius
-{
-    // 阴影颜色
-    self.layer.shadowColor        = color.CGColor;
-    // 阴影的偏移量
-    self.layer.shadowOffset       = offset;
-    // shadow 的渐变距离，从外围开始，往里渐变 shadowRadius 距离
-    self.layer.shadowRadius       = radius;
-    // 阴影的透明效果
-    self.layer.shadowOpacity      = 1;
-    
-    self.layer.shouldRasterize    = YES;
-    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
-}
-
-- (UIImage *)snapshotImage {
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return snap;
-}
-
-- (UIImage *)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates {
-    if (![self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
-        return [self snapshotImage];
-    }
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
-    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:afterUpdates];
-    UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return snap;
-}
-
-- (void)setBorderWidth:(CGFloat)borderWidth
-{
-    
-    if (borderWidth < 0) {
-        return;
-    }
-    self.layer.borderWidth = borderWidth;
-}
-
-- (void)setBorderColor:(UIColor *)borderColor
-{
-    self.layer.borderColor = borderColor.CGColor;
-}
-
-- (void)setCornerRadius:(CGFloat)cornerRadius
-{
-    self.layer.cornerRadius = cornerRadius;
-    self.layer.masksToBounds = YES;
-}
-
-- (UIViewController *)parentController
-{
+- (UIViewController *_Nullable)parentController {
     UIResponder *responder = [self nextResponder];
     while (responder) {
         if ([responder isKindOfClass:[UIViewController class]]) {
@@ -232,35 +191,30 @@ static char event_key;
     return nil;
 }
 
-- (CGFloat)borderWidth
-{
-    return self.borderWidth;
-}
-
-- (UIColor *)borderColor
-{
-    return self.borderColor;
-    
-}
-
-- (CGFloat)cornerRadius
-{
-    return self.cornerRadius;
-}
-
-- (void)removeAllsubViews;
-{
+- (void)removeAllSubviews {
     for (UIView * view in self.subviews) {
         [view removeFromSuperview];
     }
 }
 
-+ (UIView *)borderForView:(UIView *)originalView color:(UIColor *)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType {
+- (void)setLayerShadow:(UIColor *_Nullable)color offset:(CGSize)offset radius:(CGFloat)radius {
+    // 阴影颜色
+    self.layer.shadowColor = color.CGColor;
+    // 阴影的偏移量
+    self.layer.shadowOffset = offset;
+    // shadow 的渐变距离，从外围开始，往里渐变 shadowRadius 距离
+    self.layer.shadowRadius = radius;
+    // 阴影的透明效果
+    self.layer.shadowOpacity = 1;
     
+    self.layer.shouldRasterize = YES;
+    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+}
+
+- (void)setLayerBorder:(UIColor *_Nullable)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType {
     if (borderType == UIBorderSideTypeAll) {
-        originalView.layer.borderWidth = borderWidth;
-        originalView.layer.borderColor = color.CGColor;
-        return originalView;
+        self.layer.borderWidth = borderWidth;
+        self.layer.borderColor = color.CGColor;
     }
     
     /// 线的路径
@@ -269,29 +223,29 @@ static char event_key;
     /// 左侧
     if (borderType & UIBorderSideTypeLeft) {
         /// 左侧线路径
-        [bezierPath moveToPoint:CGPointMake(0.0f, originalView.frame.size.height)];
+        [bezierPath moveToPoint:CGPointMake(0.0f, self.frame.size.height)];
         [bezierPath addLineToPoint:CGPointMake(0.0f, 0.0f)];
     }
     
     /// 右侧
     if (borderType & UIBorderSideTypeRight) {
         /// 右侧线路径
-        [bezierPath moveToPoint:CGPointMake(originalView.frame.size.width, 0.0f)];
-        [bezierPath addLineToPoint:CGPointMake( originalView.frame.size.width, originalView.frame.size.height)];
+        [bezierPath moveToPoint:CGPointMake(self.frame.size.width, 0.0f)];
+        [bezierPath addLineToPoint:CGPointMake(self.frame.size.width, self.frame.size.height)];
     }
     
     /// top
     if (borderType & UIBorderSideTypeTop) {
         /// top线路径
         [bezierPath moveToPoint:CGPointMake(0.0f, 0.0f)];
-        [bezierPath addLineToPoint:CGPointMake(originalView.frame.size.width, 0.0f)];
+        [bezierPath addLineToPoint:CGPointMake(self.frame.size.width, 0.0f)];
     }
     
     /// bottom
     if (borderType & UIBorderSideTypeBottom) {
         /// bottom线路径
-        [bezierPath moveToPoint:CGPointMake(0.0f, originalView.frame.size.height)];
-        [bezierPath addLineToPoint:CGPointMake( originalView.frame.size.width, originalView.frame.size.height)];
+        [bezierPath moveToPoint:CGPointMake(0.0f, self.frame.size.height)];
+        [bezierPath addLineToPoint:CGPointMake(self.frame.size.width, self.frame.size.height)];
     }
     
     CAShapeLayer * shapeLayer = [CAShapeLayer layer];
@@ -302,25 +256,30 @@ static char event_key;
     /// 线宽度
     shapeLayer.lineWidth = borderWidth;
     
-    [originalView.layer addSublayer:shapeLayer];
-    
-    return originalView;
+    [self.layer addSublayer:shapeLayer];
 }
 
+- (void)setLayerRoundedRect:(CGFloat)cornerRadius {
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = NO;
+}
 
+- (UIImage *_Nullable)snapshotImage {
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return snap;
+}
+
+- (UIImage *_Nullable)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates {
+    if (![self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
+        return [self snapshotImage];
+    }
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
+    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:afterUpdates];
+    UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return snap;
+}
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

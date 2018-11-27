@@ -1,42 +1,43 @@
 //
-//  FZMTabBarViewController.m
-//  FZMGoldExchange
+//  YYTabBarController.m
+//  YYProject
 //
-//  Created by 于优 on 2018/4/23.
-//  Copyright © 2018年 FZM. All rights reserved.
+//  Created by 于优 on 2018/11/26.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#import "FZMTabBarViewController.h"
+#import "YYTabBarController.h"
+#import "YYHomeViewController.h"
 
-@interface FZMTabBarViewController ()<UITabBarControllerDelegate>
+@interface YYTabBarController () <UITabBarControllerDelegate>
 
 @end
 
-@implementation FZMTabBarViewController
+@implementation YYTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [UITabBar appearance].translucent = NO;
-//    [[UITabBar appearance] setBackgroundColor:[UIColor redColor]];
+    //    [UITabBar appearance].translucent = NO;
+    //    [[UITabBar appearance] setBackgroundColor:[UIColor redColor]];
     UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 60)];
     backView.backgroundColor = [UIColor whiteColor];
     [self.tabBar insertSubview:backView atIndex:0];
     self.tabBar.opaque = YES;
     
-    [self setUpAllChildVc];
+    [self createAllChildVc];
     self.delegate = self;
 }
 
 #pragma mark - 初始化tabBar上的按钮
 
-- (void)setUpAllChildVc {
+- (void)createAllChildVc {
     
-    UIViewController *homeVc = [[UIViewController alloc] init];
+    YYHomeViewController *homeVc = [[YYHomeViewController alloc] init];
     [self setupChildVcWithVc:homeVc Image:[UIImage imageNamed:@"tab_home_nor"] selectedImage:[UIImage imageNamed:@"tab_home_sel"] title:@"首页"];
     
     UIViewController *tradeVc = [[UIViewController alloc] init];
     [self setupChildVcWithVc:tradeVc Image:[UIImage imageNamed:@"tab_explore_nor"] selectedImage:[UIImage imageNamed:@"tab_explore_sel"] title:@"探索"];
-
+    
     UIViewController *mineVc = [[UIViewController alloc] init];
     [self setupChildVcWithVc:mineVc Image:[UIImage imageNamed:@"tab_mine_nor"] selectedImage:[UIImage imageNamed:@"tab_mine_sel"] title:@"我的"];
 }
@@ -56,7 +57,7 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:Vc];
     Vc.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     Vc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
- 
+    
     Vc.tabBarItem.title = title;
     Vc.navigationItem.title = title;
     
@@ -75,5 +76,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

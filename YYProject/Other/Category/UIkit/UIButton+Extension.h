@@ -1,27 +1,23 @@
 //
 //  UIButton+Extension.h
-//  MyKeyboardDemo
+//  YYProject
 //
-//  Created by 樊小聪 on 16/8/1.
-//  Copyright © 2016年 laitang. All rights reserved.
+//  Created by 于优 on 2018/11/27.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface UIButton (Extension)
 
-/** 👀 高亮背景颜色 👀 */
-@property (weak, nonatomic) UIColor *highLightBackgroundColor;
-
-/** 👀 被选中的背景颜色 👀 */
-@property (weak, nonatomic) UIColor *selectedBackgroundColor;
-
-/** 👀 不能点击时的背景颜色 👀 */
-@property (weak, nonatomic) UIColor *disabledBackgroundColor;
-
-/** 👀 点击按钮的回调 👀 */
-@property (copy, nonatomic) void(^clickHandle)(UIButton *btn);
-
+/** 高亮背景颜色 */
+@property (nonatomic, weak) UIColor *highLightBackgroundColor;
+/** 被选中的背景颜色 */
+@property (nonatomic, weak) UIColor *selectedBackgroundColor;
+/** 不能点击时的背景颜色 */
+@property (nonatomic, weak) UIColor *disabledBackgroundColor;
+/** 点击按钮的回调 */
+@property (nonatomic, copy) void(^clickHandle)(UIButton *btn);
 
 /**
  *  给按钮添加事件
@@ -33,3 +29,4 @@
                actionHandle:(void(^)(UIButton *btn))actionHandle;
 
 @end
+
