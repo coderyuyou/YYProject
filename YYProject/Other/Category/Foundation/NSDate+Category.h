@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-#define kSecondsMinute      60
-#define kSecondsHour		3600
-#define kSecondsDay         86400 
-#define kSecondsWeek		604800
-#define kSecondsYear		31556926
+//#define kSecondsMinute      60
+//#define kSecondsHour        3600
+//#define kSecondsDay         86400
+//#define kSecondsWeek        604800
+//#define kSecondsYear        31556926
+
+static const NSInteger kSecondsMinute = 60;
+static const NSInteger kSecondsHour = 3600;
+static const NSInteger kSecondsDay = 86400;
+static const NSInteger kSecondsWeek = 604800;
+static const NSInteger kSecondsYear = 31556926;
 
 @interface NSDate (Category)
 

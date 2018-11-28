@@ -1,23 +1,21 @@
 //
-//  FZMBaseViewController.m
-//  FZMGoldExchange
+//  YYBaseViewController.m
+//  YYProject
 //
-//  Created by 于优 on 2018/4/23.
-//  Copyright © 2018年 FZM. All rights reserved.
+//  Created by 于优 on 2018/11/28.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#import "FZMBaseViewController.h"
+#import "YYBaseViewController.h"
+#import <MJRefresh.h>
 
-#import "MJRefresh.h"
-
-@interface FZMBaseViewController ()<UIGestureRecognizerDelegate>
+@interface YYBaseViewController () <UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation FZMBaseViewController
+@implementation YYBaseViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self createBaseViewController];
@@ -26,14 +24,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [UIView setAnimationsEnabled:YES];
+    // 隐藏系统导航栏
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-
+    
     [super viewWillDisappear:animated];
-//    [self endRefresh:nil];
+    //    [self endRefresh:nil];
 }
 
 - (void)dealloc {
@@ -42,82 +40,72 @@
 
 - (void)createBaseViewController {
     
+    // 设置动画是否可用
     [UIView setAnimationsEnabled:YES];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.edgesForExtendedLayout = UIRectEdgeAll;
-    self.view.backgroundColor = kBackgroundColor;
-    
+    // 取消自动计算
+    UIScrollView *scrollView = nil;
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[UITableView class]] || [view isKindOfClass:[UICollectionView class]] || [view isKindOfClass:[UIScrollView class]]) {
+            scrollView = (UIScrollView *)view;
+            break;
+        }
+    }
     if (@available(iOS 11.0, *)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     else {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     
-    [self initNavView];
-}
-
-- (void)initNavView {
+    // 开启统自带的滑动手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
-    // 导航栏
+    // 设置默认背景色
+    self.view.backgroundColor = kBackgroundColor;
+    
+    // 添加自定义导航栏
     [self.view addSubview:self.navView];
-    // 左按钮
-    [self.navView addSubview:self.navLeftBtn];
-    // 右按钮
-    [self.navView addSubview:self.navRightBtn];
-    // 标题
-    [self.navView addSubview:self.navTitleLab];
-    // 分割线
-    [self.navView addSubview:self.navSeperateLine];
-    
     [self.navView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view).offset(0);
         make.height.mas_equalTo(kStatusAndNavigationBarHeitht);
     }];
-
-    [self.navLeftBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.navView).offset(-1);
-        make.left.equalTo(self.navView).offset(0);
-        make.size.mas_equalTo(CGSizeMake(60, 40));
-    }];
+    WEAKSELF;
+    self.navView.didNavBtnClickHandle = ^(YYNavBtnClickType type, UIButton * _Nonnull btn) {
+        if (type == YYNavBtnClickTypeLeft) {
+            [weakSelf navLeftPressed:btn];
+        }
+        else if (type == YYNavBtnClickTypeRight) {
+            [weakSelf navRightPressed:btn];
+        }
+    };
     
-    [self.navRightBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.navView).offset(-1);
-        make.right.equalTo(self.navView).offset(10);
-        make.size.mas_equalTo(CGSizeMake(60, 40));
-    }];
-    
-    [self.navTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.navView).offset(-1);
-        make.right.left.equalTo(self.navView).offset(70);
-        make.height.mas_equalTo(40);
-    }];
-    
-    [self.navSeperateLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.left.right.equalTo(self.navView).offset(0);
-        make.right.left.equalTo(self.navView).offset(70);
-        make.height.mas_equalTo(1);
-    }];
-    
-    // 开启统自带的滑动手势
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    // 是否隐藏左边按钮
+    if ([self isRootViewController]) {
+        // 根视图隐藏左边按钮
+        self.navView.hiddenLeftBtn = YES;
+    }
+    else {
+        // 非根视图显示左边按钮
+        self.navView.hiddenLeftBtn = NO;
+    }
 }
 
 // 拦截手势触发
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     
     // 当前控制器是根控制器
-    if (self.navigationController.childViewControllers.count == 1) {
+    if ([self isRootViewController]) {
         return NO;
     }
     return YES;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self.view endEditing:YES];
+    // 点击屏幕取消编辑
+    //    [self.view endEditing:YES];
 }
 
-#pragma mark - ***************  tableView  ***************
+#pragma mark - TableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -136,19 +124,22 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 0.01;
+    return CGFLOAT_MIN;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
-    return 0.01;
+    return CGFLOAT_MIN;
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    return nil;
+    return [UIView new];
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     
-    return nil;
+    return [UIView new];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -162,14 +153,19 @@
     return cell;
 }
 
+#pragma mark - Action
 
-#pragma mark - ***************  Action  ***************
-/**
- *  导航左按钮事件（默认返回上一页）
- */
-- (void)navLeftPressed {
+- (BOOL)isRootViewController {
     
-//    [self.navigationController popViewControllerAnimated:YES];
+    if (self.navigationController.childViewControllers.count == 1) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)navLeftPressed:(UIButton *)sender {
+    
+    //    [self.navigationController popViewControllerAnimated:YES];
     NSArray *viewcontrollers = self.navigationController.viewControllers;
     if (viewcontrollers.count > 1) {
         if ([viewcontrollers objectAtIndex:viewcontrollers.count - 1] == self) {
@@ -177,17 +173,13 @@
             [self.navigationController popViewControllerAnimated:YES];
         }
     }
-    else{
+    else {
         //present方式
-        [self dismissViewControllerAnimated:YES completion:^{
-        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
-/**
- *  导航右按钮事件（默认无内容）
- */
-- (void)navRightPressed:(id)sender {
+- (void)navRightPressed:(UIButton *)sender {
     
     NSLog(@"=> navRightPressed !");
 }
@@ -204,7 +196,7 @@
 
 - (void)popToIndex:(NSInteger)index {
     if (self.navigationController == nil) return ;
-
+    
     NSInteger navNumber = (int)[[self.navigationController viewControllers]indexOfObject:self];
     if (navNumber > index) {
         [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:(navNumber - index)] animated:YES];
@@ -230,7 +222,7 @@
 
 - (void)presentVc:(UIViewController *)vc {
     if ([vc isKindOfClass:[UIViewController class]] == NO) return ;
-    [self presentVc:vc completion:nil];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)presentVc:(UIViewController *)vc completion:(void (^)(void))completion {
@@ -288,7 +280,7 @@
     
     //进入刷新状态
     [scrollView.mj_header beginRefreshing];
-
+    
 }
 
 - (void)loadFooterRefresh:(UIScrollView *)scrollView completion:(void (^)(void))completion {
@@ -327,86 +319,31 @@
     
 }
 
-/**
- *  上拉加载 数据加载完毕
- */
 - (void)endFooterRefreshWithNoMoreData:(UIScrollView *)scrollView {
     [scrollView.mj_footer endRefreshingWithNoMoreData];
 }
 
-/**
- *  上拉加载 恢复上拉加载
- */
 - (void)resetFooterRefreshWithNoMoreData:(UIScrollView *)scrollView {
     [scrollView.mj_footer resetNoMoreData];
 }
 
-#pragma mark - ***************  setter & getter  ***************
+#pragma mark - setter & getter
 
-- (UIImageView *)navView {
+- (YYNavigationBarView *)navView {
     if (!_navView) {
-        _navView = [[UIImageView alloc] init];
-        _navView.backgroundColor = [UIColor whiteColor];
-        _navView.userInteractionEnabled = YES;
+        _navView = [YYNavigationBarView shopView];
     }
     return _navView;
-}
-
-- (UILabel *)navTitleLab {
-    if (!_navTitleLab) {
-        _navTitleLab = [[UILabel alloc] init];
-        _navTitleLab.textAlignment = NSTextAlignmentCenter;
-        _navTitleLab.font = [UIFont systemFontOfSize:18];
-        _navTitleLab.textColor = kFontColor;
-    }
-    return _navTitleLab;
-}
-
-- (UIButton *)navLeftBtn {
-    if (!_navLeftBtn) {
-        _navLeftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_navLeftBtn addTarget:self action:@selector(navLeftPressed) forControlEvents:UIControlEventTouchUpInside];
-        _navLeftBtn.titleLabel.font = [UIFont systemFontOfSize:13];
-        [_navLeftBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    }
-    return _navLeftBtn;
-}
-
-- (UIButton *)navRightBtn {
-    if (!_navRightBtn) {
-        _navRightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_navRightBtn addTarget:self action:@selector(navRightPressed:) forControlEvents:UIControlEventTouchUpInside];
-        _navRightBtn.titleLabel.font = [UIFont systemFontOfSize:13];
-        [_navRightBtn setTitleColor:kBlackColor forState:UIControlStateNormal];
-    }
-    return _navRightBtn;
-}
-
-- (UILabel *)navSeperateLine {
-    if (!_navSeperateLine) {
-        _navSeperateLine = [[UILabel alloc] init];
-        _navSeperateLine.backgroundColor = [UIColor clearColor];
-    }
-    return _navSeperateLine;
 }
 
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kStatusAndNavigationBarHeitht, kScreen_Width, kScreen_Height - kStatusAndNavigationBarHeitht) style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = kBackgroundColor;
-        _tableView.delegate   = self ;
+        _tableView.delegate = self ;
         _tableView.dataSource = self ;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

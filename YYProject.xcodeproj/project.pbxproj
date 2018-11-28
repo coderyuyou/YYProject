@@ -11,6 +11,8 @@
 		97A418236274164B0FC9E8AC /* libPods-YYProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 723DFA20A8411F774CBC8223 /* libPods-YYProject.a */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
 		BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */; };
+		BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87821AE832900394BF5 /* YYBaseViewController.m */; };
+		BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */; };
 		BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499721ACF13D0017D981 /* YYHomeViewController.m */; };
 		BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499B21AD1FEC0017D981 /* YYAlignmentButton.m */; };
 		BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A121AD3AA70017D981 /* UIView+Extension.m */; };
@@ -19,12 +21,10 @@
 		BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */; };
 		BC290AE321A798460039E2F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290ADF21A798460039E2F8 /* main.m */; };
 		BC290AE421A798460039E2F8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC290AE021A798460039E2F8 /* Info.plist */; };
-		BC290B1721A79B190039E2F8 /* UIScrollView+TouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AF221A79B190039E2F8 /* UIScrollView+TouchEvent.m */; };
 		BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AF921A79B190039E2F8 /* UIButton+Extension.m */; };
 		BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AFF21A79B190039E2F8 /* NSString+CommonUseTool.m */; };
 		BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B0221A79B190039E2F8 /* NSDate+Category.m */; };
 		BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */; };
-		BC290B3921A79B230039E2F8 /* FZMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B3321A79B230039E2F8 /* FZMBaseViewController.m */; };
 		BC290B3A21A79B230039E2F8 /* FZMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B3521A79B230039E2F8 /* FZMBaseView.m */; };
 		BCC5224820DF821A00915076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5224720DF821A00915076 /* AppDelegate.m */; };
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
@@ -62,6 +62,10 @@
 		BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUIManager.m; sourceTree = "<group>"; };
 		BC02945021AB9E6D002AF4D0 /* YYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTabBarController.h; sourceTree = "<group>"; };
 		BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTabBarController.m; sourceTree = "<group>"; };
+		BC03B87721AE832900394BF5 /* YYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBaseViewController.h; sourceTree = "<group>"; };
+		BC03B87821AE832900394BF5 /* YYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBaseViewController.m; sourceTree = "<group>"; };
+		BC03B87A21AE904B00394BF5 /* YYNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNavigationBarView.h; sourceTree = "<group>"; };
+		BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYNavigationBarView.m; sourceTree = "<group>"; };
 		BC05499621ACF13D0017D981 /* YYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHomeViewController.h; sourceTree = "<group>"; };
 		BC05499721ACF13D0017D981 /* YYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHomeViewController.m; sourceTree = "<group>"; };
 		BC05499A21AD1FEC0017D981 /* YYAlignmentButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYAlignmentButton.h; sourceTree = "<group>"; };
@@ -81,8 +85,6 @@
 		BC290AEA21A79B190039E2F8 /* ERAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERAPI.h; sourceTree = "<group>"; };
 		BC290AEB21A79B190039E2F8 /* YYUtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYUtilsMacros.h; sourceTree = "<group>"; };
 		BC290AF121A79B190039E2F8 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
-		BC290AF221A79B190039E2F8 /* UIScrollView+TouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TouchEvent.m"; sourceTree = "<group>"; };
-		BC290AF821A79B190039E2F8 /* UIScrollView+TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TouchEvent.h"; sourceTree = "<group>"; };
 		BC290AF921A79B190039E2F8 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 		BC290AFF21A79B190039E2F8 /* NSString+CommonUseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CommonUseTool.m"; sourceTree = "<group>"; };
 		BC290B0221A79B190039E2F8 /* NSDate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
@@ -90,8 +92,6 @@
 		BC290B0A21A79B190039E2F8 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		BC290B0D21A79B190039E2F8 /* NSString+CommonUseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonUseTool.h"; sourceTree = "<group>"; };
 		BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Addtion.m"; sourceTree = "<group>"; };
-		BC290B3221A79B230039E2F8 /* FZMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMBaseViewController.h; sourceTree = "<group>"; };
-		BC290B3321A79B230039E2F8 /* FZMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMBaseViewController.m; sourceTree = "<group>"; };
 		BC290B3521A79B230039E2F8 /* FZMBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMBaseView.m; sourceTree = "<group>"; };
 		BC290B3621A79B230039E2F8 /* FZMBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMBaseView.h; sourceTree = "<group>"; };
 		BCC5224320DF821A00915076 /* YYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,8 +235,6 @@
 				BC290AF921A79B190039E2F8 /* UIButton+Extension.m */,
 				BC0549A021AD3AA70017D981 /* UIView+Extension.h */,
 				BC0549A121AD3AA70017D981 /* UIView+Extension.m */,
-				BC290AF821A79B190039E2F8 /* UIScrollView+TouchEvent.h */,
-				BC290AF221A79B190039E2F8 /* UIScrollView+TouchEvent.m */,
 				BC0549A321AD44AF0017D981 /* UIColor+Extension.h */,
 				BC0549A421AD44AF0017D981 /* UIColor+Extension.m */,
 			);
@@ -286,8 +284,8 @@
 		BC290B3121A79B230039E2F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC290B3221A79B230039E2F8 /* FZMBaseViewController.h */,
-				BC290B3321A79B230039E2F8 /* FZMBaseViewController.m */,
+				BC03B87721AE832900394BF5 /* YYBaseViewController.h */,
+				BC03B87821AE832900394BF5 /* YYBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,8 +293,10 @@
 		BC290B3421A79B230039E2F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC290B3521A79B230039E2F8 /* FZMBaseView.m */,
 				BC290B3621A79B230039E2F8 /* FZMBaseView.h */,
+				BC290B3521A79B230039E2F8 /* FZMBaseView.m */,
+				BC03B87A21AE904B00394BF5 /* YYNavigationBarView.h */,
+				BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,17 +565,17 @@
 			files = (
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
 				BC290AE321A798460039E2F8 /* main.m in Sources */,
+				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
+				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
 				BCC5224820DF821A00915076 /* AppDelegate.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
 				BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
-				BC290B1721A79B190039E2F8 /* UIScrollView+TouchEvent.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
 				BC290B3A21A79B230039E2F8 /* FZMBaseView.m in Sources */,
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
-				BC290B3921A79B230039E2F8 /* FZMBaseViewController.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
 			);

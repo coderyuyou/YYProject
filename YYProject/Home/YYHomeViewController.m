@@ -26,7 +26,9 @@
 }
 
 - (void)createView {
-    self.view.backgroundColor = kBackgroundColor;
+    
+    self.navView.title = @"首页";
+    self.navView.seperateColor = kBlueColor;
     
     YYAlignmentButton *btn = [YYAlignmentButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor colorWithHexString:@"7190FF"];
@@ -47,6 +49,12 @@
         [btn setLayerBorder:kColor borderWidth:1 borderType:UIBorderSideTypeAll];
         [btn setLayerRoundedRect:6];
     });
+    
+    [btn addTargetWithEvents:UIControlEventTouchUpInside actionHandle:^(UIButton *btn) {
+    
+        YYBaseViewController *Vc = [[YYBaseViewController alloc] init];
+        [self pushVc:Vc];
+    }];
     
 }
 

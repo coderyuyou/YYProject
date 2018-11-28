@@ -50,8 +50,10 @@ IB_DESIGNABLE
 
 /** frame.origin.size */
 @property (nonatomic) CGSize  size;
+
 /** frame.origin.x */
 @property (nonatomic) CGFloat x;
+
 /** frame.origin.y */
 @property (nonatomic) CGFloat y;
 
