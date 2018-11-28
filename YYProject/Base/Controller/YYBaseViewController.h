@@ -29,12 +29,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  导航左按钮事件（默认返回上一页）
  */
-- (void)navLeftPressed;
+- (void)navLeftPressed:(UIButton *)sender;
 
 /**
  *  导航右按钮事件（默认无内容）
  */
-- (void)navRightPressed:(id)sender;
+- (void)navRightPressed:(UIButton *)sender;
 
 /**
  *  pop
