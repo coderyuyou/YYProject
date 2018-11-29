@@ -180,7 +180,7 @@ static char event_key;
     }
 }
 
-- (UIViewController *_Nullable)parentController {
+- (UIViewController *)parentController {
     UIResponder *responder = [self nextResponder];
     while (responder) {
         if ([responder isKindOfClass:[UIViewController class]]) {
@@ -197,7 +197,7 @@ static char event_key;
     }
 }
 
-- (void)setLayerShadow:(UIColor *_Nullable)color offset:(CGSize)offset radius:(CGFloat)radius {
+- (void)setLayerShadow:(UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius {
     // 阴影颜色
     self.layer.shadowColor = color.CGColor;
     // 阴影的偏移量
@@ -211,7 +211,7 @@ static char event_key;
     self.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
-- (void)setLayerBorder:(UIColor *_Nullable)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType {
+- (void)setLayerBorder:(UIColor *)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType {
     if (borderType == UIBorderSideTypeAll) {
         self.layer.borderWidth = borderWidth;
         self.layer.borderColor = color.CGColor;
@@ -264,7 +264,16 @@ static char event_key;
     self.layer.masksToBounds = NO;
 }
 
-- (UIImage *_Nullable)snapshotImage {
+- (void)setLayerBezierPath:(CGRect)rect corners:(UIRectCorner)corners cornerRadii:(CGSize)cornerRadii {
+    
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:cornerRadii];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = maskPath.CGPath;
+    self.layer.mask = maskLayer;
+}
+
+- (UIImage *)snapshotImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
@@ -272,7 +281,7 @@ static char event_key;
     return snap;
 }
 
-- (UIImage *_Nullable)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates {
+- (UIImage *)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates {
     if (![self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
         return [self snapshotImage];
     }

@@ -38,6 +38,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)createBaseViewController {
     
     // 设置动画是否可用

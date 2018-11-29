@@ -46,8 +46,9 @@
     }];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [btn setLayerBorder:kColor borderWidth:1 borderType:UIBorderSideTypeAll];
-        [btn setLayerRoundedRect:6];
+//        [btn setLayerBorder:kColor borderWidth:1 borderType:UIBorderSideTypeAll];
+//        [btn setLayerRoundedRect:6];
+        [btn setLayerBezierPath:btn.bounds corners:UIRectCornerTopRight | UIRectCornerBottomRight cornerRadii:CGSizeMake(10, 4)];
     });
     
     [btn addTargetWithEvents:UIControlEventTouchUpInside actionHandle:^(UIButton *btn) {

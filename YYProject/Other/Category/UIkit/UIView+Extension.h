@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, UIBorderSideType) {
     UIBorderSideTypeAll    = 0,
     UIBorderSideTypeTop    = 1 << 0,
@@ -58,7 +60,7 @@ IB_DESIGNABLE
 @property (nonatomic) CGFloat y;
 
 @property (nonatomic, assign) IBInspectable CGFloat borderWidth;
-@property (nonatomic, assign) IBInspectable UIColor *_Nullable borderColor;
+@property (nonatomic, assign) IBInspectable UIColor *borderColor;
 @property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
 
 /**
@@ -69,7 +71,7 @@ IB_DESIGNABLE
 /**
  *  获取父控制器
  */
-- (UIViewController *_Nullable)parentController;
+- (UIViewController *)parentController;
 
 /**
  *  移除所有子视图
@@ -83,7 +85,7 @@ IB_DESIGNABLE
  *  @param offset 阴影的偏移量
  *  @param radius 阴影的渐变距离
  */
-- (void)setLayerShadow:(UIColor *_Nullable)color offset:(CGSize)offset radius:(CGFloat)radius;
+- (void)setLayerShadow:(UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius;
 
 /**
  *  给 UIView 的图层添加边框
@@ -92,7 +94,7 @@ IB_DESIGNABLE
  *  @param borderWidth  边框宽度
  *  @param borderType   边框类型
  */
-- (void)setLayerBorder:(UIColor *_Nullable)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType;
+- (void)setLayerBorder:(UIColor *)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType;
 
 /**
  *  给 UIView 绘制圆角
@@ -102,15 +104,31 @@ IB_DESIGNABLE
 - (void)setLayerRoundedRect:(CGFloat)cornerRadius;
 
 /**
+ *  给 UIView 绘制指定位置圆角
+ *
+ *  @param rect 绘制view的bounds
+ *  @param corners 绘制view的位置
+     UIRectCornerTopLeft     = 1 << 0,
+     UIRectCornerTopRight    = 1 << 1,
+     UIRectCornerBottomLeft  = 1 << 2,
+     UIRectCornerBottomRight = 1 << 3,
+     UIRectCornerAllCorners  = ~0UL
+ *  @param cornerRadii 绘制view的bounds
+ */
+- (void)setLayerBezierPath:(CGRect)rect corners:(UIRectCorner)corners cornerRadii:(CGSize)cornerRadii;
+
+/**
  *  截取当前视图
  */
-- (UIImage *_Nullable)snapshotImage;
+- (UIImage *)snapshotImage;
 
 /**
  *  Create a snapshot image of the complete view hierarchy.
  *  discussion It's faster than "snapshotImage", but may cause screen updates.
  *  See -[UIView drawViewHierarchyInRect:afterScreenUpdates:] for more information.
  */
-- (UIImage *_Nullable)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
+- (UIImage *)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
 
 @end
+
+NS_ASSUME_NONNULL_END

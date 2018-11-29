@@ -13,6 +13,7 @@
 		BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */; };
 		BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87821AE832900394BF5 /* YYBaseViewController.m */; };
 		BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */; };
+		BC03B87F21AEAE5500394BF5 /* YYSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87E21AEAE5500394BF5 /* YYSetViewController.m */; };
 		BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499721ACF13D0017D981 /* YYHomeViewController.m */; };
 		BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499B21AD1FEC0017D981 /* YYAlignmentButton.m */; };
 		BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A121AD3AA70017D981 /* UIView+Extension.m */; };
@@ -20,15 +21,16 @@
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
 		BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */; };
 		BC290AE321A798460039E2F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290ADF21A798460039E2F8 /* main.m */; };
-		BC290AE421A798460039E2F8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC290AE021A798460039E2F8 /* Info.plist */; };
 		BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AF921A79B190039E2F8 /* UIButton+Extension.m */; };
 		BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AFF21A79B190039E2F8 /* NSString+CommonUseTool.m */; };
 		BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B0221A79B190039E2F8 /* NSDate+Category.m */; };
 		BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */; };
-		BC290B3A21A79B230039E2F8 /* FZMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B3521A79B230039E2F8 /* FZMBaseView.m */; };
 		BCC5224820DF821A00915076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5224720DF821A00915076 /* AppDelegate.m */; };
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
 		BCC5226B20DF821C00915076 /* YYProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5226A20DF821C00915076 /* YYProjectUITests.m */; };
+		BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332121AFF16700BAE678 /* YYUnitTextField.m */; };
+		BCFF332521AFF47400BAE678 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332421AFF47400BAE678 /* UITextView+Placeholder.m */; };
+		BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332721AFF85100BAE678 /* UIImage+Extension.m */; };
 		E031E760304F40DDA2A7EDCC /* libPods-YYProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		BC03B87821AE832900394BF5 /* YYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBaseViewController.m; sourceTree = "<group>"; };
 		BC03B87A21AE904B00394BF5 /* YYNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNavigationBarView.h; sourceTree = "<group>"; };
 		BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYNavigationBarView.m; sourceTree = "<group>"; };
+		BC03B87D21AEAE5500394BF5 /* YYSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSetViewController.h; sourceTree = "<group>"; };
+		BC03B87E21AEAE5500394BF5 /* YYSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSetViewController.m; sourceTree = "<group>"; };
 		BC05499621ACF13D0017D981 /* YYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHomeViewController.h; sourceTree = "<group>"; };
 		BC05499721ACF13D0017D981 /* YYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHomeViewController.m; sourceTree = "<group>"; };
 		BC05499A21AD1FEC0017D981 /* YYAlignmentButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYAlignmentButton.h; sourceTree = "<group>"; };
@@ -92,8 +96,6 @@
 		BC290B0A21A79B190039E2F8 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		BC290B0D21A79B190039E2F8 /* NSString+CommonUseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonUseTool.h"; sourceTree = "<group>"; };
 		BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Addtion.m"; sourceTree = "<group>"; };
-		BC290B3521A79B230039E2F8 /* FZMBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMBaseView.m; sourceTree = "<group>"; };
-		BC290B3621A79B230039E2F8 /* FZMBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMBaseView.h; sourceTree = "<group>"; };
 		BCC5224320DF821A00915076 /* YYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC5224620DF821A00915076 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCC5224720DF821A00915076 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +105,12 @@
 		BCC5226620DF821C00915076 /* YYProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC5226A20DF821C00915076 /* YYProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYProjectUITests.m; sourceTree = "<group>"; };
 		BCC5226C20DF821C00915076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCFF332021AFF16700BAE678 /* YYUnitTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYUnitTextField.h; sourceTree = "<group>"; };
+		BCFF332121AFF16700BAE678 /* YYUnitTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUnitTextField.m; sourceTree = "<group>"; };
+		BCFF332321AFF47400BAE678 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		BCFF332421AFF47400BAE678 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		BCFF332621AFF85100BAE678 /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		BCFF332721AFF85100BAE678 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		FDFDEFEF2094EDAE20564E4F /* Pods-YYProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectTests/Pods-YYProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +179,8 @@
 			children = (
 				BC05499621ACF13D0017D981 /* YYHomeViewController.h */,
 				BC05499721ACF13D0017D981 /* YYHomeViewController.m */,
+				BC03B87D21AEAE5500394BF5 /* YYSetViewController.h */,
+				BC03B87E21AEAE5500394BF5 /* YYSetViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -180,6 +190,8 @@
 			children = (
 				BC05499A21AD1FEC0017D981 /* YYAlignmentButton.h */,
 				BC05499B21AD1FEC0017D981 /* YYAlignmentButton.m */,
+				BCFF332021AFF16700BAE678 /* YYUnitTextField.h */,
+				BCFF332121AFF16700BAE678 /* YYUnitTextField.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -237,6 +249,10 @@
 				BC0549A121AD3AA70017D981 /* UIView+Extension.m */,
 				BC0549A321AD44AF0017D981 /* UIColor+Extension.h */,
 				BC0549A421AD44AF0017D981 /* UIColor+Extension.m */,
+				BCFF332321AFF47400BAE678 /* UITextView+Placeholder.h */,
+				BCFF332421AFF47400BAE678 /* UITextView+Placeholder.m */,
+				BCFF332621AFF85100BAE678 /* UIImage+Extension.h */,
+				BCFF332721AFF85100BAE678 /* UIImage+Extension.m */,
 			);
 			path = UIkit;
 			sourceTree = "<group>";
@@ -293,8 +309,6 @@
 		BC290B3421A79B230039E2F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC290B3621A79B230039E2F8 /* FZMBaseView.h */,
-				BC290B3521A79B230039E2F8 /* FZMBaseView.m */,
 				BC03B87A21AE904B00394BF5 /* YYNavigationBarView.h */,
 				BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */,
 			);
@@ -420,7 +434,7 @@
 		BCC5223B20DF821A00915076 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = SuperYu;
 				TargetAttributes = {
 					BCC5224220DF821A00915076 = {
@@ -463,7 +477,6 @@
 			files = (
 				BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */,
 				BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */,
-				BC290AE421A798460039E2F8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,14 +581,17 @@
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
+				BCFF332521AFF47400BAE678 /* UITextView+Placeholder.m in Sources */,
 				BCC5224820DF821A00915076 /* AppDelegate.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
+				BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */,
 				BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
-				BC290B3A21A79B230039E2F8 /* FZMBaseView.m in Sources */,
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
+				BC03B87F21AEAE5500394BF5 /* YYSetViewController.m in Sources */,
+				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
 			);

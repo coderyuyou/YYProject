@@ -18,6 +18,14 @@
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 
 /**
+ *  通过十六进制获取颜色
+ *  注：hexString:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
+ *  @param hexString  十六进制色值
+ *  @param alpha  透明度
+ */
++ (UIColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
+
+/**
  *  通过颜色获取十六进制
  *
  *  @param color  颜色
