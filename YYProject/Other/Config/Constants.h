@@ -1,13 +1,13 @@
 //
-//  ERConstants.h
-//  EasyRent
+//  Constants.h
+//  YYProject
 //
-//  Created by 于优 on 2018/8/9.
-//  Copyright © 2018年 EasyRent. All rights reserved.
+//  Created by 于优 on 2018/11/30.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#ifndef ERConstants_h
-#define ERConstants_h
+#ifndef Constants_h
+#define Constants_h
 
 // ----------  Enum  ----------
 
@@ -35,4 +35,4 @@ static const NSTimeInterval kMessageCountdown = 30;
 /** 数据刷新时间 */
 static const NSTimeInterval kUploadTime = 0.3;
 
-#endif /* ERConstants_h */
+#endif /* Constants_h */

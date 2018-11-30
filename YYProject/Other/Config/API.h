@@ -1,13 +1,13 @@
 //
-//  ERAPI.h
-//  EasyRent
+//  API.h
+//  YYProject
 //
-//  Created by 于优 on 2018/8/20.
-//  Copyright © 2018年 EasyRent. All rights reserved.
+//  Created by 于优 on 2018/11/30.
+//  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#ifndef ERAPI_h
-#define ERAPI_h
+#ifndef API_h
+#define API_h
 
 #pragma mark - ***************  BASEURL  ***************
 
@@ -23,4 +23,5 @@ static NSString *const URL_IUSSUE = @"";
 /**  */
 static NSString *const PUSH_ListUserMessage = @"";
 
-#endif /* ERAPI_h */
+
+#endif /* API_h */

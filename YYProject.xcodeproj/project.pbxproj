@@ -62,6 +62,9 @@
 		B96C6EE10229317649F697DB /* Pods-YYProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectUITests/Pods-YYProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC01868621B0EC6D00A18A7D /* YYToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYToolViewController.h; sourceTree = "<group>"; };
 		BC01868721B0EC6D00A18A7D /* YYToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYToolViewController.m; sourceTree = "<group>"; };
+		BC01868921B11D5400A18A7D /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		BC01868A21B11DBC00A18A7D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BC01868B21B1204A00A18A7D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BC02944A21AB9BC2002AF4D0 /* YYUIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYUIManager.h; sourceTree = "<group>"; };
 		BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUIManager.m; sourceTree = "<group>"; };
 		BC02945021AB9E6D002AF4D0 /* YYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTabBarController.h; sourceTree = "<group>"; };
@@ -82,11 +85,8 @@
 		BC290ADE21A798460039E2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC290ADF21A798460039E2F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC290AE021A798460039E2F8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC290AE621A79B190039E2F8 /* ERPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERPrefixHeader.pch; sourceTree = "<group>"; };
-		BC290AE721A79B190039E2F8 /* ERConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERConstants.h; sourceTree = "<group>"; };
 		BC290AE821A79B190039E2F8 /* YYFontMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFontMacros.h; sourceTree = "<group>"; };
 		BC290AE921A79B190039E2F8 /* YYColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYColorMacros.h; sourceTree = "<group>"; };
-		BC290AEA21A79B190039E2F8 /* ERAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERAPI.h; sourceTree = "<group>"; };
 		BC290AEB21A79B190039E2F8 /* YYUtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYUtilsMacros.h; sourceTree = "<group>"; };
 		BC290AF121A79B190039E2F8 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		BC290AF921A79B190039E2F8 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
@@ -221,12 +221,12 @@
 		BC290AE521A79B190039E2F8 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				BC290AE621A79B190039E2F8 /* ERPrefixHeader.pch */,
+				BC01868B21B1204A00A18A7D /* PrefixHeader.pch */,
 				BC290AE821A79B190039E2F8 /* YYFontMacros.h */,
 				BC290AE921A79B190039E2F8 /* YYColorMacros.h */,
-				BC290AEA21A79B190039E2F8 /* ERAPI.h */,
 				BC290AEB21A79B190039E2F8 /* YYUtilsMacros.h */,
-				BC290AE721A79B190039E2F8 /* ERConstants.h */,
+				BC01868921B11D5400A18A7D /* API.h */,
+				BC01868A21B11DBC00A18A7D /* Constants.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -757,7 +757,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H536G2V449;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/ERPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +777,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H536G2V449;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/ERPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
