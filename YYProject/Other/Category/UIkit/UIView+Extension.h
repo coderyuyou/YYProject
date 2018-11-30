@@ -64,70 +64,59 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
 
 /**
- *  添加手势事件
+ 添加手势事件
  */
 @property (nonatomic, copy, nullable) void(^tapGestureHandle)(UITapGestureRecognizer * _Nullable gesture, UIView * _Nullable tapView);
 
 /**
- *  获取父控制器
+ 获取父控制器
  */
 - (UIViewController *)parentController;
 
 /**
- *  移除所有子视图
+ 移除所有子视图
  */
 - (void)removeAllSubviews;
 
 /**
- *  给 UIView 的图层添加阴影
- *
- *  @param color  阴影颜色
- *  @param offset 阴影的偏移量
- *  @param radius 阴影的渐变距离
+ 给 UIView 的图层添加阴影
+
+ @param color 阴影颜色
+ @param offset 阴影的偏移量
+ @param radius 阴影的渐变距离
  */
 - (void)setLayerShadow:(UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius;
 
 /**
- *  给 UIView 的图层添加边框
- *
- *  @param color        边框颜色
- *  @param borderWidth  边框宽度
- *  @param borderType   边框类型
+ 给 UIView 的图层添加边框
+
+ @param color 边框颜色
+ @param borderWidth 边框宽度
+ @param borderType 边框类型
  */
 - (void)setLayerBorder:(UIColor *)color borderWidth:(CGFloat)borderWidth borderType:(UIBorderSideType)borderType;
 
 /**
- *  给 UIView 绘制圆角
- *
- *  @param cornerRadius 圆角度数
+ 给 UIView 绘制圆角
+
+ @param cornerRadius 圆角度数
  */
 - (void)setLayerRoundedRect:(CGFloat)cornerRadius;
 
 /**
- *  给 UIView 绘制指定位置圆角
- *
- *  @param rect 绘制view的bounds
- *  @param corners 绘制view的位置
-     UIRectCornerTopLeft     = 1 << 0,
-     UIRectCornerTopRight    = 1 << 1,
-     UIRectCornerBottomLeft  = 1 << 2,
-     UIRectCornerBottomRight = 1 << 3,
-     UIRectCornerAllCorners  = ~0UL
- *  @param cornerRadii 绘制view的bounds
+ 给 UIView 绘制指定位置圆角
+
+ @param rect 绘制view的bounds
+ @param corners 绘制view的位置
+ UIRectCornerTopLeft     = 1 << 0,
+ UIRectCornerTopRight    = 1 << 1,
+ UIRectCornerBottomLeft  = 1 << 2,
+ UIRectCornerBottomRight = 1 << 3,
+ UIRectCornerAllCorners  = ~0UL
+ @param cornerRadii 圆角的Size(width有效)
  */
 - (void)setLayerBezierPath:(CGRect)rect corners:(UIRectCorner)corners cornerRadii:(CGSize)cornerRadii;
 
-/**
- *  截取当前视图
- */
-- (UIImage *)snapshotImage;
-
-/**
- *  Create a snapshot image of the complete view hierarchy.
- *  discussion It's faster than "snapshotImage", but may cause screen updates.
- *  See -[UIView drawViewHierarchyInRect:afterScreenUpdates:] for more information.
- */
-- (UIImage *)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
 
 @end
 

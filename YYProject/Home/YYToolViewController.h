@@ -1,8 +1,8 @@
 //
-//  YYSetViewController.h
+//  YYToolViewController.h
 //  YYProject
 //
-//  Created by 于优 on 2018/11/28.
+//  Created by 于优 on 2018/11/30.
 //  Copyright © 2018 SuperYu. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YYSetViewController : YYBaseViewController
+@interface YYToolViewController : YYBaseViewController
 
 @end
 

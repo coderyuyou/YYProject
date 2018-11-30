@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YYBaseViewController : UIViewController
+@interface YYBaseViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 #pragma mark - UI相关
 /** 自定义的Navigation来替换系统 */
@@ -22,89 +22,89 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 控制器操作相关
 
 /**
- *  当前控制器是否根控制器
+  当前控制器是否根控制器
  */
 - (BOOL)isRootViewController;
 
 /**
- *  导航左按钮事件（默认返回上一页）
+ 导航左按钮事件（默认返回上一页）
  */
 - (void)navLeftPressed:(UIButton *)sender;
 
 /**
- *  导航右按钮事件（默认无内容）
+ 导航右按钮事件（默认无内容）
  */
 - (void)navRightPressed:(UIButton *)sender;
 
 /**
- *  pop
+ pop
  */
 - (void)pop;
 
 /**
- *  pop到根
+ pop到根
  */
 - (void)popToRootVc;
 
 /**
- *  pop到指定栈
+ pop到指定栈
  */
 - (void)popToIndex:(NSInteger)index;
 
 /**
- *  pop到指定Vc
+ pop到指定Vc
  */
 - (void)popToVc:(UIViewController *)vc;
 
 /**
- *  dismiss
+ dismiss
  */
 - (void)dismiss;
 
 /**
- *  dismiss With block
+ dismiss With block
  */
 - (void)dismissWithCompletion:(void(^)(void))completion;
 
 /**
- *  present
+ present
  */
 - (void)presentVc:(UIViewController *)vc;
 
 /**
- *  present With block
+ present With block
  */
 - (void)presentVc:(UIViewController *)vc completion:(void (^)(void))completion;
 
 /**
- *  push
+ push
  */
 - (void)pushVc:(UIViewController *)vc;
 
 #pragma mark - 数据处理相关（下拉刷新，上拉加载）
 
 /**
- *  下拉刷新
+ 下拉刷新
  */
 - (void)loadHeaderRefresh:(UIScrollView *)scrollView completion:(void(^)(void))completion;
 
 /**
- *  进入下拉刷新状态(只能在设置完之后使用)
+ 进入下拉刷新状态(只能在设置完之后使用)
  */
 - (void)beginHeaderRefreshing:(UIScrollView *)scrollView;
 
 /**
- *  上拉加载
+ 上拉加载
  */
 - (void)loadFooterRefresh:(UIScrollView *)scrollView completion:(void(^)(void))completion;
 
 /**
- *  上拉加载 数据加载完毕
+ 上拉加载 数据加载完毕
  */
 - (void)endFooterRefreshWithNoMoreData:(UIScrollView *)scrollView;
 
 /**
- *  上拉加载 恢复上拉加载
+ 上拉加载 恢复上拉加载
  */
 - (void)resetFooterRefreshWithNoMoreData:(UIScrollView *)scrollView;
 

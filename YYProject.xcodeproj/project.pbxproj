@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		2095E7DA6D25DECE74A17647 /* libPods-YYProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DC7FABD71E02D3726F4D2F /* libPods-YYProjectTests.a */; };
 		97A418236274164B0FC9E8AC /* libPods-YYProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 723DFA20A8411F774CBC8223 /* libPods-YYProject.a */; };
+		BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01868721B0EC6D00A18A7D /* YYToolViewController.m */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
 		BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */; };
 		BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87821AE832900394BF5 /* YYBaseViewController.m */; };
 		BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */; };
-		BC03B87F21AEAE5500394BF5 /* YYSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87E21AEAE5500394BF5 /* YYSetViewController.m */; };
 		BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499721ACF13D0017D981 /* YYHomeViewController.m */; };
 		BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499B21AD1FEC0017D981 /* YYAlignmentButton.m */; };
 		BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A121AD3AA70017D981 /* UIView+Extension.m */; };
@@ -60,6 +60,8 @@
 		98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F49C961E601178366D6185 /* Pods-YYProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProject/Pods-YYProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B96C6EE10229317649F697DB /* Pods-YYProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectUITests/Pods-YYProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BC01868621B0EC6D00A18A7D /* YYToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYToolViewController.h; sourceTree = "<group>"; };
+		BC01868721B0EC6D00A18A7D /* YYToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYToolViewController.m; sourceTree = "<group>"; };
 		BC02944A21AB9BC2002AF4D0 /* YYUIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYUIManager.h; sourceTree = "<group>"; };
 		BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUIManager.m; sourceTree = "<group>"; };
 		BC02945021AB9E6D002AF4D0 /* YYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTabBarController.h; sourceTree = "<group>"; };
@@ -68,8 +70,6 @@
 		BC03B87821AE832900394BF5 /* YYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBaseViewController.m; sourceTree = "<group>"; };
 		BC03B87A21AE904B00394BF5 /* YYNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNavigationBarView.h; sourceTree = "<group>"; };
 		BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYNavigationBarView.m; sourceTree = "<group>"; };
-		BC03B87D21AEAE5500394BF5 /* YYSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSetViewController.h; sourceTree = "<group>"; };
-		BC03B87E21AEAE5500394BF5 /* YYSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSetViewController.m; sourceTree = "<group>"; };
 		BC05499621ACF13D0017D981 /* YYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHomeViewController.h; sourceTree = "<group>"; };
 		BC05499721ACF13D0017D981 /* YYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHomeViewController.m; sourceTree = "<group>"; };
 		BC05499A21AD1FEC0017D981 /* YYAlignmentButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYAlignmentButton.h; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 			children = (
 				BC05499621ACF13D0017D981 /* YYHomeViewController.h */,
 				BC05499721ACF13D0017D981 /* YYHomeViewController.m */,
-				BC03B87D21AEAE5500394BF5 /* YYSetViewController.h */,
-				BC03B87E21AEAE5500394BF5 /* YYSetViewController.m */,
+				BC01868621B0EC6D00A18A7D /* YYToolViewController.h */,
+				BC01868721B0EC6D00A18A7D /* YYToolViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -590,7 +590,7 @@
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
-				BC03B87F21AEAE5500394BF5 /* YYSetViewController.m in Sources */,
+				BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */,
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,

@@ -9,7 +9,7 @@
 #import "YYBaseViewController.h"
 #import <MJRefresh.h>
 
-@interface YYBaseViewController () <UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface YYBaseViewController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -343,7 +343,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kStatusAndNavigationBarHeitht, kScreen_Width, kScreen_Height - kStatusAndNavigationBarHeitht) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.delegate = self ;
         _tableView.dataSource = self ;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

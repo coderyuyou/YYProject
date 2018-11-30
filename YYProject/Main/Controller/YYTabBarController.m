@@ -8,6 +8,7 @@
 
 #import "YYTabBarController.h"
 #import "YYHomeViewController.h"
+#import "YYToolViewController.h"
 
 @interface YYTabBarController () <UITabBarControllerDelegate>
 
@@ -38,7 +39,7 @@
     UIViewController *tradeVc = [[UIViewController alloc] init];
     [self setupChildVcWithVc:tradeVc Image:[UIImage imageNamed:@"tab_explore_nor"] selectedImage:[UIImage imageNamed:@"tab_explore_sel"] title:@"探索"];
     
-    UIViewController *mineVc = [[UIViewController alloc] init];
+    YYToolViewController *mineVc = [[YYToolViewController alloc] init];
     [self setupChildVcWithVc:mineVc Image:[UIImage imageNamed:@"tab_mine_nor"] selectedImage:[UIImage imageNamed:@"tab_mine_sel"] title:@"我的"];
 }
 

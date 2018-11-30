@@ -11,6 +11,7 @@
 #import "UIButton+Extension.h"
 #import "UIView+Extension.h"
 #import "UIColor+Extension.h"
+#import "UIImage+Extension.h"
 
 @interface YYHomeViewController ()
 
@@ -57,6 +58,35 @@
         [self pushVc:Vc];
     }];
     
+    UIImageView *imgView = [UIImageView new];
+    imgView.backgroundColor = kFontColor_Gray;
+    [self.view addSubview:imgView];
+    
+    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view);
+        make.top.mas_equalTo(btn.mas_bottom).offset(10);
+        make.size.mas_equalTo(CGSizeMake(140, 50));
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        imgView.image = [UIImage snapshotImageAfterScreenUpdates:YES operateView:btn];
+        
+        imgView.image = [UIImage snapshotImage:btn];
+    });
+    
+    UIImageView *gradImgView = [UIImageView new];
+//    gradImgView.backgroundColor = kFontColor_Gray;
+    [self.view addSubview:gradImgView];
+    
+    [gradImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view);
+        make.top.mas_equalTo(imgView.mas_bottom).offset(10);
+        make.size.mas_equalTo(CGSizeMake(200, 80));
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        gradImgView.image = [UIImage gradientImageWithBounds:gradImgView.bounds colors:@[kColor, kColor] gradientType:UIGradientTypeTransverse];
+    });
 }
 
 - (void)viewDidLayoutSubviews {

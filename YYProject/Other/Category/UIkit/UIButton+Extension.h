@@ -20,10 +20,10 @@
 @property (nonatomic, copy) void(^clickHandle)(UIButton *btn);
 
 /**
- *  给按钮添加事件
- *
- *  @param events      事件类型
- *  @param actionHandle 响应事件的回调
+ 给按钮添加事件
+
+ @param events 事件类型
+ @param actionHandle 响应事件的回调
  */
 - (void)addTargetWithEvents:(UIControlEvents)events
                actionHandle:(void(^)(UIButton *btn))actionHandle;
