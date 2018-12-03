@@ -1,5 +1,5 @@
 //
-//  UITextView+Placeholder.h
+//  UITextView+Extension.h
 //  YYProject
 //
 //  Created by 于优 on 2018/11/29.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITextView (Placeholder)
+@interface UITextView (Extension)
 
 /** placeholder的文字 */
 @property (nonatomic, copy) NSString *placeholder;

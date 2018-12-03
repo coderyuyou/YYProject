@@ -24,6 +24,13 @@
     
     [self createView];
     
+    if (IS_iOS(12.0)) {
+        YYLog(@" --- 大于ios12");
+    } else {
+        YYLog(@" --- 小于ios12");
+    }
+    
+    
 }
 
 - (void)createView {
@@ -43,7 +50,7 @@
     
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(140, 50));
+        make.size.mas_equalTo(CGSizeMake([UIView fitWidth:140], 50));
     }];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

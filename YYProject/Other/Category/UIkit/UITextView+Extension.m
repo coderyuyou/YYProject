@@ -1,12 +1,12 @@
 //
-//  UITextView+Placeholder.m
+//  UITextView+Extension.m
 //  YYProject
 //
 //  Created by 于优 on 2018/11/29.
 //  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#import "UITextView+Placeholder.h"
+#import "UITextView+Extension.h"
 #import <objc/runtime.h>
 
 static const char placehodler_key;
@@ -17,7 +17,7 @@ static const char placehodler_key;
 
 @end
 
-@implementation UITextView (Placeholder)
+@implementation UITextView (Extension)
 
 - (void)addPlaceholerLabel {
     UILabel *placeHolderLabel = [[UILabel alloc] init];

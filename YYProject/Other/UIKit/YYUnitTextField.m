@@ -108,10 +108,10 @@
 - (CGFloat)stringWidthWithText:(NSString *)text font:(UIFont *)font {
     
     CGFloat margin = 4;
-    if (kDevice_Is_iPhonePlus) {
+    if (kDevice_iPhonePlus) {
         margin = 4;
     }
-    else if (kDevice_Is_iPhoneX) {
+    else if (kDevice_iPhoneX) {
         
     }
     

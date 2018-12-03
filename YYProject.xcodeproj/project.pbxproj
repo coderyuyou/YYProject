@@ -10,6 +10,7 @@
 		2095E7DA6D25DECE74A17647 /* libPods-YYProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DC7FABD71E02D3726F4D2F /* libPods-YYProjectTests.a */; };
 		97A418236274164B0FC9E8AC /* libPods-YYProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 723DFA20A8411F774CBC8223 /* libPods-YYProject.a */; };
 		BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01868721B0EC6D00A18A7D /* YYToolViewController.m */; };
+		BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
 		BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */; };
 		BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87821AE832900394BF5 /* YYBaseViewController.m */; };
@@ -29,7 +30,7 @@
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
 		BCC5226B20DF821C00915076 /* YYProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5226A20DF821C00915076 /* YYProjectUITests.m */; };
 		BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332121AFF16700BAE678 /* YYUnitTextField.m */; };
-		BCFF332521AFF47400BAE678 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332421AFF47400BAE678 /* UITextView+Placeholder.m */; };
+		BCFF332521AFF47400BAE678 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332421AFF47400BAE678 /* UITextView+Extension.m */; };
 		BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332721AFF85100BAE678 /* UIImage+Extension.m */; };
 		E031E760304F40DDA2A7EDCC /* libPods-YYProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,8 @@
 		BC01868921B11D5400A18A7D /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		BC01868A21B11DBC00A18A7D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		BC01868B21B1204A00A18A7D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BC01A66F21B4D74B0001CA1D /* UIFont+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
+		BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
 		BC02944A21AB9BC2002AF4D0 /* YYUIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYUIManager.h; sourceTree = "<group>"; };
 		BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUIManager.m; sourceTree = "<group>"; };
 		BC02945021AB9E6D002AF4D0 /* YYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTabBarController.h; sourceTree = "<group>"; };
@@ -107,8 +110,8 @@
 		BCC5226C20DF821C00915076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFF332021AFF16700BAE678 /* YYUnitTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYUnitTextField.h; sourceTree = "<group>"; };
 		BCFF332121AFF16700BAE678 /* YYUnitTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUnitTextField.m; sourceTree = "<group>"; };
-		BCFF332321AFF47400BAE678 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
-		BCFF332421AFF47400BAE678 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		BCFF332321AFF47400BAE678 /* UITextView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
+		BCFF332421AFF47400BAE678 /* UITextView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
 		BCFF332621AFF85100BAE678 /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		BCFF332721AFF85100BAE678 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		FDFDEFEF2094EDAE20564E4F /* Pods-YYProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectTests/Pods-YYProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,10 +252,12 @@
 				BC0549A121AD3AA70017D981 /* UIView+Extension.m */,
 				BC0549A321AD44AF0017D981 /* UIColor+Extension.h */,
 				BC0549A421AD44AF0017D981 /* UIColor+Extension.m */,
-				BCFF332321AFF47400BAE678 /* UITextView+Placeholder.h */,
-				BCFF332421AFF47400BAE678 /* UITextView+Placeholder.m */,
+				BCFF332321AFF47400BAE678 /* UITextView+Extension.h */,
+				BCFF332421AFF47400BAE678 /* UITextView+Extension.m */,
 				BCFF332621AFF85100BAE678 /* UIImage+Extension.h */,
 				BCFF332721AFF85100BAE678 /* UIImage+Extension.m */,
+				BC01A66F21B4D74B0001CA1D /* UIFont+Extension.h */,
+				BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */,
 			);
 			path = UIkit;
 			sourceTree = "<group>";
@@ -581,7 +586,7 @@
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
-				BCFF332521AFF47400BAE678 /* UITextView+Placeholder.m in Sources */,
+				BCFF332521AFF47400BAE678 /* UITextView+Extension.m in Sources */,
 				BCC5224820DF821A00915076 /* AppDelegate.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
 				BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */,
@@ -592,6 +597,7 @@
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
 				BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */,
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
+				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
 			);

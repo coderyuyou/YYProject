@@ -197,6 +197,16 @@ static char event_key;
     }
 }
 
++ (CGFloat)fitWidth:(CGFloat)width {
+    CGFloat w = ((width / 375.000) * [UIScreen mainScreen].bounds.size.width);
+    return w;
+}
+
++ (CGFloat)fitHeight:(CGFloat)height {
+    CGFloat H = (height / 667.000 * [UIScreen mainScreen].bounds.size.height);
+    return H;
+}
+
 - (void)setLayerShadow:(UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius {
     // 阴影颜色
     self.layer.shadowColor = color.CGColor;

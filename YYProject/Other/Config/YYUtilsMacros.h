@@ -29,33 +29,45 @@ fprintf(stderr, "-------------------\n");   \
 #define kScreen_Height [UIScreen mainScreen].bounds.size.height
 
 /** iPhone4S */
-#define kDevice_Is_iPhone4S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_iPhone4S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 
 /** iPhone5 iPhone5s iPhoneSE */
-#define kDevice_Is_iPhoneSE ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_iPhoneSE ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 /** iPhone6 iPhone7 iPhone8 */
-#define kDevice_Is_iPhone ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)) : NO)
+#define kDevice_iPhone ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)) : NO)
 
 /** iPhone6plus  iPhone7plus iPhone8plus */
-#define kDevice_Is_iPhonePlus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
+#define kDevice_iPhonePlus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
 
 /** iphoneX */
-#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+/** iphoneXR */
+#define kDevice_iPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+/** iphoneXS */
+#define kDevice_iPhoneXS ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+/** iphoneXSMax */
+#define kDevice_iPhoneXSMax ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 
-/** 状态栏高度 */
-#define STATUS_BAR_SIZE [UIApplication sharedApplication].statusBarFrame.size
-#define STATUS_BAR_WIDTH MAX(STATUS_BAR_SIZE.height, STATUS_BAR_SIZE.width)
-#define kStatusBarHeight MIN(STATUS_BAR_SIZE.height, STATUS_BAR_SIZE.width)
+/** 异形屏系列 */
+#define kDevice_iPhoneXSeries (kDevice_iPhoneX || kDevice_iPhoneXR || kDevice_iPhoneXS || kDevice_iPhoneXSMax)
+
+/** 视图底部偏移量 */
+#define kBottomOffset (kDevice_iPhoneXSeries ? 34 : 0)
+
+/** 状态栏 */
+#define kStatusBarSize [UIApplication sharedApplication].statusBarFrame.size
+#define kStatusBarWdth kStatusBarSize.width
+#define kStatusBarHeight kStatusBarSize.height
 
 /** NavBar高度 */
 #define kNavigationBarHeight 44.0f
 
 /** TabBar高度 */
-#define kTabBarHeight (kDevice_Is_iPhoneX ? (49.f + 34.f) : 49.0f)
+#define kTabBarHeight (kDevice_iPhoneXSeries ? (49.f + 34.f) : 49.0f)
 
 /** 状态栏 ＋ 导航栏 高度 */
-#define kStatusAndNavigationBarHeitht ((kStatusBarHeight) + (kNavigationBarHeight))
+#define kStatusAndNavigationBarHeitht (kStatusBarHeight + kNavigationBarHeight)
 
 /** 缩放比分割线 */
 #define kLineHeight (1 / [UIScreen mainScreen].scale)
@@ -65,15 +77,24 @@ fprintf(stderr, "-------------------\n");   \
 
 /** ---------- tool 相关 ---------- */
 
+/** 获取系统版本 */
+#define kiOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+/** 某版本及以上 */
+#define IS_iOS(value) (([[[UIDevice currentDevice] systemVersion] floatValue] >= value) ? YES : NO)
+
+//[[UIDevice currentDevice].systemVersion floatValue] = value
+
 /** __weak */
 #define WEAKSELF __weak typeof(self) weakSelf = self
-#define WeakSelf(self) __weak __typeof(self) weakSelf = self;
+#define WeakSelf(self) __weak __typeof(self) weakSelf = self
 
 /** 检查是否为空对象 */
 #define YYCHECK_NULL(object) ([object isKindOfClass:[NSNull class]]?nil:object)
 /** 空对象 赋予空字符串 */
 #define YYNullClass(object) (object?object:@"")
 
-#define FZMLocalizedString(key, comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
+/** 多语言 */
+#define YYLocalizedString(key, comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
 
 #endif /* YYUtilsMacros_h */

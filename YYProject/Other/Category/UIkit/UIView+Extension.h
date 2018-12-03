@@ -79,6 +79,23 @@ IB_DESIGNABLE
 - (void)removeAllSubviews;
 
 /**
+ 设置自适应宽度：375
+ 
+ @param width 设置的宽度
+ @return 返回的最终根据屏幕自适应大小
+ */
++ (CGFloat)fitWidth:(CGFloat)width;
+
+
+/**
+ 设置自适应高度：667
+ 
+ @param height 高度
+ @return 得到的自适应屏幕的高度值
+ */
++ (CGFloat)fitHeight:(CGFloat)height;
+
+/**
  给 UIView 的图层添加阴影
 
  @param color 阴影颜色
