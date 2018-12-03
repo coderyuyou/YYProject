@@ -12,6 +12,7 @@
 #import "UIView+Extension.h"
 #import "UIColor+Extension.h"
 #import "UIImage+Extension.h"
+#import "MBProgressHUD+Extension.h"
 
 @interface YYHomeViewController ()
 
@@ -24,13 +25,9 @@
     
     [self createView];
     
-    if (IS_iOS(12.0)) {
-        YYLog(@" --- 大于ios12");
-    } else {
-        YYLog(@" --- 小于ios12");
-    }
-    
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD yy_showSuccess];
+    });
 }
 
 - (void)createView {

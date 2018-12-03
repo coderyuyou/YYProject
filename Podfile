@@ -10,7 +10,8 @@ target 'YYProject' do
   pod 'YYWebImage'
   pod 'SDWebImage', '~> 4.4.2'
   pod 'MJRefresh','~> 3.1.15.7'
-  
+  pod 'MBProgressHUD', '~> 1.1.0'
+
   target 'YYProjectTests' do
     inherit! :search_paths
     # Pods for testing

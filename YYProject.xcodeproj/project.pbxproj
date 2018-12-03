@@ -26,6 +26,8 @@
 		BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AFF21A79B190039E2F8 /* NSString+CommonUseTool.m */; };
 		BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B0221A79B190039E2F8 /* NSDate+Category.m */; };
 		BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */; };
+		BC83AB6321B52F880078E014 /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC83AB6121B52F880078E014 /* MBProgressHUD+Extension.m */; };
+		BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */; };
 		BCC5224820DF821A00915076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5224720DF821A00915076 /* AppDelegate.m */; };
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
 		BCC5226B20DF821C00915076 /* YYProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5226A20DF821C00915076 /* YYProjectUITests.m */; };
@@ -99,6 +101,10 @@
 		BC290B0A21A79B190039E2F8 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		BC290B0D21A79B190039E2F8 /* NSString+CommonUseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonUseTool.h"; sourceTree = "<group>"; };
 		BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Addtion.m"; sourceTree = "<group>"; };
+		BC83AB5E21B52F880078E014 /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		BC83AB6121B52F880078E014 /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		BC83AB6421B57AB50078E014 /* YYHUDAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHUDAnimationView.h; sourceTree = "<group>"; };
+		BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHUDAnimationView.m; sourceTree = "<group>"; };
 		BCC5224320DF821A00915076 /* YYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC5224620DF821A00915076 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCC5224720DF821A00915076 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 		BC290ADA21A798460039E2F8 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BCA799B221B5179100188A24 /* Tool */,
 				BC05499921AD1FAB0017D981 /* UIKit */,
 				BC290AEC21A79B190039E2F8 /* Category */,
 				BC290AE521A79B190039E2F8 /* Config */,
@@ -318,6 +325,25 @@
 				BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BC83AB5D21B52F880078E014 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				BC83AB5E21B52F880078E014 /* MBProgressHUD+Extension.h */,
+				BC83AB6121B52F880078E014 /* MBProgressHUD+Extension.m */,
+				BC83AB6421B57AB50078E014 /* YYHUDAnimationView.h */,
+				BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		BCA799B221B5179100188A24 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				BC83AB5D21B52F880078E014 /* HUD */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		BCC5223A20DF821A00915076 = {
@@ -584,11 +610,13 @@
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
 				BC290AE321A798460039E2F8 /* main.m in Sources */,
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
+				BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */,
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
 				BCFF332521AFF47400BAE678 /* UITextView+Extension.m in Sources */,
 				BCC5224820DF821A00915076 /* AppDelegate.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
+				BC83AB6321B52F880078E014 /* MBProgressHUD+Extension.m in Sources */,
 				BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */,
 				BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,

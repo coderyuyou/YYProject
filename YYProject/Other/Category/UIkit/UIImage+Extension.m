@@ -10,10 +10,10 @@
 
 @implementation UIImage (Extension)
 
-+ (UIImage *)imageWithColor:(UIColor *)color {
-    
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+
     //描述一个矩形
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     //开启图形上下文
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
     //获得图形上下文

@@ -21,9 +21,10 @@ typedef NS_ENUM(NSInteger, UIGradientType) {
  根据颜色生成一张图片
 
  @param color 提供的颜色
+ @param size 绘制大小
  @return 指定颜色的UIImage
  */
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
 /**
  截取当前视图
