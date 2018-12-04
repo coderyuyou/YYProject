@@ -12,11 +12,7 @@
 #import "UIView+Extension.h"
 #import "UIColor+Extension.h"
 #import "UIImage+Extension.h"
-
-
-@interface YYHomeViewController ()
-
-@end
+//#import "YYNetwork.h"
 
 @implementation YYHomeViewController
 
@@ -24,6 +20,22 @@
     [super viewDidLoad];
     
     [self createView];
+    [self requestData];
+}
+
+- (void)requestData {
+//    [[YYNetwork sharedNetwork] requestWithPath:@"" method:RequestTypePost parameters:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        
+//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+//        
+//    }];
+//    
+//    
+//    [[YYNetwork sharedNetwork] requestWithPath:@"" method:RequestTypeGet parameters:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        
+//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+//        
+//    }];
 }
 
 - (void)createView {

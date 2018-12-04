@@ -7,6 +7,7 @@
 //
 
 #import "YYToolViewController.h"
+#import "PagingViewController.h"
 #import "YYProgressHUD.h"
 
 @interface YYToolViewController ()
@@ -77,8 +78,10 @@ static NSString *const toolCell = @"toolCell";
         case 2:
             
             break;
-        case 3:
-            
+        case 3:{
+            PagingViewController *Vc = [PagingViewController new];
+            [self pushVc:Vc];
+        }
             break;
         case 4:
             

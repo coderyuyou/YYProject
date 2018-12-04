@@ -6,7 +6,7 @@ target 'YYProject' do
   # use_frameworks!
   
   pod 'Masonry', '~> 1.1.0'
-  pod 'AFNetworking', '~> 3.2.1'
+  pod 'AFNetworking',
   pod 'YYWebImage'
   pod 'SDWebImage', '~> 4.4.2'
   pod 'MJRefresh','~> 3.1.15.7'

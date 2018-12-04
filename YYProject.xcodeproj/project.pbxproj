@@ -34,6 +34,13 @@
 		BCFF332521AFF47400BAE678 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332421AFF47400BAE678 /* UITextView+Extension.m */; };
 		BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF332721AFF85100BAE678 /* UIImage+Extension.m */; };
 		BCFF435021B61BD500681BB6 /* YYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF434F21B61BD500681BB6 /* YYProgressHUD.m */; };
+		BCFF435421B6713000681BB6 /* PagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF435321B6713000681BB6 /* PagingViewController.m */; };
+		BCFF436421B6724E00681BB6 /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF435821B6724E00681BB6 /* UIView+SGPagingView.m */; };
+		BCFF436521B6724E00681BB6 /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF435A21B6724E00681BB6 /* SGPageContentScrollView.m */; };
+		BCFF436621B6724E00681BB6 /* SGPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF435B21B6724E00681BB6 /* SGPageContentView.m */; };
+		BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF435F21B6724E00681BB6 /* SGPageTitleView.m */; };
+		BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF436021B6724E00681BB6 /* SGPageTitleViewConfigure.m */; };
+		BCFF436C21B6817900681BB6 /* YYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF436B21B6817900681BB6 /* YYNetwork.m */; };
 		E031E760304F40DDA2A7EDCC /* libPods-YYProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +127,21 @@
 		BCFF332721AFF85100BAE678 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		BCFF434E21B61BD500681BB6 /* YYProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYProgressHUD.h; sourceTree = "<group>"; };
 		BCFF434F21B61BD500681BB6 /* YYProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYProgressHUD.m; sourceTree = "<group>"; };
+		BCFF435221B6713000681BB6 /* PagingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagingViewController.h; sourceTree = "<group>"; };
+		BCFF435321B6713000681BB6 /* PagingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagingViewController.m; sourceTree = "<group>"; };
+		BCFF435721B6724E00681BB6 /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
+		BCFF435821B6724E00681BB6 /* UIView+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGPagingView.m"; sourceTree = "<group>"; };
+		BCFF435A21B6724E00681BB6 /* SGPageContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentScrollView.m; sourceTree = "<group>"; };
+		BCFF435B21B6724E00681BB6 /* SGPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentView.m; sourceTree = "<group>"; };
+		BCFF435C21B6724E00681BB6 /* SGPageContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentScrollView.h; sourceTree = "<group>"; };
+		BCFF435D21B6724E00681BB6 /* SGPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentView.h; sourceTree = "<group>"; };
+		BCFF435F21B6724E00681BB6 /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		BCFF436021B6724E00681BB6 /* SGPageTitleViewConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleViewConfigure.m; sourceTree = "<group>"; };
+		BCFF436121B6724E00681BB6 /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
+		BCFF436221B6724E00681BB6 /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		BCFF436321B6724E00681BB6 /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
+		BCFF436A21B6817900681BB6 /* YYNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNetwork.h; sourceTree = "<group>"; };
+		BCFF436B21B6817900681BB6 /* YYNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYNetwork.m; sourceTree = "<group>"; };
 		FDFDEFEF2094EDAE20564E4F /* Pods-YYProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectTests/Pods-YYProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,7 +205,7 @@
 			path = UIManager;
 			sourceTree = "<group>";
 		};
-		BC05499521ACF1280017D981 /* Home */ = {
+		BC05499521ACF1280017D981 /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
 				BC05499621ACF13D0017D981 /* YYHomeViewController.h */,
@@ -191,7 +213,7 @@
 				BC01868621B0EC6D00A18A7D /* YYToolViewController.h */,
 				BC01868721B0EC6D00A18A7D /* YYToolViewController.m */,
 			);
-			path = Home;
+			path = TabBarViewController;
 			sourceTree = "<group>";
 		};
 		BC05499921AD1FAB0017D981 /* UIKit */ = {
@@ -341,6 +363,8 @@
 		BCA799B221B5179100188A24 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF436921B6815B00681BB6 /* Network */,
+				BCFF435521B6724E00681BB6 /* SGPagingView */,
 				BC83AB5D21B52F880078E014 /* HUD */,
 			);
 			path = Tool;
@@ -371,7 +395,8 @@
 		BCC5224520DF821A00915076 /* YYProject */ = {
 			isa = PBXGroup;
 			children = (
-				BC05499521ACF1280017D981 /* Home */,
+				BCFF435121B670B200681BB6 /* NextViewController */,
+				BC05499521ACF1280017D981 /* TabBarViewController */,
 				BC290B3021A79B230039E2F8 /* Base */,
 				BC290B2821A79B230039E2F8 /* Main */,
 				BC290ADA21A798460039E2F8 /* Other */,
@@ -397,6 +422,66 @@
 				BCC5226C20DF821C00915076 /* Info.plist */,
 			);
 			path = YYProjectUITests;
+			sourceTree = "<group>";
+		};
+		BCFF435121B670B200681BB6 /* NextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF435221B6713000681BB6 /* PagingViewController.h */,
+				BCFF435321B6713000681BB6 /* PagingViewController.m */,
+			);
+			path = NextViewController;
+			sourceTree = "<group>";
+		};
+		BCFF435521B6724E00681BB6 /* SGPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF435621B6724E00681BB6 /* Category */,
+				BCFF435921B6724E00681BB6 /* SGPageContent */,
+				BCFF435E21B6724E00681BB6 /* SGPageTitle */,
+				BCFF436321B6724E00681BB6 /* SGPagingView.h */,
+			);
+			path = SGPagingView;
+			sourceTree = "<group>";
+		};
+		BCFF435621B6724E00681BB6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF435721B6724E00681BB6 /* UIView+SGPagingView.h */,
+				BCFF435821B6724E00681BB6 /* UIView+SGPagingView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		BCFF435921B6724E00681BB6 /* SGPageContent */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF435A21B6724E00681BB6 /* SGPageContentScrollView.m */,
+				BCFF435B21B6724E00681BB6 /* SGPageContentView.m */,
+				BCFF435C21B6724E00681BB6 /* SGPageContentScrollView.h */,
+				BCFF435D21B6724E00681BB6 /* SGPageContentView.h */,
+			);
+			path = SGPageContent;
+			sourceTree = "<group>";
+		};
+		BCFF435E21B6724E00681BB6 /* SGPageTitle */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF435F21B6724E00681BB6 /* SGPageTitleView.m */,
+				BCFF436021B6724E00681BB6 /* SGPageTitleViewConfigure.m */,
+				BCFF436121B6724E00681BB6 /* SGPageTitleViewConfigure.h */,
+				BCFF436221B6724E00681BB6 /* SGPageTitleView.h */,
+			);
+			path = SGPageTitle;
+			sourceTree = "<group>";
+		};
+		BCFF436921B6815B00681BB6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF436A21B6817900681BB6 /* YYNetwork.h */,
+				BCFF436B21B6817900681BB6 /* YYNetwork.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,18 +692,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */,
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
 				BC290AE321A798460039E2F8 /* main.m in Sources */,
+				BCFF436621B6724E00681BB6 /* SGPageContentView.m in Sources */,
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
 				BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */,
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
 				BCFF332521AFF47400BAE678 /* UITextView+Extension.m in Sources */,
 				BCC5224820DF821A00915076 /* AppDelegate.m in Sources */,
+				BCFF436521B6724E00681BB6 /* SGPageContentScrollView.m in Sources */,
 				BCFF435021B61BD500681BB6 /* YYProgressHUD.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
+				BCFF436421B6724E00681BB6 /* UIView+SGPagingView.m in Sources */,
+				BCFF436C21B6817900681BB6 /* YYNetwork.m in Sources */,
 				BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */,
 				BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */,
+				BCFF435421B6713000681BB6 /* PagingViewController.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
@@ -627,6 +718,7 @@
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
 				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
+				BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

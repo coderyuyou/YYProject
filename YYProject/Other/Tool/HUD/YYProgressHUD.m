@@ -7,7 +7,7 @@
 //
 
 #import "YYProgressHUD.h"
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
 #import "YYHUDAnimationView.h"
 
 @implementation YYProgressHUD

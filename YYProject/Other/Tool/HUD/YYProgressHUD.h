@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class MBProgressHUD;
+#import "MBProgressHUD.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
