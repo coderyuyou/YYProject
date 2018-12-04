@@ -7,6 +7,7 @@
 //
 
 #import "YYToolViewController.h"
+#import "YYProgressHUD.h"
 
 @interface YYToolViewController ()
 /** 数据源 */
@@ -68,7 +69,7 @@ static NSString *const toolCell = @"toolCell";
     
     switch (indexPath.row) {
         case 0:
-            
+            [YYProgressHUD showLoadingStyle:YYHUDLoadingStyleDeterminate];
             break;
         case 1:
             

@@ -12,7 +12,7 @@
 #import "UIView+Extension.h"
 #import "UIColor+Extension.h"
 #import "UIImage+Extension.h"
-#import "MBProgressHUD+Extension.h"
+
 
 @interface YYHomeViewController ()
 
@@ -24,10 +24,6 @@
     [super viewDidLoad];
     
     [self createView];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [MBProgressHUD yy_showSuccess];
-    });
 }
 
 - (void)createView {
