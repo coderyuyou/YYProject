@@ -10,6 +10,7 @@
 #import "PagingViewController.h"
 #import "YYProgressHUD.h"
 #import "YYAlertViewController.h"
+#import "PickViewController.h"
 
 @interface YYToolViewController ()
 /** 数据源 */
@@ -99,8 +100,10 @@ static NSString *const toolCell = @"toolCell";
             [self pushVc:Vc];
         }
             break;
-        case 4:
-            
+        case 4: {
+            PickViewController *Vc = [PickViewController new];
+            [self pushVc:Vc];
+        }
             break;
         case 5:
             

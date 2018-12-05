@@ -10,6 +10,8 @@
 #define PrefixHeader_pch
 
 #import "Masonry.h"
+#import "YYModel.h"
+#import "MJExtension.h"
 
 // 系统设置
 #import "YYUtilsMacros.h"
