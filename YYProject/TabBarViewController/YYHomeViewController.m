@@ -12,7 +12,7 @@
 #import "UIView+Extension.h"
 #import "UIColor+Extension.h"
 #import "UIImage+Extension.h"
-//#import "YYNetwork.h"
+#import "YYNetworkUser.h"
 
 @implementation YYHomeViewController
 
@@ -24,18 +24,18 @@
 }
 
 - (void)requestData {
-//    [[YYNetwork sharedNetwork] requestWithPath:@"" method:RequestTypePost parameters:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        
-//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-//        
-//    }];
-//    
-//    
-//    [[YYNetwork sharedNetwork] requestWithPath:@"" method:RequestTypeGet parameters:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        
-//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-//        
-//    }];
+    
+    [YYNetworkUser requestWithUserInfo:@{} successBlock:^(ResponseModel * _Nonnull response) {
+        
+    } failureBlock:^(NSError * _Nonnull error) {
+        
+    }];
+    
+    [YYNetworkUser requestWithCheckMobile:@{@"mobile":@"15167152681"} successBlock:^(ResponseModel * _Nonnull response) {
+        
+    } failureBlock:^(NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)createView {

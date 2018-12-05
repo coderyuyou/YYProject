@@ -78,9 +78,7 @@ typedef NS_ENUM(NSInteger, YYHUDLoadingProgressStyle) {
  @param message 消息正文
  @param view 展示的view
  */
-+ (void)showIcon:(UIImage *)icon
-            message:(NSString *)message
-               view:(nullable UIView *)view;
++ (void)showIcon:(UIImage *)icon message:(NSString *)message view:(nullable UIView *)view;
 
 /**
  显示带有自定义icon图标消息HUD, 默认 1s 后消失

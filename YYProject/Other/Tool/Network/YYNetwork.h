@@ -36,7 +36,7 @@ typedef void(^ResponseFail)(NSError *error);
 + (instancetype)sharedNetwork;
 
 /**
- 网络请求（Post）
+ 网络请求（GET、POST、DELETE、PUT）
  
  @param url 请求地址
  @param method 请求类型
@@ -50,64 +50,47 @@ typedef void(^ResponseFail)(NSError *error);
                 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
-- (void)requestWithPost:(NSString *)urlString
-             parameters:(NSDictionary *)parameters
-           successBlock:(ResponseSuccess)successBlock
-           failureBlock:(ResponseFail)failureBlock;
-
 /**
  *  向服务器上传单文件
  *
  *  @param url       要上传的文件接口
  *  @param parameter 上传的参数
  *  @param fileData  上传的文件\数据
+ *  @param name       上传到服务器中接受该文件的字段名，不能为空
+ *  @param fileName   存到服务器中的文件名，不能为空
  *  @param success   成功执行，block的参数为服务器返回的内容
  *  @param failure   执行失败，block的参数为错误信息
  */
-- (void)POST:(NSString *)url
-   Parameter:(NSDictionary *)parameter
-        Data:(NSData *)fileData
-     Success:(void(^)(id responseObject))success
-     Failure:(void(^)(NSError *error))failure;
+- (void)uploadFile:(NSString *)url
+         parameter:(NSDictionary *)parameter
+          fileData:(NSData *)fileData
+              name:(NSString *)name
+          fileName:(NSString *)fileName
+          progress:(void (^)(NSProgress *progress))progress
+           success:(void(^)(id responseObject))success
+           failure:(void(^)(NSError *error))failure;
 
 
 /**
  *  向服务器上传多文件
  *
- *  @param url       要上传的文件接口
- *  @param parameter 上传的参数
+ *  @param url        要上传的文件接口
+ *  @param parameter  上传的参数
  *  @param fileDatas  上传的文件\数据的数组
  *  @param fieldNames 服务对应的字段
  *  @param fileNames  上传到时服务器的文件名的数组
- *  @param mimeType  上传的文件类型
- *  @param success   成功执行，block的参数为服务器返回的内容
- *  @param failure   执行失败，block的参数为错误信息
+ *  @param mimeType   上传的文件类型
+ *  @param success    成功执行，block的参数为服务器返回的内容
+ *  @param failure    执行失败，block的参数为错误信息
  */
-- (void)POST:(NSString *)url
-   Parameter:(NSDictionary *)parameter
-       Datas:(NSArray<NSData *> *)fileDatas
-  FieldNames:(NSArray<NSString *> *)fieldNames
-   FileNames:(NSArray *)fileNames
-    MimeType:(NSString *)mimeType
-     Success:(void(^)(id responseObject))success
-     Failure:(void(^)(NSError *error))failure;
-
-/**
- *  向服务器上传多组多文件
- *
- *  @param url         要上传的文件接口
- *  @param parameter   上传的参数
- *  @param fileDatas   上传的文件\数据的数组
- *  @param fieldNames  服务对应的字段
- *  @param success     成功执行，block的参数为服务器返回的内容
- *  @param failure     执行失败，block的参数为错误信息
- */
-- (void)POST:(NSString *)url
-   Parameter:(NSDictionary *)parameter
-       Datas:(NSArray<NSArray<NSData *> *> *)fileDatas
-  FieldNames:(NSArray<NSArray<NSString *> *> *)fieldNames
-     Success:(void(^)(id responseObject))success
-     Failure:(void(^)(NSError *error))failure;
+- (void)uploadFileSet:(NSString *)url
+            parameter:(NSDictionary *)parameter
+            fileDatas:(NSArray<NSData *> *)fileDatas
+                names:(NSArray<NSString *> *)names
+            fileNames:(NSArray *)fileNames
+             progress:(void (^)(NSProgress *progress))progress
+              success:(void(^)(id responseObject))success
+              failure:(void(^)(NSError *error))failure;
 
 @end
 
@@ -120,5 +103,7 @@ typedef void(^ResponseFail)(NSError *error);
 @property (nonatomic, strong) NSDictionary *originalData;
 
 - (instancetype)initWithResponse:(NSDictionary *)response;
+
+@end
 
 NS_ASSUME_NONNULL_END

@@ -23,9 +23,7 @@ static YYNetwork *_instance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if (_instance == nil) {
-           _instance = [[YYNetwork alloc] init];
-        }
+        _instance = [[YYNetwork alloc] init];
     });
     return _instance;
 }
@@ -34,9 +32,7 @@ static YYNetwork *_instance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if (_instance == nil) {
-            _instance = [super allocWithZone:zone];
-        }
+        _instance = [super allocWithZone:zone];
     });
     return _instance;
 }
@@ -80,34 +76,17 @@ static YYNetwork *_instance = nil;
     
     //网络检查
     [YYNetwork checkingNetworkResult:^(NetworkStatus status) {
-        if (status == StatusNotReachable) {
-            [YYProgressHUD showPlainText:@"网络连接失败！" view:nil];
-            return;
-        }
+        if (status == StatusNotReachable) return;
     }];
     
     NSLog(@"--请求详情--\n请求头: %@\n请求URL: %@\n请求param: %@\n\n",self.manager.requestSerializer.HTTPRequestHeaders, url, parameters);
     
     switch (method) {
         case RequestTypeGet: {
-            
-            [self.manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                if (success) {
-                    success(task, responseObject);
-                }
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                if (failure) {
-                    failure(task, error);
-                    // NSHTTPURLResponse *response = error.userInfo[AFNetworkingOperationFailingURLResponseErrorKey];
-                    // NSInteger statusCode = response.statusCode;
-                }
-            }];
+            [self.manager POST:url parameters:parameters progress:nil success:success failure:failure];
         }
             break;
         case RequestTypePost: {
-            
             [self.manager POST:url parameters:parameters progress:nil success:success failure:failure];
         }
             break;
@@ -122,219 +101,81 @@ static YYNetwork *_instance = nil;
     }
 }
 
-/**
- *   POST
- */
-- (void)requestWithPost: (NSString *)urlString
-             parameters: (NSDictionary *)parameters
-           successBlock: (ResponseSuccess)successBlock
-           failureBlock: (ResponseFail)failureBlock {
-    
+
+- (void)uploadFile:(NSString *)url
+         parameter:(NSDictionary *)parameter
+          fileData:(NSData *)fileData
+              name:(NSString *)name
+          fileName:(NSString *)fileName
+          progress:(void (^)(NSProgress *progress))progress
+           success:(void(^)(id responseObject))success
+           failure:(void(^)(NSError *error))failure {
     //网络检查
     [YYNetwork checkingNetworkResult:^(NetworkStatus status) {
-        if (status == StatusNotReachable) {
-            [YYProgressHUD showPlainText:@"网络连接失败！" view:nil];
-            return;
-        }
-    }];
-    
-    NSAssert(urlString != nil, @"url不能为空");
-    
-    //    if ([FZMUserInfoManager sharedManager].cookie) {
-    //        [self.manager.requestSerializer setValue:[FZMUserInfoManager sharedManager].cookie forHTTPHeaderField:@"Cookie"];
-    //    }
-    
-    NSLog(@"--请求详情--\n请求头: %@\n请求URL: %@\n请求param: %@\n\n",self.manager.requestSerializer.HTTPRequestHeaders, urlString, parameters);
-    
-    [self.manager POST:urlString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSLog(@"--返回详情-- \n请求URL: %@\n 请求结果: %@\n", urlString, responseObject);
-        
-        if (successBlock) {
-            ResponseModel *model = [[ResponseModel alloc] initWithResponse:responseObject];
-            successBlock(model);
-        }
-        
-        if ([[responseObject objectForKey:@"code"] integerValue] == 200) {
-            
-        }
-        else if ([[responseObject objectForKey:@"code"] integerValue] == 201) {
-  
-            // 清除本地用户信息
-           
-        }
-        else {
-            if ([responseObject objectForKey:@"message"]) {
-//                [MBProgressHUD wj_showPlainText:[responseObject objectForKey:@"message"] view:kWindow];
-            }
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //        [MBProgressHUD wj_showError:@"网络超时，请稍后再试" toView:kWindow];
-        if (failureBlock) {
-            failureBlock(error);
-            //            NSHTTPURLResponse *response = error.userInfo[AFNetworkingOperationFailingURLResponseErrorKey];
-            //            NSInteger statusCode = response.statusCode;
-        }
-    }];
-    
-}
-
-/**
- *   GET
- */
-
-- (void)requestWithGet: (NSString *)urlString
-            parameters: (NSDictionary *)parameters
-          successBlock: (ResponseSuccess)successBlock
-          failureBlock: (ResponseFail)failureBlock {
-    
-    //网络检查
-    [YYNetwork checkingNetworkResult:^(NetworkStatus status) {
-        if (status == StatusNotReachable) {
-//            [MBProgressHUD wj_showPlainText:@"网络连接失败！" view:kWindow];
-            return;
-        }
-    }];
-    
-    NSAssert(urlString != nil, @"url不能为空");
-    NSLog(@"--请求详情--\n请求头: %@\n请求URL: %@\n请求param: %@\n\n",self.manager.requestSerializer.HTTPRequestHeaders, urlString, parameters);
-    
-    [self.manager GET:urlString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSLog(@"--返回详情-- \n请求URL: %@\n 请求结果: %@\n", urlString, responseObject);
-        //        [MBProgressHUD wj_hideHUDForView:kWindow];
-        if (successBlock) {
-            ResponseModel *model = [[ResponseModel alloc] initWithResponse:responseObject];
-            successBlock(model);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //        [MBProgressHUD wj_showError:@"网络超时，请稍后再试" toView:kWindow];
-        //        [MBProgressHUD wj_hideHUDForView:kWindow];
-        if (failureBlock) {
-            failureBlock(error);
-        }
-    }];
-}
-
-/**
- *  向服务器上传单文件
- */
-- (void)POST:(NSString *)url
-   Parameter:(NSDictionary *)parameter
-        Data:(NSData *)fileData
-     Success:(void (^)(id))success
-     Failure:(void (^)(NSError *))failure{
-    
-    //网络检查
-    [YYNetwork checkingNetworkResult:^(NetworkStatus status) {
-        if (status == StatusNotReachable) {
-//            [MBProgressHUD wj_showPlainText:@"网络连接失败！" view:kWindow];
-            return;
-        }
+        if (status == StatusNotReachable) return;
     }];
     
     [self.manager POST:url parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        [MBProgressHUD wj_showActivityLoading:FZMLocalizedString(@"上传中...", nil) toView:kWindow];
-        // 设置时间格式
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = @"yyyyMMddHHmmssSSS";
-        NSString *str = [formatter stringFromDate:[NSDate date]];
-        NSString *fileName = [NSString stringWithFormat:@"%@.jpg", str];
         
-        [formData appendPartWithFileData:fileData name:@"image" fileName:fileName mimeType:@"image/jpeg"];
+        NSString *mimeType = @"image/jpg";
+        /**
+         拼接data到 HTTP body
+         mimeType JPG:image/jpg, PNG:image/png, JSON:application/json
+         */
+        [formData appendPartWithFileData:fileData name:name fileName:fileName mimeType:mimeType];
+        
+        //表单拼接参数data
+        [parameter enumerateKeysAndObjectsUsingBlock:^(id key, id  obj, BOOL *stop) {
+            NSString *objStr = [NSString stringWithFormat:@"%@", obj];
+            NSData *objData = [objStr dataUsingEncoding:NSUTF8StringEncoding];
+            [formData appendPartWithFormData:objData name:key];
+        }];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
-        
+        progress(uploadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-//        [MBProgressHUD wj_showSuccess:@"" toView:kWindow];
-//        [MBProgressHUD wj_hideHUDForView:kWindow];
-        if ([[responseObject objectForKey:@"code"] integerValue] == 200) {
-            
-            if (success) {
-                ResponseModel *model = [[ResponseModel alloc] initWithResponse:responseObject];
-                success(model);
-            }
-        }
-        else if ([[responseObject objectForKey:@"code"] integerValue] == 201) {
-            // 清楚本地用户信息
-           
-        }
-        else {
-//            [MBProgressHUD wj_showError:[responseObject objectForKey:@"message"] toView:kWindow];
-        }
-        
+        success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        [MBProgressHUD wj_showError:@"网络访问超时，请稍后再试" toView:kWindow];
-//        [MBProgressHUD wj_hideHUDForView:kWindow];
-        //通过block,将错误信息回传给用户
-        if (failure) failure(error);
+        
+        failure(error);
     }];
 }
 
-/**
- *  向服务器上传多文件
- */
-- (void)POST:(NSString *)url
-   Parameter:(NSDictionary *)parameter
-       Datas:(NSArray<NSData *> *)fileDatas
-  FieldNames:(NSArray<NSString *> *)fieldNames
-   FileNames:(NSArray *)fileNames
-    MimeType:(NSString *)mimeType
-     Success:(void (^)(id))success
-     Failure:(void (^)(NSError *))failure{
-    
+- (void)uploadFileSet:(NSString *)url
+            parameter:(NSDictionary *)parameter
+            fileDatas:(NSArray<NSData *> *)fileDatas
+                names:(NSArray<NSString *> *)names
+            fileNames:(NSArray *)fileNames
+             progress:(void (^)(NSProgress * _Nonnull))progress
+              success:(void (^)(id _Nonnull))success
+              failure:(void (^)(NSError * _Nonnull))failure {
     //网络检查
     [YYNetwork checkingNetworkResult:^(NetworkStatus status) {
-        if (status == StatusNotReachable) {
-//            [MBProgressHUD wj_showPlainText:@"网络连接失败！"view:kWindow];
-            return;
-        }
+        if (status == StatusNotReachable) return;
     }];
     
     [self.manager POST:url parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
+        NSString *mimeType = @"image/jpg";
+        /**
+         拼接data到 HTTP body
+         mimeType JPG:image/jpg, PNG:image/png, JSON:application/json
+         */
         for (int i = 0; i < fileNames.count; i ++) {
-            [formData appendPartWithFileData:fileDatas[i] name:fieldNames[i] fileName:fileNames[i] mimeType:mimeType];
+            [formData appendPartWithFileData:fileDatas[i] name:names[i] fileName:fileNames[i] mimeType:mimeType];
         }
-        
-        
+
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
+        progress(uploadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        if (success) {
-            success(responseObject);
-        }
-        
-        //        if ([[responseObject objectForKey:@"code"] integerValue] == 200) {
-        
-        //            if (success) {
-        //                FZMResponseModel *model = [[FZMResponseModel alloc] initWithResponse:responseObject];
-        //                success(model);
-        //            }
-        //        }
-        //        else if ([[responseObject objectForKey:@"code"] integerValue] == 201) {
-        //            // 清楚本地用户信息
-        //            [[FZMUserInfoManager sharedManager] didLoginOut];
-        //        }
-        //        else {
-        //            [MBProgressHUD wj_showError:[responseObject objectForKey:@"message"] toView:kWindow];
-        //        }
-        //
-        
+        success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        [MBProgressHUD wj_showError:@"网络访问超时，请稍后再试" toView:kWindow];
-        //通过block,将错误信息回传给用户
-        if (failure) failure(error);
+        
+        failure(error);
     }];
 }
 
@@ -348,7 +189,7 @@ static YYNetwork *_instance = nil;
  *  @param success     成功执行，block的参数为服务器返回的内容
  *  @param failure     执行失败，block的参数为错误信息
  */
-- (void)POST:(NSString *)url
+- (void)uploadGroupFile:(NSString *)url
    Parameter:(NSDictionary *)parameter
        Datas:(NSArray<NSArray<NSData *> *> *)fileDatas
   FieldNames:(NSArray<NSArray<NSString *> *> *)fieldNames
@@ -357,10 +198,7 @@ static YYNetwork *_instance = nil;
     
     //网络检查
     [YYNetwork checkingNetworkResult:^(NetworkStatus status) {
-        if (status == StatusNotReachable) {
-//            [MBProgressHUD wj_showPlainText:@"网络连接失败！"view:kWindow];
-            return;
-        }
+        if (status == StatusNotReachable) return;
     }];
     
     [self.manager POST:url parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -380,7 +218,7 @@ static YYNetwork *_instance = nil;
             }
         }
         
-        //        NSAssert(imgAry.count != nameAry.count, @"数据源错误！！！检查代码！！！");
+        NSAssert(imgAry.count != nameAry.count, @"数据源不匹配！！！");
         for (NSInteger i = 0; i < imgAry.count; i ++) {
             // 设置时间戳
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -396,13 +234,10 @@ static YYNetwork *_instance = nil;
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        if (success) {
-            success(responseObject);
-        }
+        if (success) success(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        [MBProgressHUD wj_showError:@"网络访问超时，请稍后再试" toView:kWindow];
-        //通过block,将错误信息回传给用户
+
         if (failure) failure(error);
     }];
     
@@ -423,6 +258,7 @@ static YYNetwork *_instance = nil;
                 break;
             case AFNetworkReachabilityStatusNotReachable:
                 if (result) result(StatusNotReachable);
+                [YYProgressHUD showPlainText:@"请检查网络连接！" view:nil];
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 if (result) result(StatusReachableViaWWAN);
@@ -443,7 +279,7 @@ static YYNetwork *_instance = nil;
     if (self = [super init]) {
         self.statusCode = [response[@"code"] integerValue];
         self.responseData = response[@"data"]&&![response[@"data"] isEqual:[NSNull null]]?response[@"data"]:nil;
-        self.message = response[@"message"];
+        self.message = response[@"message"]&&![response[@"message"] isEqual:[NSNull null]]?response[@"message"]:@"";
         self.success = [response[@"success"] boolValue];
         self.originalData = response;
     }

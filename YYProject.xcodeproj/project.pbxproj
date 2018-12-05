@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2095E7DA6D25DECE74A17647 /* libPods-YYProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DC7FABD71E02D3726F4D2F /* libPods-YYProjectTests.a */; };
 		97A418236274164B0FC9E8AC /* libPods-YYProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 723DFA20A8411F774CBC8223 /* libPods-YYProject.a */; };
+		BC003AA321B76C5100321033 /* YYNetworkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AA221B76C5100321033 /* YYNetworkUser.m */; };
 		BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01868721B0EC6D00A18A7D /* YYToolViewController.m */; };
 		BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
@@ -70,6 +71,8 @@
 		98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F49C961E601178366D6185 /* Pods-YYProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProject/Pods-YYProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B96C6EE10229317649F697DB /* Pods-YYProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectUITests/Pods-YYProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BC003AA121B76C5100321033 /* YYNetworkUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNetworkUser.h; sourceTree = "<group>"; };
+		BC003AA221B76C5100321033 /* YYNetworkUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYNetworkUser.m; sourceTree = "<group>"; };
 		BC01868621B0EC6D00A18A7D /* YYToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYToolViewController.h; sourceTree = "<group>"; };
 		BC01868721B0EC6D00A18A7D /* YYToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYToolViewController.m; sourceTree = "<group>"; };
 		BC01868921B11D5400A18A7D /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
@@ -480,6 +483,8 @@
 			children = (
 				BCFF436A21B6817900681BB6 /* YYNetwork.h */,
 				BCFF436B21B6817900681BB6 /* YYNetwork.m */,
+				BC003AA121B76C5100321033 /* YYNetworkUser.h */,
+				BC003AA221B76C5100321033 /* YYNetworkUser.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */,
+				BC003AA321B76C5100321033 /* YYNetworkUser.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
