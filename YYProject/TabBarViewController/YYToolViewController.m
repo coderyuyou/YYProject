@@ -9,6 +9,7 @@
 #import "YYToolViewController.h"
 #import "PagingViewController.h"
 #import "YYProgressHUD.h"
+#import "YYAlertViewController.h"
 
 @interface YYToolViewController ()
 /** 数据源 */
@@ -72,7 +73,22 @@ static NSString *const toolCell = @"toolCell";
         case 0:
             [YYProgressHUD showLoadingStyle:YYHUDLoadingStyleDeterminate];
             break;
-        case 1:
+        case 1: {
+            YYAlertViewController *alertVC = [YYAlertViewController alertControllerWithTitle:@"提示" message:@"您还没有设置过登录密码，无法使用密码登录。"];
+            
+            YYAlertAction *sure = [YYAlertAction actionWithTitle:@"设置密码" handler:^(YYAlertAction *action) {
+                
+                
+            }];
+            
+            YYAlertAction *cancle = [YYAlertAction actionWithTitle:@"验证码登录" handler:^(YYAlertAction *action) {
+                
+            }];
+            [alertVC addAction:sure];
+            [alertVC addAction:cancle];
+            
+            [self presentViewController:alertVC animated:NO completion:nil];
+        }
             
             break;
         case 2:
