@@ -15,6 +15,7 @@
 		BC003AAC21B7D3FD00321033 /* YYAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AAB21B7D3FD00321033 /* YYAddressPicker.m */; };
 		BC003AAE21B7D42300321033 /* citys.json in Resources */ = {isa = PBXBuildFile; fileRef = BC003AAD21B7D42300321033 /* citys.json */; };
 		BC003AB121B7D4AD00321033 /* YYAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AB021B7D4AC00321033 /* YYAddressModel.m */; };
+		BC003AB421B7DF2E00321033 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AB321B7DF2E00321033 /* HUDViewController.m */; };
 		BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01868721B0EC6D00A18A7D /* YYToolViewController.m */; };
 		BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
@@ -87,6 +88,8 @@
 		BC003AAD21B7D42300321033 /* citys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citys.json; sourceTree = "<group>"; };
 		BC003AAF21B7D4AC00321033 /* YYAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAddressModel.h; sourceTree = "<group>"; };
 		BC003AB021B7D4AC00321033 /* YYAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAddressModel.m; sourceTree = "<group>"; };
+		BC003AB221B7DF2E00321033 /* HUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		BC003AB321B7DF2E00321033 /* HUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 		BC01868621B0EC6D00A18A7D /* YYToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYToolViewController.h; sourceTree = "<group>"; };
 		BC01868721B0EC6D00A18A7D /* YYToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYToolViewController.m; sourceTree = "<group>"; };
 		BC01868921B11D5400A18A7D /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
@@ -455,6 +458,8 @@
 				BCFF435321B6713000681BB6 /* PagingViewController.m */,
 				BC003AA721B7CCF300321033 /* PickViewController.h */,
 				BC003AA821B7CCF300321033 /* PickViewController.m */,
+				BC003AB221B7DF2E00321033 /* HUDViewController.h */,
+				BC003AB321B7DF2E00321033 /* HUDViewController.m */,
 			);
 			path = NextViewController;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC003AB421B7DF2E00321033 /* HUDViewController.m in Sources */,
 				BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */,
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
 				BC003AAC21B7D3FD00321033 /* YYAddressPicker.m in Sources */,

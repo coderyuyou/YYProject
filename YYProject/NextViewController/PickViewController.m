@@ -28,6 +28,8 @@
 
 - (void)createView {
     
+    self.navView.title = @"PickerView";
+    
     [self.view addSubview:self.saveBtn];
     
     [self.saveBtn mas_makeConstraints:^(MASConstraintMaker *make) {

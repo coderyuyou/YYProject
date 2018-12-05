@@ -1,36 +1,37 @@
 //
-//  YYToolViewController.m
+//  HUDViewController.m
 //  YYProject
 //
-//  Created by 于优 on 2018/11/30.
+//  Created by 于优 on 2018/12/5.
 //  Copyright © 2018 SuperYu. All rights reserved.
 //
 
-#import "YYToolViewController.h"
-#import "PagingViewController.h"
 #import "HUDViewController.h"
-#import "YYAlertViewController.h"
-#import "PickViewController.h"
+#import "YYProgressHUD.h"
+#import "UIView+Extension.h"
 
-@interface YYToolViewController ()
+@interface HUDViewController ()
+
 /** 数据源 */
 @property (nonatomic, strong) NSArray<NSString *> *dataArray;
+/**  */
+@property (nonatomic, strong) UIButton *saveBtn;
 
 @end
 
-@implementation YYToolViewController
+@implementation HUDViewController
 
 static NSString *const toolCell = @"toolCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     [self createView];
 }
 
 - (void)createView {
     
-    self.navView.title = @"系统工具";
+    self.navView.title = @"HUD";
     self.navView.seperateColor = kBlackColor;
     
     [self.view addSubview:self.tableView];
@@ -71,44 +72,29 @@ static NSString *const toolCell = @"toolCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.row) {
-        case 0:{
-            HUDViewController *Vc = [HUDViewController new];
-            [self pushVc:Vc];
-        }
+        case 0:
+            [YYProgressHUD showLoadingStyle:YYHUDLoadingStyleDeterminate];
             break;
-        case 1: {
-            YYAlertViewController *alertVC = [YYAlertViewController alertControllerWithTitle:@"提示" message:@"您还没有设置过登录密码，无法使用密码登录。"];
-            
-            YYAlertAction *sure = [YYAlertAction actionWithTitle:@"设置密码" handler:^(YYAlertAction *action) {
-                
-                
-            }];
-            
-            YYAlertAction *cancle = [YYAlertAction actionWithTitle:@"验证码登录" handler:^(YYAlertAction *action) {
-                
-            }];
-            [alertVC addAction:sure];
-            [alertVC addAction:cancle];
-            
-            [self presentViewController:alertVC animated:NO completion:nil];
-        }
-            
+        case 1:
+            [YYProgressHUD showLoadingStyle:YYHUDLoadingStyleDeterminateHorizontalBar];
             break;
         case 2:
-            
+            [YYProgressHUD showLoadingStyle:YYHUDLoadingStyleAnnularDeterminate];
             break;
-        case 3:{
-            PagingViewController *Vc = [PagingViewController new];
-            [self pushVc:Vc];
-        }
+        case 3:
+            [YYProgressHUD showPlainText:@"文字提醒" view:self.view];
             break;
-        case 4: {
-            PickViewController *Vc = [PickViewController new];
-            [self pushVc:Vc];
-        }
+        case 4:
+            [YYProgressHUD showSuccess:@"已关注" toView:self.view];
             break;
         case 5:
-            
+            [YYProgressHUD showError:@"操作失败" toView:self.view];
+            break;
+        case 6:
+            [YYProgressHUD showIcon:[UIImage imageNamed:@"contacts"] message:@"自定义icon"];
+            break;
+        case 7:
+            [YYProgressHUD showCustomView:self.saveBtn hideAfterDelay:1];
             break;
             
         default:
@@ -120,9 +106,21 @@ static NSString *const toolCell = @"toolCell";
 
 - (NSArray<NSString *> *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"MBP_HUD", @"AlertView", @"ActionSheet", @"PagingView", @"PickView", @"CalendarView"];
+        _dataArray = @[@"LoadingStyleDeterminate", @"LoadingStyleHorizontalBar", @"LoadingStyleAnnularDeterminate", @"showPlainText", @"showSuccess", @"showError", @"showIcon", @"showCustomView"];
     }
     return _dataArray;
+}
+
+- (UIButton *)saveBtn {
+    if (!_saveBtn) {
+        _saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_saveBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:kWhiteColor forState:UIControlStateNormal];
+        _saveBtn.titleLabel.font = FONT_SIZE(12);
+        _saveBtn.backgroundColor = kFontColor_Theme;
+        [_saveBtn setLayerRoundedRect:10];
+    }
+    return _saveBtn;
 }
 
 @end
