@@ -41,7 +41,7 @@
 - (void)createView {
     
     self.navView.title = @"首页";
-    self.navView.seperateColor = kBlueColor;
+    self.navView.seperateColor = kFontColor_Gray;
     
     YYAlignmentButton *btn = [YYAlignmentButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor colorWithHexString:@"7190FF"];

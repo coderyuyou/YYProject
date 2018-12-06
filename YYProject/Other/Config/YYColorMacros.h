@@ -30,10 +30,19 @@
 #define kBlackColor kColorHex(0x232A4A)
 /** 主题蓝颜色 */
 #define kBlueColor kColorHex(0x5656D6)
+/** 主题棕颜色 */
+#define kBrownColor kColorHex(0x6f480f)
+/** 主题黄颜色 */
+#define kThemeColor kColorHex(0xf8d147)
 /** 背景色 */
 #define kBackgroundColor kColorHex(0xF7F7F7)
 /** 蒙版背景色 */
 #define kMaskViewColor kColorRGBA(0, 0, 0, 0.7)
+
+/** K线红 */
+#define kCandlestickRedColor kColorHex(0xbe2f1f)
+/** K线绿 */
+#define kCandlestickGreenColor kColorHex(0x58ac83)
 
 /** 分割线 */
 #define kLineColor kColorHex(0xEAEAEA)

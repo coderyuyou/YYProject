@@ -51,15 +51,16 @@ typedef void(^ResponseFail)(NSError *error);
                 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
 
 /**
- *  向服务器上传单文件
- *
- *  @param url       要上传的文件接口
- *  @param parameter 上传的参数
- *  @param fileData  上传的文件\数据
- *  @param name       上传到服务器中接受该文件的字段名，不能为空
- *  @param fileName   存到服务器中的文件名，不能为空
- *  @param success   成功执行，block的参数为服务器返回的内容
- *  @param failure   执行失败，block的参数为错误信息
+ 向服务器上传单文件
+
+ @param url 要上传的文件接口
+ @param parameter 上传的参数
+ @param fileData 上传的文件\数据
+ @param name 上传到服务器中接受该文件的字段名，不能为空
+ @param fileName 存到服务器中的文件名，不能为空
+ @param progress 执行中，block的参数为上传进度
+ @param success 成功执行，block的参数为服务器返回的内容
+ @param failure 执行失败，block的参数为错误信息
  */
 - (void)uploadFile:(NSString *)url
          parameter:(NSDictionary *)parameter
@@ -70,18 +71,17 @@ typedef void(^ResponseFail)(NSError *error);
            success:(void(^)(id responseObject))success
            failure:(void(^)(NSError *error))failure;
 
-
 /**
- *  向服务器上传多文件
- *
- *  @param url        要上传的文件接口
- *  @param parameter  上传的参数
- *  @param fileDatas  上传的文件\数据的数组
- *  @param fieldNames 服务对应的字段
- *  @param fileNames  上传到时服务器的文件名的数组
- *  @param mimeType   上传的文件类型
- *  @param success    成功执行，block的参数为服务器返回的内容
- *  @param failure    执行失败，block的参数为错误信息
+ 向服务器上传多文件
+
+ @param url 要上传的文件接口
+ @param parameter 上传的参数
+ @param fileDatas 上传的文件\数据的数组
+ @param names 服务对应的字段
+ @param fileNames 上传到时服务器的文件名的数组
+ @param progress 执行中，block的参数为上传进度
+ @param success 成功执行，block的参数为服务器返回的内容
+ @param failure 执行失败，block的参数为错误信息
  */
 - (void)uploadFileSet:(NSString *)url
             parameter:(NSDictionary *)parameter

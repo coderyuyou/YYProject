@@ -31,7 +31,7 @@ static NSString *const toolCell = @"toolCell";
 - (void)createView {
     
     self.navView.title = @"系统工具";
-    self.navView.seperateColor = kBlackColor;
+    self.navView.seperateColor = kFontColor_Gray;
     
     [self.view addSubview:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:toolCell];

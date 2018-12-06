@@ -26,6 +26,8 @@
 		BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499B21AD1FEC0017D981 /* YYAlignmentButton.m */; };
 		BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A121AD3AA70017D981 /* UIView+Extension.m */; };
 		BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A421AD44AF0017D981 /* UIColor+Extension.m */; };
+		BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */; };
+		BC0FE12421B8BC5700CCB0A5 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE12321B8BC5700CCB0A5 /* swift.swift */; };
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
 		BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */; };
 		BC290AE321A798460039E2F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290ADF21A798460039E2F8 /* main.m */; };
@@ -33,6 +35,13 @@
 		BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AFF21A79B190039E2F8 /* NSString+CommonUseTool.m */; };
 		BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B0221A79B190039E2F8 /* NSDate+Category.m */; };
 		BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */; };
+		BC69711E21B8BFD20083F57E /* FZMTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69711C21B8BFD20083F57E /* FZMTimeLineView.m */; };
+		BC69712721B8CD0F0083F57E /* FZMTradeKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69712621B8CD0F0083F57E /* FZMTradeKLineView.m */; };
+		BC69712B21B8FAA40083F57E /* YYWebSockeIO.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69712A21B8FAA40083F57E /* YYWebSockeIO.m */; };
+		BC69712F21B8FEA20083F57E /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69712D21B8FEA20083F57E /* HWWeakTimer.m */; };
+		BC69713321B8FEF20083F57E /* YYPolling.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713221B8FEF20083F57E /* YYPolling.m */; };
+		BC69713621B901050083F57E /* YYMarketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713521B901050083F57E /* YYMarketModel.m */; };
+		BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713821B904EE0083F57E /* YYDataValueFormatter.m */; };
 		BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */; };
 		BCC5224820DF821A00915076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5224720DF821A00915076 /* AppDelegate.m */; };
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
@@ -113,6 +122,10 @@
 		BC0549A121AD3AA70017D981 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		BC0549A321AD44AF0017D981 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		BC0549A421AD44AF0017D981 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModuleViewController.h; sourceTree = "<group>"; };
+		BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModuleViewController.m; sourceTree = "<group>"; };
+		BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC0FE12321B8BC5700CCB0A5 /* swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift.swift; sourceTree = "<group>"; };
 		BC290ADC21A798460039E2F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC290ADE21A798460039E2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC290ADF21A798460039E2F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +141,20 @@
 		BC290B0A21A79B190039E2F8 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		BC290B0D21A79B190039E2F8 /* NSString+CommonUseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonUseTool.h"; sourceTree = "<group>"; };
 		BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Addtion.m"; sourceTree = "<group>"; };
+		BC69711C21B8BFD20083F57E /* FZMTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMTimeLineView.m; sourceTree = "<group>"; };
+		BC69711D21B8BFD20083F57E /* FZMTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMTimeLineView.h; sourceTree = "<group>"; };
+		BC69712521B8CD0F0083F57E /* FZMTradeKLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMTradeKLineView.h; sourceTree = "<group>"; };
+		BC69712621B8CD0F0083F57E /* FZMTradeKLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMTradeKLineView.m; sourceTree = "<group>"; };
+		BC69712921B8FAA40083F57E /* YYWebSockeIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYWebSockeIO.h; sourceTree = "<group>"; };
+		BC69712A21B8FAA40083F57E /* YYWebSockeIO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYWebSockeIO.m; sourceTree = "<group>"; };
+		BC69712D21B8FEA20083F57E /* HWWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWeakTimer.m; sourceTree = "<group>"; };
+		BC69712E21B8FEA20083F57E /* HWWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWeakTimer.h; sourceTree = "<group>"; };
+		BC69713121B8FEF20083F57E /* YYPolling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YYPolling.h; path = YYProject/Other/Tool/Polling/YYPolling.h; sourceTree = SOURCE_ROOT; };
+		BC69713221B8FEF20083F57E /* YYPolling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YYPolling.m; path = YYProject/Other/Tool/Polling/YYPolling.m; sourceTree = SOURCE_ROOT; };
+		BC69713421B901050083F57E /* YYMarketModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMarketModel.h; sourceTree = "<group>"; };
+		BC69713521B901050083F57E /* YYMarketModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMarketModel.m; sourceTree = "<group>"; };
+		BC69713721B904EE0083F57E /* YYDataValueFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDataValueFormatter.h; sourceTree = "<group>"; };
+		BC69713821B904EE0083F57E /* YYDataValueFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDataValueFormatter.m; sourceTree = "<group>"; };
 		BC83AB6421B57AB50078E014 /* YYHUDAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHUDAnimationView.h; sourceTree = "<group>"; };
 		BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHUDAnimationView.m; sourceTree = "<group>"; };
 		BCC5224320DF821A00915076 /* YYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +257,8 @@
 			children = (
 				BC05499621ACF13D0017D981 /* YYHomeViewController.h */,
 				BC05499721ACF13D0017D981 /* YYHomeViewController.m */,
+				BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */,
+				BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */,
 				BC01868621B0EC6D00A18A7D /* YYToolViewController.h */,
 				BC01868721B0EC6D00A18A7D /* YYToolViewController.m */,
 			);
@@ -251,6 +280,15 @@
 				BC003AB021B7D4AC00321033 /* YYAddressModel.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		BC0FE12121B8BC4100CCB0A5 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BC0FE12321B8BC5700CCB0A5 /* swift.swift */,
+				BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		BC290ADA21A798460039E2F8 /* Other */ = {
@@ -376,6 +414,64 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC69710C21B8BF450083F57E /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				BC69710D21B8BF450083F57E /* Model */,
+				BC69710E21B8BF450083F57E /* View */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		BC69710D21B8BF450083F57E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC69713721B904EE0083F57E /* YYDataValueFormatter.h */,
+				BC69713821B904EE0083F57E /* YYDataValueFormatter.m */,
+				BC69713421B901050083F57E /* YYMarketModel.h */,
+				BC69713521B901050083F57E /* YYMarketModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC69710E21B8BF450083F57E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC69711D21B8BFD20083F57E /* FZMTimeLineView.h */,
+				BC69711C21B8BFD20083F57E /* FZMTimeLineView.m */,
+				BC69712521B8CD0F0083F57E /* FZMTradeKLineView.h */,
+				BC69712621B8CD0F0083F57E /* FZMTradeKLineView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC69712821B8FA750083F57E /* WebSocket_IO */ = {
+			isa = PBXGroup;
+			children = (
+				BC69712921B8FAA40083F57E /* YYWebSockeIO.h */,
+				BC69712A21B8FAA40083F57E /* YYWebSockeIO.m */,
+			);
+			path = WebSocket_IO;
+			sourceTree = "<group>";
+		};
+		BC69712C21B8FEA20083F57E /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				BC69712D21B8FEA20083F57E /* HWWeakTimer.m */,
+				BC69712E21B8FEA20083F57E /* HWWeakTimer.h */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		BC69713021B8FECB0083F57E /* Polling */ = {
+			isa = PBXGroup;
+			children = (
+				BC69713121B8FEF20083F57E /* YYPolling.h */,
+				BC69713221B8FEF20083F57E /* YYPolling.m */,
+			);
+			path = Polling;
+			sourceTree = "<group>";
+		};
 		BC83AB5D21B52F880078E014 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +486,9 @@
 		BCA799B221B5179100188A24 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BC69713021B8FECB0083F57E /* Polling */,
+				BC69712C21B8FEA20083F57E /* Timer */,
+				BC69712821B8FA750083F57E /* WebSocket_IO */,
 				BCFF436921B6815B00681BB6 /* Network */,
 				BCFF435521B6724E00681BB6 /* SGPagingView */,
 				BC83AB5D21B52F880078E014 /* HUD */,
@@ -422,6 +521,8 @@
 		BCC5224520DF821A00915076 /* YYProject */ = {
 			isa = PBXGroup;
 			children = (
+				BC69710C21B8BF450083F57E /* Chats */,
+				BC0FE12121B8BC4100CCB0A5 /* Swift */,
 				BCFF435121B670B200681BB6 /* NextViewController */,
 				BC05499521ACF1280017D981 /* TabBarViewController */,
 				BC290B3021A79B230039E2F8 /* Base */,
@@ -588,6 +689,7 @@
 				TargetAttributes = {
 					BCC5224220DF821A00915076 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					BCC5225A20DF821C00915076 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -728,11 +830,14 @@
 			files = (
 				BC003AB421B7DF2E00321033 /* HUDViewController.m in Sources */,
 				BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */,
+				BC69712B21B8FAA40083F57E /* YYWebSockeIO.m in Sources */,
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
 				BC003AAC21B7D3FD00321033 /* YYAddressPicker.m in Sources */,
 				BC290AE321A798460039E2F8 /* main.m in Sources */,
 				BCFF436621B6724E00681BB6 /* SGPageContentView.m in Sources */,
+				BC69712F21B8FEA20083F57E /* HWWeakTimer.m in Sources */,
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
+				BC0FE12421B8BC5700CCB0A5 /* swift.swift in Sources */,
 				BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */,
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
@@ -743,18 +848,24 @@
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
 				BCFF436421B6724E00681BB6 /* UIView+SGPagingView.m in Sources */,
 				BCFF436C21B6817900681BB6 /* YYNetwork.m in Sources */,
+				BC69711E21B8BFD20083F57E /* FZMTimeLineView.m in Sources */,
+				BC69713621B901050083F57E /* YYMarketModel.m in Sources */,
 				BC003AA621B7C72500321033 /* YYAlertViewController.m in Sources */,
+				BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */,
 				BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */,
 				BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */,
 				BCFF435421B6713000681BB6 /* PagingViewController.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
+				BC69712721B8CD0F0083F57E /* FZMTradeKLineView.m in Sources */,
 				BC003AB121B7D4AD00321033 /* YYAddressModel.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
 				BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */,
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
+				BC69713321B8FEF20083F57E /* YYPolling.m in Sources */,
 				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
+				BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */,
 				BC003AA321B76C5100321033 /* YYNetworkUser.m in Sources */,
@@ -920,6 +1031,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1F49C961E601178366D6185 /* Pods-YYProject.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H536G2V449;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -932,6 +1044,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YYProject/Swift/YYProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -940,6 +1055,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 438A20D041E09540E75DD5D8 /* Pods-YYProject.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H536G2V449;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -952,6 +1068,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YYProject/Swift/YYProject-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -960,6 +1078,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 840184932722718BCF808A27 /* Pods-YYProjectTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
@@ -980,6 +1099,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDFDEFEF2094EDAE20564E4F /* Pods-YYProjectTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
@@ -1000,6 +1120,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FDC4EC9BF3878A821F48DE0 /* Pods-YYProjectUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectUITests/Info.plist;
@@ -1019,6 +1140,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B96C6EE10229317649F697DB /* Pods-YYProjectUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectUITests/Info.plist;

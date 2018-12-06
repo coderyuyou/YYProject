@@ -8,6 +8,7 @@
 
 #import "YYTabBarController.h"
 #import "YYHomeViewController.h"
+#import "YYModuleViewController.h"
 #import "YYToolViewController.h"
 
 @interface YYTabBarController () <UITabBarControllerDelegate>
@@ -36,11 +37,11 @@
     YYHomeViewController *homeVc = [[YYHomeViewController alloc] init];
     [self setupChildVcWithVc:homeVc Image:[UIImage imageNamed:@"tab_home_nor"] selectedImage:[UIImage imageNamed:@"tab_home_sel"] title:@"首页"];
     
-    UIViewController *tradeVc = [[UIViewController alloc] init];
-    [self setupChildVcWithVc:tradeVc Image:[UIImage imageNamed:@"tab_explore_nor"] selectedImage:[UIImage imageNamed:@"tab_explore_sel"] title:@"探索"];
+    YYModuleViewController *tradeVc = [[YYModuleViewController alloc] init];
+    [self setupChildVcWithVc:tradeVc Image:[UIImage imageNamed:@"tab_explore_nor"] selectedImage:[UIImage imageNamed:@"tab_explore_sel"] title:@"功能模块"];
     
     YYToolViewController *mineVc = [[YYToolViewController alloc] init];
-    [self setupChildVcWithVc:mineVc Image:[UIImage imageNamed:@"tab_mine_nor"] selectedImage:[UIImage imageNamed:@"tab_mine_sel"] title:@"我的"];
+    [self setupChildVcWithVc:mineVc Image:[UIImage imageNamed:@"tab_mine_nor"] selectedImage:[UIImage imageNamed:@"tab_mine_sel"] title:@"系统工具"];
 }
 
 #pragma mark - 初始化设置tabBar上面单个按钮的方法

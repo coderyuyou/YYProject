@@ -16,12 +16,20 @@
  *  内网测试
  *  外网测试
  */
-static NSString *const URL_TEST = @"";
+static NSString *const URL_TEST = @"http://122.224.124.250:10011/";
 static NSString *const URL_IUSSUE = @"";
 
 #pragma mark - ***************  模块  ***************
 /**  */
 static NSString *const USER_userInfo = @"";
+
+/** WebSocket */
+static NSString *const MARKET_WebSocket = URL_TEST;
+
+/** 历史行情*/
+static NSString *const MARKET_GetKines = @"kline/getKines";
+/** 最新行情 */
+static NSString *const MARKET_GetTicker5m = @"marhttp/ticker/ticker5m";
 
 
 #endif /* API_h */

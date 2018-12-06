@@ -13,6 +13,8 @@ target 'YYProject' do
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'YYModel', '~> 1.0.4'
   pod 'MJExtension', '~> 3.0.15.1'
+  pod 'Charts'
+  pod 'Socket.IO-Client-Swift'
 
   target 'YYProjectTests' do
     inherit! :search_paths
