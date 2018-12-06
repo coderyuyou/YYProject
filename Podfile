@@ -15,7 +15,8 @@ target 'YYProject' do
   pod 'MJExtension', '~> 3.0.15.1'
   pod 'Charts'
   pod 'Socket.IO-Client-Swift'
-
+  pod 'SVGKit'
+# :git => 'https://github.com/SVGKit/SVGKit.git'，:branch => '2.x'
   target 'YYProjectTests' do
     inherit! :search_paths
     # Pods for testing

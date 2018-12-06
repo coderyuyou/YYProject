@@ -42,6 +42,7 @@
 		BC69713321B8FEF20083F57E /* YYPolling.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713221B8FEF20083F57E /* YYPolling.m */; };
 		BC69713621B901050083F57E /* YYMarketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713521B901050083F57E /* YYMarketModel.m */; };
 		BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713821B904EE0083F57E /* YYDataValueFormatter.m */; };
+		BC69713D21B921980083F57E /* UIImage+SVG.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713C21B921980083F57E /* UIImage+SVG.m */; };
 		BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */; };
 		BCC5224820DF821A00915076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5224720DF821A00915076 /* AppDelegate.m */; };
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
@@ -155,6 +156,8 @@
 		BC69713521B901050083F57E /* YYMarketModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMarketModel.m; sourceTree = "<group>"; };
 		BC69713721B904EE0083F57E /* YYDataValueFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDataValueFormatter.h; sourceTree = "<group>"; };
 		BC69713821B904EE0083F57E /* YYDataValueFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDataValueFormatter.m; sourceTree = "<group>"; };
+		BC69713B21B921980083F57E /* UIImage+SVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SVG.h"; sourceTree = "<group>"; };
+		BC69713C21B921980083F57E /* UIImage+SVG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SVG.m"; sourceTree = "<group>"; };
 		BC83AB6421B57AB50078E014 /* YYHUDAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHUDAnimationView.h; sourceTree = "<group>"; };
 		BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHUDAnimationView.m; sourceTree = "<group>"; };
 		BCC5224320DF821A00915076 /* YYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -472,6 +475,15 @@
 			path = Polling;
 			sourceTree = "<group>";
 		};
+		BC69713A21B921870083F57E /* SVGImage */ = {
+			isa = PBXGroup;
+			children = (
+				BC69713B21B921980083F57E /* UIImage+SVG.h */,
+				BC69713C21B921980083F57E /* UIImage+SVG.m */,
+			);
+			path = SVGImage;
+			sourceTree = "<group>";
+		};
 		BC83AB5D21B52F880078E014 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +498,7 @@
 		BCA799B221B5179100188A24 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BC69713A21B921870083F57E /* SVGImage */,
 				BC69713021B8FECB0083F57E /* Polling */,
 				BC69712C21B8FEA20083F57E /* Timer */,
 				BC69712821B8FA750083F57E /* WebSocket_IO */,
@@ -864,6 +877,7 @@
 				BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */,
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
 				BC69713321B8FEF20083F57E /* YYPolling.m in Sources */,
+				BC69713D21B921980083F57E /* UIImage+SVG.m in Sources */,
 				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
 				BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
