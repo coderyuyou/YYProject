@@ -107,7 +107,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     // 点击屏幕取消编辑
-    //    [self.view endEditing:YES];
+    [self.view endEditing:YES];
 }
 
 #pragma mark - TableView

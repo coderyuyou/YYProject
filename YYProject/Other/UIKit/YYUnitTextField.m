@@ -8,24 +8,25 @@
 
 #import "YYUnitTextField.h"
 
-@interface YYUnitTextField ()<UITextFieldDelegate>
+@interface YYUnitTextField () <UITextFieldDelegate>
 
 @property (nonatomic, strong) UILabel *unitLab;
-
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, copy) NSString *unit;
+@property (nonatomic, assign) YYUnitAlignment alignment;
 
 @end
 
-@implementation YYUnitTextField {
-    UIColor *_placeholderColor;
-    UIColor *_textColor;
-}
+@implementation YYUnitTextField
 
-- (instancetype)init {
+@synthesize placeholderColor =_placeholderColor;
+@synthesize textColor =_textColor;
+
+- (instancetype)initUnitTextFieldWith:(YYUnitAlignment)alignment unit:(NSString *)unit {
     self = [super init];
     if (self) {
-        _placeholderColor = kFontColor_Gray;
-        _textColor = kFontColor;
+        self.unit = unit;
+        self.alignment = alignment;
         [self createView];
     }
     return self;
@@ -35,8 +36,22 @@
     
     CGFloat rightLabWidth = [self stringWidthWithText:self.unitLab.text font:[UIFont systemFontOfSize:24]];
     self.unitLab.frame = CGRectMake(0, 0, rightLabWidth, 30);
-    self.textField.rightView = self.unitLab;
-    self.textField.rightViewMode = UITextFieldViewModeAlways;
+    
+    switch (self.alignment) {
+            case YYUnitAlignmentLeft:
+            self.textField.leftView = self.unitLab;
+            self.textField.leftViewMode = UITextFieldViewModeAlways;
+            self.textField.textAlignment = NSTextAlignmentRight;
+            self.unitLab.textAlignment = NSTextAlignmentRight;
+            break;
+            
+            case YYUnitAlignmentRight:
+            self.textField.rightView = self.unitLab;
+            self.textField.rightViewMode = UITextFieldViewModeAlways;
+            self.textField.textAlignment = NSTextAlignmentRight;
+            self.unitLab.textAlignment = NSTextAlignmentRight;
+            break;
+    }
     
     CGFloat textFieldWidth = [self stringWidthWithText:@"0.00" font:[UIFont systemFontOfSize:24]] + rightLabWidth;
     [self addSubview:self.textField];
@@ -64,10 +79,10 @@
 - (void)textValueDidChanged:(UITextField *)textField {
     
     if (textField.text.length < 1) {
-        self.unitLab.textColor = _placeholderColor;
+        self.unitLab.textColor = self.placeholderColor;
     }
     else {
-        self.unitLab.textColor = _textColor;
+        self.unitLab.textColor = self.textColor;
     }
     if (self.didTextValueDidChangedHandle) {
         self.didTextValueDidChangedHandle(textField);
@@ -80,7 +95,7 @@
 
 - (void)changeTextFieldWidth:(UITextField *)textField {
     
-    NSString *text = (textField.text.length > 1)?textField.text:@"0.00";
+    NSString *text = (textField.text.length > 0)?textField.text:@"0.00";
     
     CGFloat textFieldWidth = [self stringWidthWithText:text font:[UIFont systemFontOfSize:24]] + [self stringWidthWithText:self.unitLab.text font:[UIFont systemFontOfSize:24]];
     
@@ -89,7 +104,7 @@
             make.width.mas_offset(textFieldWidth);
         }];
         UIFont *font = [UIFont systemFontOfSize:24];
-        CGFloat labWidth = [self stringWidthWithText:@"CNY" font:font];
+        CGFloat labWidth = [self stringWidthWithText:self.unit font:font];
         self.unitLab.frame = CGRectMake(0, 0, labWidth, 30);
         self.textField.font = font;
         self.unitLab.font = font;
@@ -98,7 +113,7 @@
             make.width.mas_offset(self.frame.size.width);
         }];
         UIFont *font = [self getFontWithText:text];
-        CGFloat labWidth = [self stringWidthWithText:@"CNY" font:font];
+        CGFloat labWidth = [self stringWidthWithText:self.unit font:font];
         self.unitLab.frame = CGRectMake(0, 0, labWidth, 30);
         self.textField.font = font;
         self.unitLab.font = font;
@@ -107,12 +122,10 @@
 
 - (CGFloat)stringWidthWithText:(NSString *)text font:(UIFont *)font {
     
-    CGFloat margin = 4;
-    if (kDevice_iPhonePlus) {
-        margin = 4;
-    }
-    else if (kDevice_iPhoneX) {
-        
+    CGFloat margin = 2;
+    
+    if (self.alignment == YYUnitAlignmentLeft) {
+        margin = 6;
     }
     
     return [text boundingRectWithSize:CGSizeMake(MAXFLOAT, font.lineHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.width + margin;
@@ -120,7 +133,7 @@
 
 - (UIFont *)getFontWithText:(NSString *)text {
     
-    NSString *content = [NSString stringWithFormat:@"%@CNY",text];
+    NSString *content = [NSString stringWithFormat:@"%@%@",text,self.unit];
     CGFloat fontValue = 24;
     
     CGFloat strWidth = [self stringWidthWithText:content font:[UIFont systemFontOfSize:fontValue]];
@@ -146,18 +159,42 @@
     [self changeTextFieldWidth:self.textField];
 }
 
+- (void)setPlaceholderColor:(UIColor *)placeholderColor {
+    _placeholderColor = placeholderColor;
+    
+    self.unitLab.textColor = placeholderColor;
+    [self.textField setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (void)setTextColor:(UIColor *)textColor {
+    _textColor = textColor;
+    
+    self.unitLab.textColor = textColor;
+    self.textField.textColor = textColor;
+}
+
+- (UIColor *)placeholderColor {
+    if (!_placeholderColor) {
+        _placeholderColor = kFontColor_Gray;
+    }
+    return _placeholderColor;
+}
+
+- (UIColor *)textColor {
+    if (!_textColor) {
+        _textColor = kFontColor;
+    }
+    return _textColor;
+}
+
 - (UITextField *)textField {
     if (!_textField) {
         _textField = [[UITextField alloc] init];
-        //        _textField.text = @"0.00";
         _textField.font = [UIFont systemFontOfSize:24];
-        _textField.textColor = _textColor;
         _textField.placeholder = @"0.00";
-        [_textField setValue:_placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+        _textField.textColor = self.textColor;
+        [_textField setValue:self.placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
         _textField.keyboardType = UIKeyboardTypeDecimalPad;
-        //        _textField.adjustsFontSizeToFitWidth = YES;
-        //        [_textField setMinimumFontSize:8];
-        _textField.textAlignment = NSTextAlignmentRight;
         _textField.delegate = self;
         [_textField addTarget:self action:@selector(textValueDidChanged:) forControlEvents:UIControlEventEditingChanged];
     }
@@ -167,10 +204,9 @@
 - (UILabel *)unitLab {
     if (!_unitLab) {
         _unitLab = [[UILabel alloc] init];
-        _unitLab.text = @"CNY";
+        _unitLab.text = self.unit;
         _unitLab.font = [UIFont systemFontOfSize:24];
-        _unitLab.textAlignment = NSTextAlignmentRight;
-        _unitLab.textColor = _placeholderColor;
+        _unitLab.textColor = self.placeholderColor;
     }
     return _unitLab;
 }

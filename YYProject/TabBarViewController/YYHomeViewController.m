@@ -13,6 +13,7 @@
 #import "UIColor+Extension.h"
 #import "UIImage+Extension.h"
 #import "YYNetworkUser.h"
+#import "YYUnitTextField.h"
 
 @implementation YYHomeViewController
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     
     [self createView];
-    [self requestData];
+//    [self requestData];
 }
 
 - (void)requestData {
@@ -43,6 +44,18 @@
     self.navView.title = @"首页";
     self.navView.seperateColor = kFontColor_Gray;
     
+    YYUnitTextField *textField = [[YYUnitTextField alloc] initUnitTextFieldWith:YYUnitAlignmentLeft unit:@"¥"];
+    textField.backgroundColor = kWhiteColor;
+    [self.view addSubview:textField];
+    
+    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(140, 50));
+    }];
+}
+
+- (void)createOtherView {
+    
     YYAlignmentButton *btn = [YYAlignmentButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor colorWithHexString:@"7190FF"];
     [btn setTitle:@"按钮" forState:UIControlStateNormal];
@@ -59,13 +72,13 @@
     }];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [btn setLayerBorder:kColor borderWidth:1 borderType:UIBorderSideTypeAll];
-//        [btn setLayerRoundedRect:6];
+        //        [btn setLayerBorder:kColor borderWidth:1 borderType:UIBorderSideTypeAll];
+        //        [btn setLayerRoundedRect:6];
         [btn setLayerBezierPath:btn.bounds corners:UIRectCornerTopRight | UIRectCornerBottomRight cornerRadii:CGSizeMake(10, 4)];
     });
     
     [btn addTargetWithEvents:UIControlEventTouchUpInside actionHandle:^(UIButton *btn) {
-    
+        
         YYBaseViewController *Vc = [[YYBaseViewController alloc] init];
         [self pushVc:Vc];
     }];
@@ -87,7 +100,7 @@
     });
     
     UIImageView *gradImgView = [UIImageView new];
-//    gradImgView.backgroundColor = kFontColor_Gray;
+    //    gradImgView.backgroundColor = kFontColor_Gray;
     [self.view addSubview:gradImgView];
     
     [gradImgView mas_makeConstraints:^(MASConstraintMaker *make) {
