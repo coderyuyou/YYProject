@@ -43,6 +43,7 @@
     
     self.navView.title = @"首页";
     self.navView.seperateColor = kFontColor_Gray;
+    self.tabBarItem.badgeValue = @"2";
     
     YYUnitTextField *textField = [[YYUnitTextField alloc] initUnitTextFieldWith:YYUnitAlignmentLeft unit:@"¥"];
     textField.backgroundColor = kWhiteColor;

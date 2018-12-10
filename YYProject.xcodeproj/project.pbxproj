@@ -26,6 +26,7 @@
 		BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499B21AD1FEC0017D981 /* YYAlignmentButton.m */; };
 		BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A121AD3AA70017D981 /* UIView+Extension.m */; };
 		BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A421AD44AF0017D981 /* UIColor+Extension.m */; };
+		BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */; };
 		BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */; };
 		BC0FE12421B8BC5700CCB0A5 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE12321B8BC5700CCB0A5 /* swift.swift */; };
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		BC69713621B901050083F57E /* YYMarketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713521B901050083F57E /* YYMarketModel.m */; };
 		BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713821B904EE0083F57E /* YYDataValueFormatter.m */; };
 		BC69713D21B921980083F57E /* UIImage+SVG.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69713C21B921980083F57E /* UIImage+SVG.m */; };
+		BC69714121B927830083F57E /* YYCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69714021B927830083F57E /* YYCacheManager.m */; };
 		BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */; };
 		BCC5224820DF821A00915076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5224720DF821A00915076 /* AppDelegate.m */; };
 		BCC5226020DF821C00915076 /* YYProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5225F20DF821C00915076 /* YYProjectTests.m */; };
@@ -123,6 +125,8 @@
 		BC0549A121AD3AA70017D981 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		BC0549A321AD44AF0017D981 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		BC0549A421AD44AF0017D981 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		BC0B4FE321BE05BC00718DD5 /* UITextField+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extension.h"; sourceTree = "<group>"; };
+		BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
 		BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModuleViewController.h; sourceTree = "<group>"; };
 		BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModuleViewController.m; sourceTree = "<group>"; };
 		BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 		BC69713821B904EE0083F57E /* YYDataValueFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDataValueFormatter.m; sourceTree = "<group>"; };
 		BC69713B21B921980083F57E /* UIImage+SVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SVG.h"; sourceTree = "<group>"; };
 		BC69713C21B921980083F57E /* UIImage+SVG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SVG.m"; sourceTree = "<group>"; };
+		BC69713F21B927830083F57E /* YYCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheManager.h; sourceTree = "<group>"; };
+		BC69714021B927830083F57E /* YYCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheManager.m; sourceTree = "<group>"; };
 		BC83AB6421B57AB50078E014 /* YYHUDAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYHUDAnimationView.h; sourceTree = "<group>"; };
 		BC83AB6521B57AB60078E014 /* YYHUDAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYHUDAnimationView.m; sourceTree = "<group>"; };
 		BCC5224320DF821A00915076 /* YYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,6 +357,8 @@
 				BC0549A421AD44AF0017D981 /* UIColor+Extension.m */,
 				BCFF332321AFF47400BAE678 /* UITextView+Extension.h */,
 				BCFF332421AFF47400BAE678 /* UITextView+Extension.m */,
+				BC0B4FE321BE05BC00718DD5 /* UITextField+Extension.h */,
+				BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */,
 				BCFF332621AFF85100BAE678 /* UIImage+Extension.h */,
 				BCFF332721AFF85100BAE678 /* UIImage+Extension.m */,
 				BC01A66F21B4D74B0001CA1D /* UIFont+Extension.h */,
@@ -484,6 +492,15 @@
 			path = SVGImage;
 			sourceTree = "<group>";
 		};
+		BC69713E21B9258E0083F57E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				BC69713F21B927830083F57E /* YYCacheManager.h */,
+				BC69714021B927830083F57E /* YYCacheManager.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		BC83AB5D21B52F880078E014 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +515,7 @@
 		BCA799B221B5179100188A24 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BC69713E21B9258E0083F57E /* Cache */,
 				BC69713A21B921870083F57E /* SVGImage */,
 				BC69713021B8FECB0083F57E /* Polling */,
 				BC69712C21B8FEA20083F57E /* Timer */,
@@ -871,12 +889,14 @@
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
 				BC69712721B8CD0F0083F57E /* FZMTradeKLineView.m in Sources */,
+				BC69714121B927830083F57E /* YYCacheManager.m in Sources */,
 				BC003AB121B7D4AD00321033 /* YYAddressModel.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
 				BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */,
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
 				BC69713321B8FEF20083F57E /* YYPolling.m in Sources */,
+				BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */,
 				BC69713D21B921980083F57E /* UIImage+SVG.m in Sources */,
 				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
 				BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */,

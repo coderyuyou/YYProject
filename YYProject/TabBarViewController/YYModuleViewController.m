@@ -89,14 +89,14 @@
     
     [self.view addSubview:self.timeLineView];
     [self.timeLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.navView.mas_bottom).offset(0);
+        make.top.equalTo(self.navView.mas_bottom).offset(-13);
         make.left.right.mas_equalTo(self.view);
         make.height.mas_equalTo(300);
     }];
     
     [self.view addSubview:self.kLineView];
     [self.kLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.timeLineView.mas_bottom).offset(40);
+        make.top.equalTo(self.timeLineView.mas_bottom).offset(0);
         make.left.right.mas_equalTo(self.view);
         make.height.mas_equalTo(270);
     }];
