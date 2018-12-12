@@ -30,7 +30,6 @@
 		BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */; };
 		BC0B4FF221BE4B7100718DD5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */; };
 		BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */; };
-		BC0FE12421B8BC5700CCB0A5 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE12321B8BC5700CCB0A5 /* swift.swift */; };
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
 		BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */; };
 		BC290AE321A798460039E2F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290ADF21A798460039E2F8 /* main.m */; };
@@ -132,7 +131,6 @@
 		BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModuleViewController.h; sourceTree = "<group>"; };
 		BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModuleViewController.m; sourceTree = "<group>"; };
 		BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		BC0FE12321B8BC5700CCB0A5 /* swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift.swift; sourceTree = "<group>"; };
 		BC290ADC21A798460039E2F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC290ADE21A798460039E2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC290ADF21A798460039E2F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 		BC0FE12121B8BC4100CCB0A5 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				BC0FE12321B8BC5700CCB0A5 /* swift.swift */,
 				BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */,
 			);
 			path = Swift;
@@ -812,6 +809,7 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -832,6 +830,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -902,7 +901,6 @@
 				BCFF436621B6724E00681BB6 /* SGPageContentView.m in Sources */,
 				BC69712F21B8FEA20083F57E /* HWWeakTimer.m in Sources */,
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
-				BC0FE12421B8BC5700CCB0A5 /* swift.swift in Sources */,
 				BC83AB6621B57AB60078E014 /* YYHUDAnimationView.m in Sources */,
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,

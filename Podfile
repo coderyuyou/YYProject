@@ -7,12 +7,13 @@ target 'YYProject' do
     pod 'AFNetworking', '~> 3.2.1'
     pod 'YYWebImage', '~> 1.0.4'
     pod 'SDWebImage', '~> 4.4.2'
-    pod 'MJRefresh','~> 3.1.15.7'
-    pod 'MBProgressHUD', '~> 1.1.0'
-    pod 'YYModel', '~> 1.0.4'
     pod 'MJExtension', '~> 3.0.15.1'
-    pod 'FMDB', '~> 2.7.5'
+    pod 'MJRefresh','~> 3.1.15.7'
+    pod 'YYModel', '~> 1.0.4'
+    pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'FSCalendar'
     pod 'SVGKit'
+    pod 'FMDB', '~> 2.7.5'
     
     use_frameworks!
 
