@@ -14,6 +14,7 @@
 #import "UIImage+Extension.h"
 #import "YYNetworkUser.h"
 #import "YYUnitTextField.h"
+#import "CameraViewController.h"
 
 @implementation YYHomeViewController
 
@@ -22,20 +23,47 @@
     
     [self createView];
 //    [self requestData];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"1", @"2", @"3", @"2",@"1", @"3", @"3", @"4", nil];
+    
+    for (NSString *str in [dic allKeys]) {
+        if ([str isEqualToString:@"2"]) {
+            [dic setObject:@"2" forKey:dic[str]];
+        }
+    }
+    
+    YYLog(@"------%@",dic);
+    
+    NSMutableArray * array = [[NSMutableArray alloc] initWithObjects:@"1", @"2", @"3", nil];
+    
+    for (NSInteger i = 0; i < array.count; i++) {
+        if ([array[i] isEqualToString:@"2"]) {
+            [array removeObject:array[i]];
+        }
+    }
+//
+//    for (NSString *str in array) {
+//        if ([str isEqualToString:@"2"]) {
+//            [array removeObjectAtIndex:1];
+//        }
+//    }
+    
+//    for (NSString *str in array) {
+//        if ([str isEqualToString:@"2"]) {
+//            [array removeObject:str];
+//        }
+//    }
+    
+    YYLog(@"------%@",array);
 }
 
 - (void)requestData {
-    
     [YYNetworkUser requestWithUserInfo:@{} successBlock:^(ResponseModel * _Nonnull response) {
-        
     } failureBlock:^(NSError * _Nonnull error) {
-        
     }];
     
     [YYNetworkUser requestWithCheckMobile:@{@"mobile":@"15167152681"} successBlock:^(ResponseModel * _Nonnull response) {
-        
     } failureBlock:^(NSError * _Nonnull error) {
-        
     }];
 }
 
@@ -45,6 +73,26 @@
     self.navView.seperateColor = kFontColor_Gray;
     self.tabBarItem.badgeValue = @"2";
     
+    YYAlignmentButton *btn = [YYAlignmentButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = [UIColor colorWithHexString:@"7190FF"];
+    [btn setTitle:@"按钮" forState:UIControlStateNormal];
+    [btn setTitleColor:kColor forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake([UIView fitWidth:140], 50));
+    }];
+    
+    [btn addTargetWithEvents:UIControlEventTouchUpInside actionHandle:^(UIButton *btn) {
+        CameraViewController *Vc = [CameraViewController new];
+        [self pushVc:Vc];
+    }];
+}
+
+
+
+- (void)createOtherView {
+    
     YYUnitTextField *textField = [[YYUnitTextField alloc] initUnitTextFieldWith:YYUnitAlignmentLeft unit:@"¥"];
     textField.backgroundColor = kWhiteColor;
     [self.view addSubview:textField];
@@ -53,9 +101,6 @@
         make.center.mas_equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(140, 50));
     }];
-}
-
-- (void)createOtherView {
     
     YYAlignmentButton *btn = [YYAlignmentButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor colorWithHexString:@"7190FF"];

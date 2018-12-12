@@ -1,4 +1,4 @@
-module Pods_YYProject {
+framework module Pods_YYProject {
   umbrella header "Pods-YYProject-umbrella.h"
 
   export *

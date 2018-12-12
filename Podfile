@@ -2,21 +2,23 @@
 # platform :ios, '9.0'
 
 target 'YYProject' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-  
-  pod 'Masonry', '~> 1.1.0'
-  pod 'AFNetworking', '~> 3.2.1'
-  pod 'YYWebImage', '~> 1.0.4'
-  pod 'SDWebImage', '~> 4.4.2'
-  pod 'MJRefresh','~> 3.1.15.7'
-  pod 'MBProgressHUD', '~> 1.1.0'
-  pod 'YYModel', '~> 1.0.4'
-  pod 'MJExtension', '~> 3.0.15.1'
-  pod 'FMDB', '~> 2.7.5'
-  pod 'Charts'
-  pod 'Socket.IO-Client-Swift'
-  pod 'SVGKit'
+    
+    pod 'Masonry', '~> 1.1.0'
+    pod 'AFNetworking', '~> 3.2.1'
+    pod 'YYWebImage', '~> 1.0.4'
+    pod 'SDWebImage', '~> 4.4.2'
+    pod 'MJRefresh','~> 3.1.15.7'
+    pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'YYModel', '~> 1.0.4'
+    pod 'MJExtension', '~> 3.0.15.1'
+    pod 'FMDB', '~> 2.7.5'
+    pod 'SVGKit'
+    
+    use_frameworks!
+
+    pod 'Charts'
+    pod 'Socket.IO-Client-Swift'
+    pod 'SnapKit'
 # :git => 'https://github.com/SVGKit/SVGKit.git'，:branch => '2.x'
   target 'YYProjectTests' do
     inherit! :search_paths

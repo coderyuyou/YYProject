@@ -7,7 +7,7 @@
 //
 
 #import "YYProgressHUD.h"
-//#import "MBProgressHUD.h"
+#import "MBProgressHUD.h"
 #import "YYHUDAnimationView.h"
 
 @implementation YYProgressHUD
@@ -152,6 +152,10 @@
     hud.removeFromSuperViewOnHide = YES;
     
     return hud;
+}
+
++ (void)showLoadingStyle:(YYHUDLoadingProgressStyle)style message:(nullable NSString *)message {
+    [self showLoadingStyle:style message:message toView:nil];
 }
 
 + (MBProgressHUD *)showLoadingStyle:(YYHUDLoadingProgressStyle)style toView:(nullable UIView *)view {

@@ -7,16 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
+@class MBProgressHUD;
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSInteger {
+    YYHUDLoadingStyleDeterminate, // 开扇型加载进度
+    YYHUDLoadingStyleDeterminateHorizontalBar, // 横条加载进度
+    YYHUDLoadingStyleAnnularDeterminate, // 环形加载进度
+} YYHUDLoadingProgressStyle;
+
+/*
 typedef NS_ENUM(NSInteger, YYHUDLoadingProgressStyle) {
     YYHUDLoadingStyleDeterminate, // 开扇型加载进度
     YYHUDLoadingStyleDeterminateHorizontalBar, // 横条加载进度
     YYHUDLoadingStyleAnnularDeterminate, // 环形加载进度
 };
-
+*/
 @interface YYProgressHUD : NSObject
 
 /**
@@ -131,6 +139,8 @@ typedef NS_ENUM(NSInteger, YYHUDLoadingProgressStyle) {
  @return MBProgressHUD对象，可以通过它调用MBProgressHUD中的方法
  */
 + (MBProgressHUD *)showLoadingStyle:(YYHUDLoadingProgressStyle)style message:(nullable NSString *)message toView:(nullable UIView *)view;
+
++ (void)showLoadingStyle:(YYHUDLoadingProgressStyle)style message:(nullable NSString *)message;
 
 /**
  只显示加载进度的HUD，不显示消息文本，设置HUD的progress请通过 HUD 对象调用 showAnimated: whileExecutingBlock: 等方法

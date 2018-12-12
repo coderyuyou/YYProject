@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2095E7DA6D25DECE74A17647 /* libPods-YYProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DC7FABD71E02D3726F4D2F /* libPods-YYProjectTests.a */; };
-		97A418236274164B0FC9E8AC /* libPods-YYProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 723DFA20A8411F774CBC8223 /* libPods-YYProject.a */; };
+		37749A7FF56D43DF490CF175 /* Pods_YYProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B44C99CD020DA2A561CADFB /* Pods_YYProject.framework */; };
+		50104BBF04E9A9CA4F7E456E /* Pods_YYProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E233534D8A2BFFDEA9BC64E /* Pods_YYProjectTests.framework */; };
+		84E15329343096B7F8449359 /* Pods_YYProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1C900A21D4444B4BB02B90 /* Pods_YYProjectUITests.framework */; };
 		BC003AA321B76C5100321033 /* YYNetworkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AA221B76C5100321033 /* YYNetworkUser.m */; };
 		BC003AA621B7C72500321033 /* YYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AA521B7C72500321033 /* YYAlertViewController.m */; };
 		BC003AA921B7CCF300321033 /* PickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AA821B7CCF300321033 /* PickViewController.m */; };
 		BC003AAC21B7D3FD00321033 /* YYAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AAB21B7D3FD00321033 /* YYAddressPicker.m */; };
 		BC003AAE21B7D42300321033 /* citys.json in Resources */ = {isa = PBXBuildFile; fileRef = BC003AAD21B7D42300321033 /* citys.json */; };
 		BC003AB121B7D4AD00321033 /* YYAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AB021B7D4AC00321033 /* YYAddressModel.m */; };
-		BC003AB421B7DF2E00321033 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC003AB321B7DF2E00321033 /* HUDViewController.m */; };
 		BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01868721B0EC6D00A18A7D /* YYToolViewController.m */; };
 		BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
 		BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */; };
+		BC02DABB21BFA783001B91A0 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02DABA21BFA783001B91A0 /* HUDViewController.swift */; };
 		BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87821AE832900394BF5 /* YYBaseViewController.m */; };
 		BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */; };
 		BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05499721ACF13D0017D981 /* YYHomeViewController.m */; };
@@ -27,6 +28,7 @@
 		BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A121AD3AA70017D981 /* UIView+Extension.m */; };
 		BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A421AD44AF0017D981 /* UIColor+Extension.m */; };
 		BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */; };
+		BC0B4FF221BE4B7100718DD5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */; };
 		BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */; };
 		BC0FE12421B8BC5700CCB0A5 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE12321B8BC5700CCB0A5 /* swift.swift */; };
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
@@ -60,7 +62,6 @@
 		BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF435F21B6724E00681BB6 /* SGPageTitleView.m */; };
 		BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF436021B6724E00681BB6 /* SGPageTitleViewConfigure.m */; };
 		BCFF436C21B6817900681BB6 /* YYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFF436B21B6817900681BB6 /* YYNetwork.m */; };
-		E031E760304F40DDA2A7EDCC /* libPods-YYProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,12 +82,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32DC7FABD71E02D3726F4D2F /* libPods-YYProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1C900A21D4444B4BB02B90 /* Pods_YYProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B44C99CD020DA2A561CADFB /* Pods_YYProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E233534D8A2BFFDEA9BC64E /* Pods_YYProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		438A20D041E09540E75DD5D8 /* Pods-YYProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProject/Pods-YYProject.release.xcconfig"; sourceTree = "<group>"; };
-		723DFA20A8411F774CBC8223 /* libPods-YYProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDC4EC9BF3878A821F48DE0 /* Pods-YYProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectUITests/Pods-YYProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		840184932722718BCF808A27 /* Pods-YYProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectTests/Pods-YYProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F49C961E601178366D6185 /* Pods-YYProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProject/Pods-YYProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B96C6EE10229317649F697DB /* Pods-YYProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectUITests/Pods-YYProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC003AA121B76C5100321033 /* YYNetworkUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNetworkUser.h; sourceTree = "<group>"; };
@@ -100,8 +101,6 @@
 		BC003AAD21B7D42300321033 /* citys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citys.json; sourceTree = "<group>"; };
 		BC003AAF21B7D4AC00321033 /* YYAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAddressModel.h; sourceTree = "<group>"; };
 		BC003AB021B7D4AC00321033 /* YYAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAddressModel.m; sourceTree = "<group>"; };
-		BC003AB221B7DF2E00321033 /* HUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
-		BC003AB321B7DF2E00321033 /* HUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 		BC01868621B0EC6D00A18A7D /* YYToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYToolViewController.h; sourceTree = "<group>"; };
 		BC01868721B0EC6D00A18A7D /* YYToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYToolViewController.m; sourceTree = "<group>"; };
 		BC01868921B11D5400A18A7D /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUIManager.m; sourceTree = "<group>"; };
 		BC02945021AB9E6D002AF4D0 /* YYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTabBarController.h; sourceTree = "<group>"; };
 		BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTabBarController.m; sourceTree = "<group>"; };
+		BC02DABA21BFA783001B91A0 /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
 		BC03B87721AE832900394BF5 /* YYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBaseViewController.h; sourceTree = "<group>"; };
 		BC03B87821AE832900394BF5 /* YYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBaseViewController.m; sourceTree = "<group>"; };
 		BC03B87A21AE904B00394BF5 /* YYNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNavigationBarView.h; sourceTree = "<group>"; };
@@ -127,6 +127,8 @@
 		BC0549A421AD44AF0017D981 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		BC0B4FE321BE05BC00718DD5 /* UITextField+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extension.h"; sourceTree = "<group>"; };
 		BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
+		BC0B4FF021BE4B7000718DD5 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModuleViewController.h; sourceTree = "<group>"; };
 		BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModuleViewController.m; sourceTree = "<group>"; };
 		BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -206,7 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A418236274164B0FC9E8AC /* libPods-YYProject.a in Frameworks */,
+				37749A7FF56D43DF490CF175 /* Pods_YYProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2095E7DA6D25DECE74A17647 /* libPods-YYProjectTests.a in Frameworks */,
+				50104BBF04E9A9CA4F7E456E /* Pods_YYProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E031E760304F40DDA2A7EDCC /* libPods-YYProjectUITests.a in Frameworks */,
+				84E15329343096B7F8449359 /* Pods_YYProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +234,9 @@
 		70C4D51F8DF8F559DEFFB2C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				723DFA20A8411F774CBC8223 /* libPods-YYProject.a */,
-				32DC7FABD71E02D3726F4D2F /* libPods-YYProjectTests.a */,
-				98AFDFC5FDC9563A62FEE6AE /* libPods-YYProjectUITests.a */,
+				1B44C99CD020DA2A561CADFB /* Pods_YYProject.framework */,
+				2E233534D8A2BFFDEA9BC64E /* Pods_YYProjectTests.framework */,
+				0B1C900A21D4444B4BB02B90 /* Pods_YYProjectUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -590,8 +592,9 @@
 				BCFF435321B6713000681BB6 /* PagingViewController.m */,
 				BC003AA721B7CCF300321033 /* PickViewController.h */,
 				BC003AA821B7CCF300321033 /* PickViewController.m */,
-				BC003AB221B7DF2E00321033 /* HUDViewController.h */,
-				BC003AB321B7DF2E00321033 /* HUDViewController.m */,
+				BC02DABA21BFA783001B91A0 /* HUDViewController.swift */,
+				BC0B4FF021BE4B7000718DD5 /* CameraViewController.h */,
+				BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */,
 			);
 			path = NextViewController;
 			sourceTree = "<group>";
@@ -660,7 +663,7 @@
 				BCC5223F20DF821A00915076 /* Sources */,
 				BCC5224020DF821A00915076 /* Frameworks */,
 				BCC5224120DF821A00915076 /* Resources */,
-				C5C14E3900351915B448748A /* [CP] Copy Pods Resources */,
+				B5860F6647F8E18F93B29829 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -798,22 +801,54 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5C14E3900351915B448748A /* [CP] Copy Pods Resources */ = {
+		B5860F6647F8E18F93B29829 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YYProject/Pods-YYProject-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${SRCROOT}/Pods/Target Support Files/Pods-YYProject/Pods-YYProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYProject/Pods-YYProject-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYProject/Pods-YYProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E306593E8014B661C0271D9C /* [CP] Check Pods Manifest.lock */ = {
@@ -859,7 +894,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC003AB421B7DF2E00321033 /* HUDViewController.m in Sources */,
 				BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */,
 				BC69712B21B8FAA40083F57E /* YYWebSockeIO.m in Sources */,
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
@@ -877,6 +911,7 @@
 				BCFF436521B6724E00681BB6 /* SGPageContentScrollView.m in Sources */,
 				BCFF435021B61BD500681BB6 /* YYProgressHUD.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
+				BC02DABB21BFA783001B91A0 /* HUDViewController.swift in Sources */,
 				BCFF436421B6724E00681BB6 /* UIView+SGPagingView.m in Sources */,
 				BCFF436C21B6817900681BB6 /* YYNetwork.m in Sources */,
 				BC69711E21B8BFD20083F57E /* FZMTimeLineView.m in Sources */,
@@ -904,6 +939,7 @@
 				BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */,
 				BC003AA321B76C5100321033 /* YYNetworkUser.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
+				BC0B4FF221BE4B7100718DD5 /* CameraViewController.m in Sources */,
 				BC003AA921B7CCF300321033 /* PickViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1067,15 +1103,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H536G2V449;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YYProject/Swift/YYProject-Bridging-Header.h";
@@ -1091,15 +1125,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H536G2V449;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YYProject/Swift/YYProject-Bridging-Header.h";
@@ -1117,11 +1149,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1138,11 +1166,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1158,11 +1182,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1178,11 +1198,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

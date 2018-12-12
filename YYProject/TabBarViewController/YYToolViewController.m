@@ -8,9 +8,10 @@
 
 #import "YYToolViewController.h"
 #import "PagingViewController.h"
-#import "HUDViewController.h"
 #import "YYAlertViewController.h"
 #import "PickViewController.h"
+
+#import "YYProject-Swift.h"
 
 @interface YYToolViewController ()
 /** 数据源 */
