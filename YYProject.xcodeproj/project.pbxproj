@@ -29,6 +29,7 @@
 		BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A421AD44AF0017D981 /* UIColor+Extension.m */; };
 		BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */; };
 		BC0B4FF221BE4B7100718DD5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */; };
+		BC0F865821C20737009C26E6 /* camera_rotating.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC0F865721C20737009C26E6 /* camera_rotating.svg */; };
 		BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */; };
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
 		BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */; };
@@ -128,6 +129,7 @@
 		BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
 		BC0B4FF021BE4B7000718DD5 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		BC0F865721C20737009C26E6 /* camera_rotating.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = camera_rotating.svg; sourceTree = "<group>"; };
 		BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModuleViewController.h; sourceTree = "<group>"; };
 		BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModuleViewController.m; sourceTree = "<group>"; };
 		BC0FE12221B8BC5700CCB0A5 /* YYProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -291,6 +293,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		BC0F865621C20737009C26E6 /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				BC0F865721C20737009C26E6 /* camera_rotating.svg */,
+			);
+			path = SVG;
+			sourceTree = "<group>";
+		};
 		BC0FE12121B8BC4100CCB0A5 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +324,7 @@
 		BC290ADB21A798460039E2F8 /* TargetLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				BC0F865621C20737009C26E6 /* SVG */,
 				BC003AAD21B7D42300321033 /* citys.json */,
 				BC290ADC21A798460039E2F8 /* Assets.xcassets */,
 				BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */,
@@ -758,6 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */,
+				BC0F865821C20737009C26E6 /* camera_rotating.svg in Resources */,
 				BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */,
 				BC003AAE21B7D42300321033 /* citys.json in Resources */,
 			);
@@ -1107,7 +1119,10 @@
 				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YYProject/Swift/YYProject-Bridging-Header.h";
@@ -1129,7 +1144,10 @@
 				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YYProject/Swift/YYProject-Bridging-Header.h";
@@ -1147,7 +1165,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1164,7 +1186,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1180,7 +1206,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1196,7 +1226,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDLQ622F2E;
 				INFOPLIST_FILE = YYProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.superyu.YYProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -7,6 +7,8 @@
 //
 
 #import "CameraViewController.h"
+#import "UIImage+SVG.h"
+#import "UIView+Extension.h"
 //导入相机框架
 #import <AVFoundation/AVFoundation.h>
 //将拍摄好的照片写入系统相册中，所以我们在这里还需要导入一个相册需要的头文件iOS8
@@ -43,14 +45,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
     
     if ([self checkCameraPermission]) {
         
         [self customCamera];
         [self initSubViews];
-        
-        [self focusAtPoint:CGPointMake(0.5, 0.5)];
+        // 默认聚焦
+        [self focusAtPoint:CGPointMake(kScreen_Width * 0.5, kScreen_Height * 0.5)];
     }
 }
 - (void)customCamera {
@@ -107,12 +108,10 @@
 
 - (void)initSubViews {
     
-    UIButton *btn = [UIButton new];
-    btn.frame = CGRectMake(20, 20, 40, 40);
-    [btn setTitle:@"取消" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(disMiss) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    [self.view bringSubviewToFront:self.navView];
+    self.navView.backgroundColor = [UIColor clearColor];
     
+    self.navView.rightBtnImage = [UIImage svgImageNamed:@"camera_rotating" size:CGSizeMake(22, 22)];
     
     self.photoButton = [UIButton new];
     self.photoButton.frame = CGRectMake(kScreen_Width/2.0-30, kScreen_Height-100, 60, 60);
@@ -122,17 +121,9 @@
     
     self.focusView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
     self.focusView.layer.borderWidth = 1.0;
-    self.focusView.layer.borderColor = [UIColor greenColor].CGColor;
+    self.focusView.layer.borderColor = kBlueColor.CGColor;
     [self.view addSubview:self.focusView];
     self.focusView.hidden = YES;
-    
-    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setTitle:@"切换" forState:UIControlStateNormal];
-    leftButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [leftButton sizeToFit];
-    leftButton.center = CGPointMake((kScreen_Width - 60)/2.0/2.0, kScreen_Height-70);
-    [leftButton addTarget:self action:@selector(changeCamera) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:leftButton];
     
     self.flashButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [ self.flashButton setTitle:@"闪光灯关" forState:UIControlStateNormal];
@@ -142,9 +133,14 @@
     [ self.flashButton addTarget:self action:@selector(FlashOn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: self.flashButton];
     
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(focusGesture:)];
-    [self.view addGestureRecognizer:tapGesture];
-    
+    WEAKSELF;
+    [self.view setTapGestureHandle:^(UITapGestureRecognizer * _Nullable gesture, UIView * _Nullable tapView) {
+        [weakSelf focusGesture:gesture];
+    }];
+}
+
+- (void)navRightPressed:(UIButton *)sender {
+    [self changeCamera];
 }
 
 - (void)focusGesture:(UITapGestureRecognizer*)gesture {
@@ -171,8 +167,8 @@
         }
         
         [self.device unlockForConfiguration];
-        _focusView.center = point;
-        _focusView.hidden = NO;
+        self.focusView.center = point;
+        self.focusView.hidden = NO;
         WEAKSELF;
         [UIView animateWithDuration:0.3 animations:^{
             weakSelf.focusView.transform = CGAffineTransformMakeScale(1.25, 1.25);
