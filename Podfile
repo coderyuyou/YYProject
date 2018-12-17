@@ -11,9 +11,10 @@ target 'YYProject' do
     pod 'MJRefresh','~> 3.1.15.7'
     pod 'YYModel', '~> 1.0.4'
     pod 'MBProgressHUD', '~> 1.1.0'
-    pod 'FSCalendar'
-    pod 'SVGKit'
+    pod 'FSCalendar', '~> 2.8.0'
+    pod 'SVGKit', '~> 2.1.0'
     pod 'FMDB', '~> 2.7.5'
+    pod 'GPUImage', '~> 0.1.7'
     
     use_frameworks!
 

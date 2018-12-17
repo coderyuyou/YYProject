@@ -27,6 +27,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - FSCalendar (2.8.0)
+  - GPUImage (0.1.7)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.15.1)
@@ -53,7 +54,8 @@ DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - Charts
   - FMDB (~> 2.7.5)
-  - FSCalendar
+  - FSCalendar (~> 2.8.0)
+  - GPUImage (~> 0.1.7)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.1.0)
   - MJExtension (~> 3.0.15.1)
@@ -61,7 +63,7 @@ DEPENDENCIES:
   - SDWebImage (~> 4.4.2)
   - SnapKit
   - Socket.IO-Client-Swift
-  - SVGKit
+  - SVGKit (~> 2.1.0)
   - YYModel (~> 1.0.4)
   - YYWebImage (~> 1.0.4)
 
@@ -72,6 +74,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - FMDB
     - FSCalendar
+    - GPUImage
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -92,6 +95,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
@@ -106,6 +110,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 75e7f86e8ef0b4c281242cb273fb9008a044b724
+PODFILE CHECKSUM: ff2c56e130377eb16a8ce5f881f6d1624906d1f2
 
 COCOAPODS: 1.5.3

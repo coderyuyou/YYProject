@@ -29,6 +29,7 @@
 		BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0549A421AD44AF0017D981 /* UIColor+Extension.m */; };
 		BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */; };
 		BC0B4FF221BE4B7100718DD5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */; };
+		BC0E3D9D21C3885100C83554 /* OptimizeCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0E3D9C21C3885100C83554 /* OptimizeCameraViewController.m */; };
 		BC0F865821C20737009C26E6 /* camera_rotating.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC0F865721C20737009C26E6 /* camera_rotating.svg */; };
 		BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */; };
 		BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC290ADC21A798460039E2F8 /* Assets.xcassets */; };
@@ -129,6 +130,8 @@
 		BC0B4FE421BE05BC00718DD5 /* UITextField+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
 		BC0B4FF021BE4B7000718DD5 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		BC0E3D9B21C3885100C83554 /* OptimizeCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptimizeCameraViewController.h; sourceTree = "<group>"; };
+		BC0E3D9C21C3885100C83554 /* OptimizeCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptimizeCameraViewController.m; sourceTree = "<group>"; };
 		BC0F865721C20737009C26E6 /* camera_rotating.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = camera_rotating.svg; sourceTree = "<group>"; };
 		BC0FE11E21B8B8AB00CCB0A5 /* YYModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModuleViewController.h; sourceTree = "<group>"; };
 		BC0FE11F21B8B8AB00CCB0A5 /* YYModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModuleViewController.m; sourceTree = "<group>"; };
@@ -603,6 +606,8 @@
 				BC02DABA21BFA783001B91A0 /* HUDViewController.swift */,
 				BC0B4FF021BE4B7000718DD5 /* CameraViewController.h */,
 				BC0B4FF121BE4B7100718DD5 /* CameraViewController.m */,
+				BC0E3D9B21C3885100C83554 /* OptimizeCameraViewController.h */,
+				BC0E3D9C21C3885100C83554 /* OptimizeCameraViewController.m */,
 			);
 			path = NextViewController;
 			sourceTree = "<group>";
@@ -822,6 +827,7 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -843,6 +849,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -933,6 +940,7 @@
 				BCFF435421B6713000681BB6 /* PagingViewController.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
+				BC0E3D9D21C3885100C83554 /* OptimizeCameraViewController.m in Sources */,
 				BC69712721B8CD0F0083F57E /* FZMTradeKLineView.m in Sources */,
 				BC69714121B927830083F57E /* YYCacheManager.m in Sources */,
 				BC003AB121B7D4AD00321033 /* YYAddressModel.m in Sources */,

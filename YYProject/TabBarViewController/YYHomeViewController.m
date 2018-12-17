@@ -15,6 +15,7 @@
 #import "YYNetworkUser.h"
 #import "YYUnitTextField.h"
 #import "CameraViewController.h"
+#import "OptimizeCameraViewController.h"
 
 @implementation YYHomeViewController
 
@@ -63,7 +64,9 @@
     }];
     
     [YYNetworkUser requestWithCheckMobile:@{@"mobile":@"15167152681"} successBlock:^(ResponseModel * _Nonnull response) {
+        
     } failureBlock:^(NSError * _Nonnull error) {
+        
     }];
 }
 

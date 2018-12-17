@@ -31,9 +31,14 @@ class HUDViewController: YYBaseViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: toolCell)
         tableView.separatorStyle = .singleLine
         
-        tableView.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(navView.snp.bottom).offset(0)
-            make.left.bottom.right.equalTo(view)
+//        tableView.snp.makeConstraints { (make) -> Void in
+//            make.top.equalTo(navView.snp.bottom).offset(0)
+//            make.left.bottom.right.equalTo(view)
+//        }
+        
+        tableView.snp.makeConstraints { (ConstraintMaker) in
+            ConstraintMaker.top.equalTo(navView.snp.bottom).offset(0)
+            ConstraintMaker.left.bottom.right.equalTo(view)
         }
     }
     
