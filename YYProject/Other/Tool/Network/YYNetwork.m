@@ -15,27 +15,9 @@
 
 @end
 
-static YYNetwork *_instance = nil;
-
 @implementation YYNetwork
 
-+ (instancetype)sharedNetwork {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[YYNetwork alloc] init];
-    });
-    return _instance;
-}
-
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [super allocWithZone:zone];
-    });
-    return _instance;
-}
+YYSingletonM(Network)
 
 - (instancetype)init {
     

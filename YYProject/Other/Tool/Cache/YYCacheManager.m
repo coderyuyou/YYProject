@@ -17,47 +17,33 @@
 
 @implementation YYCacheManager
 
-static YYCacheManager *_instance = nil;
+YYSingletonM(Cache)
 
-+ (instancetype)sharedCache {
+- (instancetype)init {
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[YYCacheManager alloc] init];
-        [_instance initBaseData];
-    });
-    return _instance;
-}
-
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [super allocWithZone:zone];
-    });
-    return _instance;
-}
-
-- (void)initBaseData {
-    // 获得数据库文件的路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *fileName = [doc stringByAppendingPathComponent:@"collection.sqlite"];
-    
-    // 获得数据库
-    FMDatabase *db = [FMDatabase databaseWithPath:fileName];
-    
-    // 打开数据库
-    if ([db open]) {
-        //4.创表
-        BOOL result = [db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_collection (id integer PRIMARY KEY AUTOINCREMENT, userId text NOT NULL, collection text NOT NULL);"];
-        if (result) {
-            NSLog(@"创表成功");
+    self = [super init];
+    if (self) {
+        // 获得数据库文件的路径
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *fileName = [doc stringByAppendingPathComponent:@"collection.sqlite"];
+        
+        // 获得数据库
+        FMDatabase *db = [FMDatabase databaseWithPath:fileName];
+        
+        // 打开数据库
+        if ([db open]) {
+            //4.创表
+            BOOL result = [db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_collection (id integer PRIMARY KEY AUTOINCREMENT, userId text NOT NULL, collection text NOT NULL);"];
+            if (result) {
+                NSLog(@"创表成功");
+            }
+            else {
+                NSLog(@"创表失败");
+            }
         }
-        else {
-            NSLog(@"创表失败");
-        }
+        self.db = db;
     }
-    self.db = db;
+    return self;
 }
 
 // 添加
@@ -75,7 +61,7 @@ static YYCacheManager *_instance = nil;
         NSString *oldStr = [oldData yy_modelToJSONString];
         NSString *newStr = [newData yy_modelToJSONString];
         
-        BOOL result = [_instance.db executeUpdate:@"update t_collection set collection = ? where collection = ?",newStr,oldStr];
+        BOOL result = [self.db executeUpdate:@"update t_collection set collection = ? where collection = ?",newStr,oldStr];
         if (result) {
             NSLog(@"修改成功");
         } else {
@@ -88,7 +74,7 @@ static YYCacheManager *_instance = nil;
         
         NSString *dataStr = [newData yy_modelToJSONString];
         
-        BOOL result = [_instance.db executeUpdate:@"INSERT INTO t_collection (userId, collection) VALUES (?,?)",key,dataStr];
+        BOOL result = [self.db executeUpdate:@"INSERT INTO t_collection (userId, collection) VALUES (?,?)",key,dataStr];
         
         if (result) {
             NSLog(@"插入成功");
@@ -113,7 +99,7 @@ static YYCacheManager *_instance = nil;
     NSString *oldStr = [oldData yy_modelToJSONString];
     NSString *newStr = [newData yy_modelToJSONString];
     
-    BOOL result = [_instance.db executeUpdate:@"update t_collection set collection = ? where collection = ?",newStr,oldStr];
+    BOOL result = [self.db executeUpdate:@"update t_collection set collection = ? where collection = ?",newStr,oldStr];
     if (result) {
         NSLog(@"修改成功");
     } else {

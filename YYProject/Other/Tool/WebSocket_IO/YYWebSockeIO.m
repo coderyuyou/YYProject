@@ -24,29 +24,13 @@
 
 @implementation YYWebSockeIO
 
-static YYWebSockeIO *_instance = nil;
 
 NSString * const kNeedPayOrderNote = @"kNeedPayOrderNote";
 NSString * const kWebSocketDidOpenNote = @"kWebSocketDidOpenNote";
 NSString * const kWebSocketDidCloseNote = @"kWebSocketDidCloseNote";
 NSString * const kWebSocketdidReceiveMessageNote = @"kWebSocketdidReceiveMessageNote";
 
-+ (instancetype)sharedWebSockeIO {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[YYWebSockeIO alloc] init];
-    });
-    return _instance;
-}
-
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [super allocWithZone:zone];
-    });
-    return _instance;
-}
+YYSingletonM(WebSockeIO)
 
 #pragma mark - public methods
 - (void)webSocketOpenWithURLString:(NSString *)urlString {

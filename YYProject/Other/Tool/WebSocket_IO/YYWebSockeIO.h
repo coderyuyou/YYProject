@@ -20,7 +20,7 @@ extern NSString * const kWebSocketdidReceiveMessageNote;
 /** 获取连接状态 */
 //@property (nonatomic,assign,readonly) SRReadyState socketReadyState;
 
-+ (instancetype)sharedWebSockeIO;
+YYSingletonH(WebSockeIO)
 
 /** 开启连接 */
 - (void)webSocketOpenWithURLString:(NSString *)urlString;

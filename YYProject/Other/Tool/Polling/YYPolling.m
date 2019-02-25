@@ -20,26 +20,9 @@
 
 @implementation YYPolling
 
-static YYPolling *_instance = nil;
-
 NSString * const kPollingdidReceiveMessageNote = @"kPollingdidReceiveMessageNote";
 
-+ (instancetype)sharedPolling {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[YYPolling alloc] init];
-    });
-    return _instance;
-}
-
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [super allocWithZone:zone];
-    });
-    return _instance;
-}
+YYSingletonM(Polling)
 
 - (void)pollingOpen {
     

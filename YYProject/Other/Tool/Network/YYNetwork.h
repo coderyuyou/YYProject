@@ -33,7 +33,7 @@ typedef void(^ResponseSuccess)(ResponseModel * response);
 /** 定义请求失败的 block */
 typedef void(^ResponseFail)(NSError *error);
 
-+ (instancetype)sharedNetwork;
+YYSingletonH(Network)
 
 /**
  网络请求（GET、POST、DELETE、PUT）

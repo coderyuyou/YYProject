@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YYCacheManager : NSObject
 
-+ (instancetype)sharedCache;
+YYSingletonH(Cache)
 
 // 添加
 - (void)addInfo:(YYCacheModel *)application;

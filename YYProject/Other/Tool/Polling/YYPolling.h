@@ -14,7 +14,7 @@ extern NSString * const kPollingdidReceiveMessageNote;
 
 @interface YYPolling : NSObject
 
-+ (instancetype)sharedPolling;
+YYSingletonH(Polling)
 
 /** 开启轮询 */
 - (void)pollingOpen;
