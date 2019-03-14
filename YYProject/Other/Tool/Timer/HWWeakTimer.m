@@ -47,34 +47,21 @@
 
 @implementation HWWeakTimer
 
-+ (NSTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                      target:(id)aTarget
-                                    selector:(SEL)aSelector
-                                    userInfo:(id)userInfo
-                                     repeats:(BOOL)repeats {
++ (NSTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)repeats {
     HWWeakTimerTarget* timerTarget = [[HWWeakTimerTarget alloc] init];
     timerTarget.target = aTarget;
     timerTarget.selector = aSelector;
-    timerTarget.timer = [NSTimer scheduledTimerWithTimeInterval:interval
-                                                         target:timerTarget
-                                                       selector:@selector(fire:)
-                                                       userInfo:userInfo
-                                                        repeats:repeats];
+    timerTarget.timer = [NSTimer scheduledTimerWithTimeInterval:interval target:timerTarget selector:@selector(fire:) userInfo:userInfo repeats:repeats];
     return timerTarget.timer;
 }
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                      block:(HWTimerHandler)block
-                                   userInfo:(id)userInfo
-                                    repeats:(BOOL)repeats {
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval block:(HWTimerHandler)block userInfo:(id)userInfo repeats:(BOOL)repeats {
     NSMutableArray *userInfoArray = [NSMutableArray arrayWithObject:[block copy]];
     if (userInfo != nil) {
         [userInfoArray addObject:userInfo];
     }
     return [self scheduledTimerWithTimeInterval:interval
-                                         target:self
-                                       selector:@selector(_timerBlockInvoke:)
-                                       userInfo:[userInfoArray copy]
+                                         target:self selector:@selector(_timerBlockInvoke:) userInfo:[userInfoArray copy]
                                         repeats:repeats];
 }
 

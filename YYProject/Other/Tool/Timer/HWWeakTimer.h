@@ -26,15 +26,8 @@ typedef void (^HWTimerHandler)(id userInfo);
 
 @interface HWWeakTimer : NSObject
 
-+ (NSTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                      target:(id)aTarget
-                                    selector:(SEL)aSelector
-                                    userInfo:(id)userInfo
-                                     repeats:(BOOL)repeats;
++ (NSTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)repeats;
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                      block:(HWTimerHandler)block
-                                   userInfo:(id)userInfo
-                                    repeats:(BOOL)repeats;
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval block:(HWTimerHandler)block userInfo:(id)userInfo repeats:(BOOL)repeats;
 
 @end

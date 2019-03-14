@@ -20,6 +20,37 @@
 		BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A67021B4D74B0001CA1D /* UIFont+Extension.m */; };
 		BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */; };
 		BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */; };
+		BC029D80223A7E7400195316 /* demo详情链接地址.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC029D39223A7E7300195316 /* demo详情链接地址.txt */; };
+		BC029D81223A7E7400195316 /* OSAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D3C223A7E7300195316 /* OSAddressPickerView.m */; };
+		BC029D82223A7E7400195316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC029D3D223A7E7300195316 /* Assets.xcassets */; };
+		BC029D83223A7E7400195316 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D3E223A7E7300195316 /* ViewController.m */; };
+		BC029D84223A7E7400195316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC029D3F223A7E7300195316 /* LaunchScreen.storyboard */; };
+		BC029D85223A7E7400195316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC029D41223A7E7300195316 /* Main.storyboard */; };
+		BC029D86223A7E7400195316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D43223A7E7300195316 /* main.m */; };
+		BC029D87223A7E7400195316 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D44223A7E7300195316 /* city.plist */; };
+		BC029D88223A7E7400195316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D45223A7E7300195316 /* AppDelegate.m */; };
+		BC029D89223A7E7400195316 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D47223A7E7300195316 /* Info.plist */; };
+		BC029D8A223A7E7400195316 /* AddressPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D4B223A7E7300195316 /* AddressPickerTests.m */; };
+		BC029D8B223A7E7400195316 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D4C223A7E7300195316 /* Info.plist */; };
+		BC029D8C223A7E7400195316 /* AddressPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D4E223A7E7300195316 /* AddressPickerUITests.m */; };
+		BC029D8D223A7E7400195316 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D4F223A7E7300195316 /* Info.plist */; };
+		BC029D8E223A7E7400195316 /* demo详情链接地址.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC029D54223A7E7300195316 /* demo详情链接地址.txt */; };
+		BC029D8F223A7E7400195316 /* bank.json in Resources */ = {isa = PBXBuildFile; fileRef = BC029D57223A7E7300195316 /* bank.json */; };
+		BC029D90223A7E7400195316 /* OSAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D58223A7E7300195316 /* OSAddressPickerView.m */; };
+		BC029D91223A7E7400195316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC029D59223A7E7300195316 /* Assets.xcassets */; };
+		BC029D92223A7E7400195316 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D5A223A7E7300195316 /* ViewController.m */; };
+		BC029D93223A7E7400195316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC029D5B223A7E7300195316 /* LaunchScreen.storyboard */; };
+		BC029D94223A7E7400195316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC029D5D223A7E7300195316 /* Main.storyboard */; };
+		BC029D95223A7E7400195316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D5F223A7E7300195316 /* main.m */; };
+		BC029D96223A7E7400195316 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D60223A7E7300195316 /* city.plist */; };
+		BC029D97223A7E7400195316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D61223A7E7300195316 /* AppDelegate.m */; };
+		BC029D98223A7E7400195316 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D63223A7E7300195316 /* Info.plist */; };
+		BC029D99223A7E7400195316 /* AddressPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D67223A7E7300195316 /* AddressPickerTests.m */; };
+		BC029D9A223A7E7400195316 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D68223A7E7300195316 /* Info.plist */; };
+		BC029D9B223A7E7400195316 /* AddressPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D6A223A7E7300195316 /* AddressPickerUITests.m */; };
+		BC029D9C223A7E7400195316 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC029D6B223A7E7300195316 /* Info.plist */; };
+		BC029D9D223A7E7400195316 /* FZMBankPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D6C223A7E7300195316 /* FZMBankPicker.m */; };
+		BC029D9E223A7E7400195316 /* FZMAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BC029D6D223A7E7300195316 /* FZMAddressPicker.m */; };
 		BC02DABB21BFA783001B91A0 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02DABA21BFA783001B91A0 /* HUDViewController.swift */; };
 		BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87821AE832900394BF5 /* YYBaseViewController.m */; };
 		BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC03B87B21AE904B00394BF5 /* YYNavigationBarView.m */; };
@@ -39,6 +70,8 @@
 		BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290AFF21A79B190039E2F8 /* NSString+CommonUseTool.m */; };
 		BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B0221A79B190039E2F8 /* NSDate+Category.m */; };
 		BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */; };
+		BC50A12B2238940A000467AB /* YYCountDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC50A12A2238940A000467AB /* YYCountDownManager.m */; };
+		BC50A1612239DF8C000467AB /* OYCountDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC50A1602239DF8C000467AB /* OYCountDownManager.m */; };
 		BC69711E21B8BFD20083F57E /* FZMTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69711C21B8BFD20083F57E /* FZMTimeLineView.m */; };
 		BC69712721B8CD0F0083F57E /* FZMTradeKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69712621B8CD0F0083F57E /* FZMTradeKLineView.m */; };
 		BC69712B21B8FAA40083F57E /* YYWebSockeIO.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69712A21B8FAA40083F57E /* YYWebSockeIO.m */; };
@@ -67,6 +100,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BC029D71223A7E7400195316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC029D51223A7E7300195316 /* AddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D097991D50841C0033393D;
+			remoteInfo = AddressPicker;
+		};
+		BC029D73223A7E7400195316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC029D51223A7E7300195316 /* AddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D097B21D50841C0033393D;
+			remoteInfo = AddressPickerTests;
+		};
+		BC029D75223A7E7400195316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC029D51223A7E7300195316 /* AddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D097BD1D50841C0033393D;
+			remoteInfo = AddressPickerUITests;
+		};
+		BC029D7A223A7E7400195316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC029D36223A7E7300195316 /* AddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D097991D50841C0033393D;
+			remoteInfo = AddressPicker;
+		};
+		BC029D7C223A7E7400195316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC029D36223A7E7300195316 /* AddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D097B21D50841C0033393D;
+			remoteInfo = AddressPickerTests;
+		};
+		BC029D7E223A7E7400195316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC029D36223A7E7300195316 /* AddressPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D097BD1D50841C0033393D;
+			remoteInfo = AddressPickerUITests;
+		};
 		BCC5225C20DF821C00915076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BCC5223B20DF821A00915076 /* Project object */;
@@ -114,6 +189,47 @@
 		BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYUIManager.m; sourceTree = "<group>"; };
 		BC02945021AB9E6D002AF4D0 /* YYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTabBarController.h; sourceTree = "<group>"; };
 		BC02945121AB9E6D002AF4D0 /* YYTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTabBarController.m; sourceTree = "<group>"; };
+		BC029D33223A7E7300195316 /* FZMAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMAddressPicker.h; sourceTree = "<group>"; };
+		BC029D34223A7E7300195316 /* FZMBankPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMBankPicker.h; sourceTree = "<group>"; };
+		BC029D36223A7E7300195316 /* AddressPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AddressPicker.xcodeproj; sourceTree = "<group>"; };
+		BC029D39223A7E7300195316 /* demo详情链接地址.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "demo详情链接地址.txt"; sourceTree = "<group>"; };
+		BC029D3B223A7E7300195316 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC029D3C223A7E7300195316 /* OSAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAddressPickerView.m; sourceTree = "<group>"; };
+		BC029D3D223A7E7300195316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC029D3E223A7E7300195316 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC029D40223A7E7300195316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC029D42223A7E7300195316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC029D43223A7E7300195316 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC029D44223A7E7300195316 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		BC029D45223A7E7300195316 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC029D46223A7E7300195316 /* OSAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAddressPickerView.h; sourceTree = "<group>"; };
+		BC029D47223A7E7300195316 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC029D48223A7E7300195316 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC029D4B223A7E7300195316 /* AddressPickerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerTests.m; sourceTree = "<group>"; };
+		BC029D4C223A7E7300195316 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC029D4E223A7E7300195316 /* AddressPickerUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerUITests.m; sourceTree = "<group>"; };
+		BC029D4F223A7E7300195316 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC029D51223A7E7300195316 /* AddressPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AddressPicker.xcodeproj; sourceTree = "<group>"; };
+		BC029D54223A7E7300195316 /* demo详情链接地址.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "demo详情链接地址.txt"; sourceTree = "<group>"; };
+		BC029D56223A7E7300195316 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC029D57223A7E7300195316 /* bank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bank.json; sourceTree = "<group>"; };
+		BC029D58223A7E7300195316 /* OSAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAddressPickerView.m; sourceTree = "<group>"; };
+		BC029D59223A7E7300195316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC029D5A223A7E7300195316 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC029D5C223A7E7300195316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC029D5E223A7E7300195316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC029D5F223A7E7300195316 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC029D60223A7E7300195316 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		BC029D61223A7E7300195316 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC029D62223A7E7300195316 /* OSAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAddressPickerView.h; sourceTree = "<group>"; };
+		BC029D63223A7E7300195316 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC029D64223A7E7300195316 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC029D67223A7E7300195316 /* AddressPickerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerTests.m; sourceTree = "<group>"; };
+		BC029D68223A7E7300195316 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC029D6A223A7E7300195316 /* AddressPickerUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerUITests.m; sourceTree = "<group>"; };
+		BC029D6B223A7E7300195316 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC029D6C223A7E7300195316 /* FZMBankPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMBankPicker.m; sourceTree = "<group>"; };
+		BC029D6D223A7E7300195316 /* FZMAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMAddressPicker.m; sourceTree = "<group>"; };
 		BC02DABA21BFA783001B91A0 /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
 		BC03B87721AE832900394BF5 /* YYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBaseViewController.h; sourceTree = "<group>"; };
 		BC03B87821AE832900394BF5 /* YYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBaseViewController.m; sourceTree = "<group>"; };
@@ -152,6 +268,10 @@
 		BC290B0A21A79B190039E2F8 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		BC290B0D21A79B190039E2F8 /* NSString+CommonUseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonUseTool.h"; sourceTree = "<group>"; };
 		BC290B1221A79B190039E2F8 /* NSDecimalNumber+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Addtion.m"; sourceTree = "<group>"; };
+		BC50A1292238940A000467AB /* YYCountDownManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCountDownManager.h; sourceTree = "<group>"; };
+		BC50A12A2238940A000467AB /* YYCountDownManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCountDownManager.m; sourceTree = "<group>"; };
+		BC50A15F2239DF8C000467AB /* OYCountDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCountDownManager.h; sourceTree = "<group>"; };
+		BC50A1602239DF8C000467AB /* OYCountDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCountDownManager.m; sourceTree = "<group>"; };
 		BC69711C21B8BFD20083F57E /* FZMTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZMTimeLineView.m; sourceTree = "<group>"; };
 		BC69711D21B8BFD20083F57E /* FZMTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMTimeLineView.h; sourceTree = "<group>"; };
 		BC69712521B8CD0F0083F57E /* FZMTradeKLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZMTradeKLineView.h; sourceTree = "<group>"; };
@@ -267,6 +387,154 @@
 				BC02944B21AB9BC2002AF4D0 /* YYUIManager.m */,
 			);
 			path = UIManager;
+			sourceTree = "<group>";
+		};
+		BC029D32223A7E7300195316 /* 选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D33223A7E7300195316 /* FZMAddressPicker.h */,
+				BC029D34223A7E7300195316 /* FZMBankPicker.h */,
+				BC029D35223A7E7300195316 /* 两级地址选择器 */,
+				BC029D50223A7E7300195316 /* 银行选择器 */,
+				BC029D6C223A7E7300195316 /* FZMBankPicker.m */,
+				BC029D6D223A7E7300195316 /* FZMAddressPicker.m */,
+			);
+			path = "选择器";
+			sourceTree = "<group>";
+		};
+		BC029D35223A7E7300195316 /* 两级地址选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D36223A7E7300195316 /* AddressPicker.xcodeproj */,
+				BC029D39223A7E7300195316 /* demo详情链接地址.txt */,
+				BC029D3A223A7E7300195316 /* AddressPicker */,
+				BC029D49223A7E7300195316 /* Demo群号335930567 */,
+				BC029D4A223A7E7300195316 /* AddressPickerTests */,
+				BC029D4D223A7E7300195316 /* AddressPickerUITests */,
+			);
+			path = "两级地址选择器";
+			sourceTree = "<group>";
+		};
+		BC029D37223A7E7300195316 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D7B223A7E7400195316 /* AddressPicker.app */,
+				BC029D7D223A7E7400195316 /* AddressPickerTests.xctest */,
+				BC029D7F223A7E7400195316 /* AddressPickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC029D3A223A7E7300195316 /* AddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D3B223A7E7300195316 /* AppDelegate.h */,
+				BC029D3C223A7E7300195316 /* OSAddressPickerView.m */,
+				BC029D3D223A7E7300195316 /* Assets.xcassets */,
+				BC029D3E223A7E7300195316 /* ViewController.m */,
+				BC029D3F223A7E7300195316 /* LaunchScreen.storyboard */,
+				BC029D41223A7E7300195316 /* Main.storyboard */,
+				BC029D43223A7E7300195316 /* main.m */,
+				BC029D44223A7E7300195316 /* city.plist */,
+				BC029D45223A7E7300195316 /* AppDelegate.m */,
+				BC029D46223A7E7300195316 /* OSAddressPickerView.h */,
+				BC029D47223A7E7300195316 /* Info.plist */,
+				BC029D48223A7E7300195316 /* ViewController.h */,
+			);
+			path = AddressPicker;
+			sourceTree = "<group>";
+		};
+		BC029D49223A7E7300195316 /* Demo群号335930567 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Demo群号335930567";
+			sourceTree = "<group>";
+		};
+		BC029D4A223A7E7300195316 /* AddressPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D4B223A7E7300195316 /* AddressPickerTests.m */,
+				BC029D4C223A7E7300195316 /* Info.plist */,
+			);
+			path = AddressPickerTests;
+			sourceTree = "<group>";
+		};
+		BC029D4D223A7E7300195316 /* AddressPickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D4E223A7E7300195316 /* AddressPickerUITests.m */,
+				BC029D4F223A7E7300195316 /* Info.plist */,
+			);
+			path = AddressPickerUITests;
+			sourceTree = "<group>";
+		};
+		BC029D50223A7E7300195316 /* 银行选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D51223A7E7300195316 /* AddressPicker.xcodeproj */,
+				BC029D54223A7E7300195316 /* demo详情链接地址.txt */,
+				BC029D55223A7E7300195316 /* AddressPicker */,
+				BC029D65223A7E7300195316 /* Demo群号335930567 */,
+				BC029D66223A7E7300195316 /* AddressPickerTests */,
+				BC029D69223A7E7300195316 /* AddressPickerUITests */,
+			);
+			path = "银行选择器";
+			sourceTree = "<group>";
+		};
+		BC029D52223A7E7300195316 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D72223A7E7400195316 /* AddressPicker.app */,
+				BC029D74223A7E7400195316 /* AddressPickerTests.xctest */,
+				BC029D76223A7E7400195316 /* AddressPickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC029D55223A7E7300195316 /* AddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D56223A7E7300195316 /* AppDelegate.h */,
+				BC029D57223A7E7300195316 /* bank.json */,
+				BC029D58223A7E7300195316 /* OSAddressPickerView.m */,
+				BC029D59223A7E7300195316 /* Assets.xcassets */,
+				BC029D5A223A7E7300195316 /* ViewController.m */,
+				BC029D5B223A7E7300195316 /* LaunchScreen.storyboard */,
+				BC029D5D223A7E7300195316 /* Main.storyboard */,
+				BC029D5F223A7E7300195316 /* main.m */,
+				BC029D60223A7E7300195316 /* city.plist */,
+				BC029D61223A7E7300195316 /* AppDelegate.m */,
+				BC029D62223A7E7300195316 /* OSAddressPickerView.h */,
+				BC029D63223A7E7300195316 /* Info.plist */,
+				BC029D64223A7E7300195316 /* ViewController.h */,
+			);
+			path = AddressPicker;
+			sourceTree = "<group>";
+		};
+		BC029D65223A7E7300195316 /* Demo群号335930567 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Demo群号335930567";
+			sourceTree = "<group>";
+		};
+		BC029D66223A7E7300195316 /* AddressPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D67223A7E7300195316 /* AddressPickerTests.m */,
+				BC029D68223A7E7300195316 /* Info.plist */,
+			);
+			path = AddressPickerTests;
+			sourceTree = "<group>";
+		};
+		BC029D69223A7E7300195316 /* AddressPickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC029D6A223A7E7300195316 /* AddressPickerUITests.m */,
+				BC029D6B223A7E7300195316 /* Info.plist */,
+			);
+			path = AddressPickerUITests;
 			sourceTree = "<group>";
 		};
 		BC05499521ACF1280017D981 /* TabBarViewController */ = {
@@ -484,8 +752,12 @@
 		BC69712C21B8FEA20083F57E /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				BC69712D21B8FEA20083F57E /* HWWeakTimer.m */,
 				BC69712E21B8FEA20083F57E /* HWWeakTimer.h */,
+				BC69712D21B8FEA20083F57E /* HWWeakTimer.m */,
+				BC50A1292238940A000467AB /* YYCountDownManager.h */,
+				BC50A12A2238940A000467AB /* YYCountDownManager.m */,
+				BC50A15F2239DF8C000467AB /* OYCountDownManager.h */,
+				BC50A1602239DF8C000467AB /* OYCountDownManager.m */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -531,6 +803,7 @@
 		BCA799B221B5179100188A24 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BC029D32223A7E7300195316 /* 选择器 */,
 				BCCC0D6F221AD82F006EA6FB /* Database */,
 				BC69713E21B9258E0083F57E /* Cache */,
 				BC69713A21B921870083F57E /* SVGImage */,
@@ -772,6 +1045,16 @@
 			mainGroup = BCC5223A20DF821A00915076;
 			productRefGroup = BCC5224420DF821A00915076 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC029D52223A7E7300195316 /* Products */;
+					ProjectRef = BC029D51223A7E7300195316 /* AddressPicker.xcodeproj */;
+				},
+				{
+					ProductGroup = BC029D37223A7E7300195316 /* Products */;
+					ProjectRef = BC029D36223A7E7300195316 /* AddressPicker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BCC5224220DF821A00915076 /* YYProject */,
@@ -781,6 +1064,51 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		BC029D72223A7E7400195316 /* AddressPicker.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AddressPicker.app;
+			remoteRef = BC029D71223A7E7400195316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC029D74223A7E7400195316 /* AddressPickerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AddressPickerTests.xctest;
+			remoteRef = BC029D73223A7E7400195316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC029D76223A7E7400195316 /* AddressPickerUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AddressPickerUITests.xctest;
+			remoteRef = BC029D75223A7E7400195316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC029D7B223A7E7400195316 /* AddressPicker.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AddressPicker.app;
+			remoteRef = BC029D7A223A7E7400195316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC029D7D223A7E7400195316 /* AddressPickerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AddressPickerTests.xctest;
+			remoteRef = BC029D7C223A7E7400195316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC029D7F223A7E7400195316 /* AddressPickerUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AddressPickerUITests.xctest;
+			remoteRef = BC029D7E223A7E7400195316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		BCC5224120DF821A00915076 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -789,7 +1117,24 @@
 				BC290AE121A798460039E2F8 /* Assets.xcassets in Resources */,
 				BC0F865821C20737009C26E6 /* camera_rotating.svg in Resources */,
 				BC290AE221A798460039E2F8 /* LaunchScreen.storyboard in Resources */,
+				BC029D96223A7E7400195316 /* city.plist in Resources */,
+				BC029D8F223A7E7400195316 /* bank.json in Resources */,
+				BC029D91223A7E7400195316 /* Assets.xcassets in Resources */,
+				BC029D87223A7E7400195316 /* city.plist in Resources */,
+				BC029D94223A7E7400195316 /* Main.storyboard in Resources */,
+				BC029D9A223A7E7400195316 /* Info.plist in Resources */,
+				BC029D85223A7E7400195316 /* Main.storyboard in Resources */,
+				BC029D98223A7E7400195316 /* Info.plist in Resources */,
+				BC029D80223A7E7400195316 /* demo详情链接地址.txt in Resources */,
+				BC029D84223A7E7400195316 /* LaunchScreen.storyboard in Resources */,
+				BC029D93223A7E7400195316 /* LaunchScreen.storyboard in Resources */,
+				BC029D82223A7E7400195316 /* Assets.xcassets in Resources */,
+				BC029D8D223A7E7400195316 /* Info.plist in Resources */,
+				BC029D8B223A7E7400195316 /* Info.plist in Resources */,
+				BC029D89223A7E7400195316 /* Info.plist in Resources */,
 				BC003AAE21B7D42300321033 /* citys.json in Resources */,
+				BC029D8E223A7E7400195316 /* demo详情链接地址.txt in Resources */,
+				BC029D9C223A7E7400195316 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,10 +1272,13 @@
 			files = (
 				BCFF436721B6724E00681BB6 /* SGPageTitleView.m in Sources */,
 				BC69712B21B8FAA40083F57E /* YYWebSockeIO.m in Sources */,
+				BC029D9B223A7E7400195316 /* AddressPickerUITests.m in Sources */,
+				BC029D88223A7E7400195316 /* AppDelegate.m in Sources */,
 				BCCC0D72221AD85D006EA6FB /* YYDatebase.m in Sources */,
 				BC02945221AB9E6D002AF4D0 /* YYTabBarController.m in Sources */,
 				BC003AAC21B7D3FD00321033 /* YYAddressPicker.m in Sources */,
 				BC290AE321A798460039E2F8 /* main.m in Sources */,
+				BC029D83223A7E7400195316 /* ViewController.m in Sources */,
 				BCFF436621B6724E00681BB6 /* SGPageContentView.m in Sources */,
 				BC69712F21B8FEA20083F57E /* HWWeakTimer.m in Sources */,
 				BC03B87C21AE904B00394BF5 /* YYNavigationBarView.m in Sources */,
@@ -938,27 +1286,38 @@
 				BC03B87921AE832900394BF5 /* YYBaseViewController.m in Sources */,
 				BC290B2021A79B190039E2F8 /* NSDate+Category.m in Sources */,
 				BCFF332521AFF47400BAE678 /* UITextView+Extension.m in Sources */,
+				BC029D95223A7E7400195316 /* main.m in Sources */,
 				BCC5224820DF821A00915076 /* AppDelegate.m in Sources */,
 				BCFF436521B6724E00681BB6 /* SGPageContentScrollView.m in Sources */,
+				BC50A12B2238940A000467AB /* YYCountDownManager.m in Sources */,
 				BCFF435021B61BD500681BB6 /* YYProgressHUD.m in Sources */,
 				BC05499821ACF13D0017D981 /* YYHomeViewController.m in Sources */,
 				BC02DABB21BFA783001B91A0 /* HUDViewController.swift in Sources */,
 				BCFF436421B6724E00681BB6 /* UIView+SGPagingView.m in Sources */,
+				BC029D9D223A7E7400195316 /* FZMBankPicker.m in Sources */,
 				BCFF436C21B6817900681BB6 /* YYNetwork.m in Sources */,
 				BC69711E21B8BFD20083F57E /* FZMTimeLineView.m in Sources */,
 				BC69713621B901050083F57E /* YYMarketModel.m in Sources */,
+				BC50A1612239DF8C000467AB /* OYCountDownManager.m in Sources */,
 				BC003AA621B7C72500321033 /* YYAlertViewController.m in Sources */,
 				BC0FE12021B8B8AB00CCB0A5 /* YYModuleViewController.m in Sources */,
 				BCFF332221AFF16700BAE678 /* YYUnitTextField.m in Sources */,
 				BC05499C21AD1FEC0017D981 /* YYAlignmentButton.m in Sources */,
+				BC029D92223A7E7400195316 /* ViewController.m in Sources */,
+				BC029D81223A7E7400195316 /* OSAddressPickerView.m in Sources */,
 				BCFF435421B6713000681BB6 /* PagingViewController.m in Sources */,
+				BC029D99223A7E7400195316 /* AddressPickerTests.m in Sources */,
 				BC0549A521AD44AF0017D981 /* UIColor+Extension.m in Sources */,
 				BC02944C21AB9BC2002AF4D0 /* YYUIManager.m in Sources */,
 				BC0E3D9D21C3885100C83554 /* OptimizeCameraViewController.m in Sources */,
 				BC69712721B8CD0F0083F57E /* FZMTradeKLineView.m in Sources */,
 				BC69714121B927830083F57E /* YYCacheManager.m in Sources */,
 				BC003AB121B7D4AD00321033 /* YYAddressModel.m in Sources */,
+				BC029D8C223A7E7400195316 /* AddressPickerUITests.m in Sources */,
+				BC029D86223A7E7400195316 /* main.m in Sources */,
+				BC029D8A223A7E7400195316 /* AddressPickerTests.m in Sources */,
 				BC0549A221AD3AA70017D981 /* UIView+Extension.m in Sources */,
+				BC029D97223A7E7400195316 /* AppDelegate.m in Sources */,
 				BC290B1B21A79B190039E2F8 /* UIButton+Extension.m in Sources */,
 				BC01868821B0EC6D00A18A7D /* YYToolViewController.m in Sources */,
 				BCFF332821AFF85100BAE678 /* UIImage+Extension.m in Sources */,
@@ -966,12 +1325,14 @@
 				BC0B4FE521BE05BC00718DD5 /* UITextField+Extension.m in Sources */,
 				BC69713D21B921980083F57E /* UIImage+SVG.m in Sources */,
 				BC01A67121B4D74B0001CA1D /* UIFont+Extension.m in Sources */,
+				BC029D90223A7E7400195316 /* OSAddressPickerView.m in Sources */,
 				BC69713921B904EE0083F57E /* YYDataValueFormatter.m in Sources */,
 				BC290B2621A79B1A0039E2F8 /* NSDecimalNumber+Addtion.m in Sources */,
 				BCFF436821B6724E00681BB6 /* SGPageTitleViewConfigure.m in Sources */,
 				BC003AA321B76C5100321033 /* YYNetworkUser.m in Sources */,
 				BC290B1D21A79B190039E2F8 /* NSString+CommonUseTool.m in Sources */,
 				BC0B4FF221BE4B7100718DD5 /* CameraViewController.m in Sources */,
+				BC029D9E223A7E7400195316 /* FZMAddressPicker.m in Sources */,
 				BC003AA921B7CCF300321033 /* PickViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1008,6 +1369,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BC029D3F223A7E7300195316 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC029D40223A7E7300195316 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BC029D41223A7E7300195316 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC029D42223A7E7300195316 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC029D5B223A7E7300195316 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC029D5C223A7E7300195316 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BC029D5D223A7E7300195316 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC029D5E223A7E7300195316 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		BC290ADD21A798460039E2F8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
