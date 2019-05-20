@@ -11,14 +11,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** 宏: 使用单例 */
-#define kCountDownManager [OYCountDownManager share]
+#define kCountDownManager [YYCountDownManager share]
+#define WEAKSELF __weak typeof(self) weakSelf = self
+
 /** 倒计时的通知名 */
-extern NSString *const OYCountDownNotification;
+extern NSString *const YYCountDownNotification;
 
 @interface YYCountDownManager : NSObject
 
 /** 使用单例 */
-+(instancetype)share;
++ (instancetype)share;
 
 /** 开始倒计时 */
 - (void)start;
@@ -28,19 +30,17 @@ extern NSString *const OYCountDownNotification;
 
 
 
-// ======== v1.0 ========
-// 如果只需要一个倒计时差, 可继续使用timeInterval属性
+
 // 增加后台模式, 后台状态下会继续计算时间差
 
 /** 时间差(单位:秒) */
 @property (nonatomic, assign) NSInteger timeInterval;
 
-/** 刷新倒计时(兼容旧版本, 如使用identifier标识的时间差, 请调用reloadAllSource方法) */
+/** 刷新倒计时 */
 - (void)reload;
 
 
 
-// ======== v2.0 ========
 // 增加identifier:标识符, 一个identifier支持一个倒计时源, 有一个单独的时间差
 
 /** 添加倒计时源 */
@@ -63,7 +63,7 @@ extern NSString *const OYCountDownNotification;
 
 @end
 
-@interface OYTimeInterval : NSObject
+@interface YYTimeInterval : NSObject
 
 @end
 

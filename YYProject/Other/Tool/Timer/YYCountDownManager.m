@@ -8,7 +8,7 @@
 
 #import "YYCountDownManager.h"
 
-@interface OYTimeInterval ()
+@interface YYTimeInterval ()
 
 @property (nonatomic, assign) NSInteger timeInterval;
 
@@ -16,10 +16,10 @@
 
 @end
 
-@implementation OYTimeInterval
+@implementation YYTimeInterval
 
 + (instancetype)timeInterval:(NSInteger)timeInterval {
-    OYTimeInterval *object = [OYTimeInterval new];
+    YYTimeInterval *object = [YYTimeInterval new];
     object.timeInterval = timeInterval;
     return object;
 }
@@ -32,7 +32,7 @@
 @property (nonatomic, strong) NSTimer *timer;
 
 /// 时间差字典(单位:秒)(使用字典来存放, 支持多列表或多页面使用)
-@property (nonatomic, strong) NSMutableDictionary<NSString *, OYTimeInterval *> *timeIntervalDict;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, YYTimeInterval *> *timeIntervalDict;
 
 /// 后台模式使用, 记录进入后台的绝对时间
 @property (nonatomic, assign) BOOL backgroudRecord;
@@ -85,24 +85,24 @@
 - (void)timerActionWithTimeInterval:(NSInteger)timeInterval {
     // 时间差+
     self.timeInterval += timeInterval;
-    [self.timeIntervalDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, OYTimeInterval * _Nonnull obj, BOOL * _Nonnull stop) {
+    [self.timeIntervalDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, YYTimeInterval * _Nonnull obj, BOOL * _Nonnull stop) {
         obj.timeInterval += timeInterval;
     }];
     //回到主线程 发出通知
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:OYCountDownNotification object:nil userInfo:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:YYCountDownNotification object:nil userInfo:nil];
     });
     
 }
 
 - (void)addSourceWithIdentifier:(NSString *)identifier {
-    OYTimeInterval *timeInterval = self.timeIntervalDict[identifier];
+    YYTimeInterval *timeInterval = self.timeIntervalDict[identifier];
     if (timeInterval)
     {
         timeInterval.timeInterval = 0;
     }else
     {
-        [self.timeIntervalDict setObject:[OYTimeInterval timeInterval:0] forKey:identifier];
+        [self.timeIntervalDict setObject:[YYTimeInterval timeInterval:0] forKey:identifier];
     }
 }
 
@@ -116,7 +116,7 @@
 }
 
 - (void)reloadAllSource {
-    [self.timeIntervalDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, OYTimeInterval * _Nonnull obj, BOOL * _Nonnull stop) {
+    [self.timeIntervalDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, YYTimeInterval * _Nonnull obj, BOOL * _Nonnull stop) {
         obj.timeInterval = 0;
     }];
 }
@@ -171,7 +171,7 @@
     return _timeIntervalDict;
 }
 
-NSString *const OYCountDownNotification = @"OYCountDownNotification";
+NSString *const YYCountDownNotification = @"YYCountDownNotification";
 
 @end
 

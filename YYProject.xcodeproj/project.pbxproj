@@ -1529,7 +1529,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H536G2V449;
+				DEVELOPMENT_TEAM = DDLQ622F2E;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
@@ -1554,7 +1554,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H536G2V449;
+				DEVELOPMENT_TEAM = DDLQ622F2E;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuyou/Desktop/YYProject/YYProject/Other/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = /Users/yuyou/Desktop/YYProject/YYProject/Other/TargetLibrary/Info.plist;
